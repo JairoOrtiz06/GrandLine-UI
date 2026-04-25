@@ -5,6 +5,8 @@ $secondary: #1B263B;
 $accent: #E09F3E;        
 $pirate-red: #E63946;     
 $gold-bright: #FFD166;    
+$black: #000000;
+$white: #FFFFFF;
 
 
 // FONDOS
@@ -52,6 +54,16 @@ $shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
 $shadow-md: 0 4px 8px rgba(0,0,0,0.3);
 $shadow-lg: 0 8px 16px rgba(0,0,0,0.4);
 
+$focus-accent: 0 0 0 2px rgba(224, 159, 62, 0.3);
+$focus-danger: 0 0 0 2px rgba(230, 57, 70, 0.3);
+$focus-success: 0 0 0 2px rgba(46, 204, 113, 0.3);
+$focus-danger-strong: 0 0 0 2px rgba(230, 57, 70, 0.4);
+$focus-success-strong: 0 0 0 2px rgba(46, 204, 113, 0.4);
+
+$shadow-pirate-sm: 2px 2px 0 $black;
+$shadow-pirate-md: 3px 3px 0 $black;
+$shadow-pirate-lg: 5px 5px 0 $black;
+
 
 $breakpoints: (
   sm: 576px,
@@ -59,8 +71,5 @@ $breakpoints: (
   lg: 992px,
   xl: 1200px
 );
-
-
-
 $columns: 12;
 $gutter: 16px;

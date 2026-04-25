@@ -1,0 +1,227 @@
+@use '../abstractos/variables' as v;
+
+// FORM GROUP
+
+.form-group {
+  margin-bottom: v.$spacing-16;
+}
+
+// LABEL
+
+.label {
+  display: block;
+  margin-bottom: v.$spacing-4;
+  color: v.$gold-bright;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+// INPUT BASE
+
+%input-base {
+  width: 100%;
+  display: block;
+  margin-bottom: v.$spacing-12;
+  padding: v.$spacing-12 v.$spacing-16;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  color: v.$text;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: v.$text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$accent;
+    box-shadow: v.$focus-accent;
+  }
+}
+
+.input {
+  @extend %input-base;
+}
+
+// HERENCIA
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]),
+textarea,
+select {
+  @extend %input-base;
+}
+
+// TIPOS ESPECIALES
+
+textarea {
+  min-height: v.$spacing-48 + v.$spacing-48 + v.$spacing-32;
+  resize: vertical;
+}
+
+input[type="color"] {
+  display: block;
+  width: v.$spacing-48;
+  height: v.$spacing-36;
+  padding: v.$spacing-4;
+  margin-bottom: v.$spacing-12;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  margin-bottom: v.$spacing-12;
+  padding: v.$spacing-8;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  color: v.$text;
+  cursor: pointer;
+
+  &::file-selector-button {
+    margin-right: v.$spacing-12;
+    padding: v.$spacing-4 v.$spacing-12;
+    border: 2px solid v.$black;
+    border-radius: v.$border-radius;
+    background: v.$pirate-red;
+    color: v.$white;
+    font-weight: 700;
+    box-shadow: v.$shadow-pirate-sm;
+    cursor: pointer;
+  }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 v.$spacing-4 0 0;
+  accent-color: v.$pirate-red;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-8;
+  margin-bottom: v.$spacing-8;
+  color: v.$text;
+}
+
+// VALIDACIONES
+
+input:not([type="checkbox"]):not([type="radio"]):invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: v.$danger;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus:invalid:not(:placeholder-shown),
+textarea:focus:invalid:not(:placeholder-shown) {
+  border-color: v.$danger;
+  box-shadow: v.$focus-danger;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus:valid:not(:placeholder-shown),
+textarea:focus:valid:not(:placeholder-shown) {
+  border-color: v.$success;
+  box-shadow: v.$focus-success;
+}
+
+// MENSAJES
+
+.input-error-message {
+  display: none;
+  margin-top: v.$spacing-4;
+  color: v.$danger;
+  font-size: 12px;
+}
+
+input:invalid:not(:placeholder-shown) + .input-error-message {
+  display: block;
+}
+
+// SELECT
+
+.select {
+  @extend %input-base;
+  cursor: pointer;
+}
+
+// CHECKBOX
+
+.checkbox {
+  width: auto;
+  accent-color: v.$pirate-red;
+  cursor: pointer;
+}
+
+// BOTON
+
+.btn {
+  display: inline-block;
+  padding: v.$spacing-8 v.$spacing-16;
+  border: 2px solid v.$black;
+  border-radius: v.$border-radius;
+  background: v.$pirate-red;
+  color: v.$white;
+  font-weight: bold;
+  box-shadow: v.$shadow-pirate-md;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: v.$shadow-pirate-lg;
+  }
+
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: v.$shadow-pirate-sm;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: v.$shadow-pirate-md;
+  }
+}
+
+// ESTADOS MANUALES
+
+.input-success {
+  border-color: v.$success;
+}
+
+.input-error {
+  border-color: v.$danger;
+}
+
+.input-success:focus {
+  box-shadow: v.$focus-success-strong;
+}
+
+.input-error:focus {
+  box-shadow: v.$focus-danger-strong;
+}
+
+// DISABLED
+
+.input:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
