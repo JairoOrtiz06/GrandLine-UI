@@ -1,42 +1,38 @@
 @use 'variables' as *;
+//BOTONES
+// MIXIN 1: Botón con fondo de color (SOLID)
+// Recibe: color de fondo y color de texto
 
-@mixin btn-variant($bg, $color: #fff, $hover-darken: 10%) {
-  background-color: $bg;
-  color: $color;
-  border: 2px solid $bg;
+@mixin boton-color($fondo, $texto) {
+  background-color: $fondo;
+  color: $texto;
+  border: 2px solid $fondo;
 
-  &:hover:not(:disabled) {
-    background-color: darken($bg, $hover-darken);
-    border-color: darken($bg, $hover-darken);
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
+  &:hover {
+    background-color: darken($fondo, 10%);
+    border-color: darken($fondo, 10%);
   }
 
-  &:active:not(:disabled) {
-    background-color: darken($bg, 15%);
-    transform: translateY(0);
-    box-shadow: $shadow-sm;
+  &:active {
+    background-color: darken($fondo, 20%);
   }
 }
 
-// ============================================
-// MIXIN: Generador de variantes botones
-// ============================================
-@mixin btn-outline-variant($color) {
+// MIXIN 2: Botón con borde (OUTLINE)
+// Recibe: color del borde y texto
+
+@mixin boton-borde($color) {
   background-color: transparent;
   color: $color;
   border: 2px solid $color;
 
-  &:hover:not(:disabled) {
+  &:hover {
     background-color: $color;
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: $shadow-md;
   }
 
-  &:active:not(:disabled) {
-    background-color: darken($color, 10%);
-    border-color: darken($color, 10%);
-    transform: translateY(0);
+  &:active {
+    background-color: darken($color, 15%);
+    border-color: darken($color, 15%);
   }
 }
