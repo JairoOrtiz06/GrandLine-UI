@@ -1,3 +1,60 @@
-body {
-  background: rgb(199, 110, 110);
-}
+
+
+$primary: #0D1B2A;        
+$secondary: #1B263B;      
+$accent: #E09F3E;        
+$pirate-red: #E63946;     
+$gold-bright: #FFD166;    
+
+
+// FONDOS
+
+$background: #0A192F;     
+$surface: #14213D;        
+
+
+// TEXTO
+
+$text: #E0E6F0;
+$text-muted: #A0AEC0;
+
+
+// COLORES SEMÁNTICOS
+
+$success: #2ECC71;
+$danger: #E63946;
+$warning: #F4A261;
+$info: #3A86FF;
+
+
+// ESPACIADOS 
+
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// BORDES Y SOMBRAS
+
+
+$border-radius: 8px;
+$border-radius-lg: 12px;
+
+$shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+$shadow-md: 0 4px 8px rgba(0,0,0,0.3);
+$shadow-lg: 0 8px 16px rgba(0,0,0,0.4);
+
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+
+
+$columns: 12;
+$gutter: 16px;
