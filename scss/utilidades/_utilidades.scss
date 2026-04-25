@@ -1,0 +1,89 @@
+@use '../abstractos/variables' as v;
+$font-sizes: (
+  1: 12px,
+  2: 14px,
+  3: 16px,
+  4: 18px,
+  5: 20px
+);
+
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+
+.fw-bold { font-weight: bold; }
+.fw-light { font-weight: 300; }
+
+// alineación
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+$spacings: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 16px,
+  4: 24px,
+  5: 32px
+);
+
+// margin y padding
+@each $key, $value in $spacings {
+  .m-#{$key} { margin: $value; }
+  .p-#{$key} { padding: $value; }
+
+  .mt-#{$key} { margin-top: $value; }
+  .mb-#{$key} { margin-bottom: $value; }
+  .ml-#{$key} { margin-left: $value; }
+  .mr-#{$key} { margin-right: $value; }
+
+  .pt-#{$key} { padding-top: $value; }
+  .pb-#{$key} { padding-bottom: $value; }
+  .pl-#{$key} { padding-left: $value; }
+  .pr-#{$key} { padding-right: $value; }
+}
+
+//colores
+.text-primary { color: v.$primary; }
+.text-secondary { color: v.$secondary; }
+.text-accent { color: v.$accent; }
+
+.bg-primary { background: v.$primary; }
+.bg-secondary { background: v.$secondary; }
+.bg-accent { background: v.$accent; }
+
+// flexbox
+.d-flex { display: flex; }
+
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.align-center { align-items: center; }
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+
+// display 
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+
+// bordes y sombras
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
