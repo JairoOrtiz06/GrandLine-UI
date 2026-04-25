@@ -50,15 +50,24 @@ $spacing-48: 48px;
 $border-radius: 8px;
 $border-radius-lg: 12px;
 
-$shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
-$shadow-md: 0 4px 8px rgba(0,0,0,0.3);
-$shadow-lg: 0 8px 16px rgba(0,0,0,0.4);
 
-$focus-accent: 0 0 0 2px rgba(224, 159, 62, 0.3);
-$focus-danger: 0 0 0 2px rgba(230, 57, 70, 0.3);
-$focus-success: 0 0 0 2px rgba(46, 204, 113, 0.3);
-$focus-danger-strong: 0 0 0 2px rgba(230, 57, 70, 0.4);
-$focus-success-strong: 0 0 0 2px rgba(46, 204, 113, 0.4);
+$shadow-sm: 0 5px 9px rgba(13, 27, 42, 0.5);
+$shadow-md: 0 4px 12px rgba(13, 27, 42, 0.6);
+$shadow-lg: 0 8px 20px rgba(13, 27, 42, 0.7);
+
+
+
+$focus-accent: 0 0 0 2px rgba(224, 159, 62, 0.35);
+$focus-danger: 0 0 0 2px rgba(230, 57, 70, 0.35);
+$focus-success: 0 0 0 2px rgba(46, 204, 113, 0.35);
+
+$focus-danger-strong: 0 0 0 2px rgba(230, 57, 70, 0.5);
+$focus-success-strong: 0 0 0 2px rgba(46, 204, 113, 0.5);
+
+$shadow-gold: 0 4px 12px rgba(224, 159, 62, 0.3);
+
+$shadow-red: 0 4px 12px rgba(230, 57, 70, 0.3);
+
 
 $shadow-pirate-sm: 2px 2px 0 $black;
 $shadow-pirate-md: 3px 3px 0 $black;

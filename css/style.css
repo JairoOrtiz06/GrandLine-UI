@@ -22,6 +22,7 @@ select, .input {
   background: #14213D;
   color: #E0E6F0;
   transition: all 0.2s ease;
+  box-shadow: 0 5px 9px rgba(13, 27, 42, 0.5);
 }
 .select::placeholder, input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file])::placeholder,
 textarea::placeholder,
@@ -33,7 +34,7 @@ textarea:focus,
 select:focus, .input:focus {
   outline: none;
   border-color: #E09F3E;
-  box-shadow: 0 0 0 2px rgba(224, 159, 62, 0.3);
+  box-shadow: 0 0 0 2px rgba(224, 159, 62, 0.35);
 }
 
 textarea {
@@ -108,13 +109,13 @@ textarea:invalid:not(:placeholder-shown) {
 input:not([type=checkbox]):not([type=radio]):focus:invalid:not(:placeholder-shown),
 textarea:focus:invalid:not(:placeholder-shown) {
   border-color: #E63946;
-  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.35);
 }
 
 input:not([type=checkbox]):not([type=radio]):focus:valid:not(:placeholder-shown),
 textarea:focus:valid:not(:placeholder-shown) {
   border-color: #2ECC71;
-  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.3);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.35);
 }
 
 .input-error-message {
@@ -174,11 +175,11 @@ input:invalid:not(:placeholder-shown) + .input-error-message {
 }
 
 .input-success:focus {
-  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.4);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.5);
 }
 
 .input-error:focus {
-  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.4);
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.5);
 }
 
 .input:disabled,

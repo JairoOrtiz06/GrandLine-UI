@@ -28,6 +28,7 @@
   background: v.$surface;
   color: v.$text;
   transition: all 0.2s ease;
+   box-shadow: v.$shadow-sm;
 
   &::placeholder {
     color: v.$text-muted;
