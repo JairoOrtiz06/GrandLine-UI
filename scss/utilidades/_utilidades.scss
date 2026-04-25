@@ -1,89 +1,99 @@
 @use '../abstractos/variables' as v;
+
+// ------- TIPOGRAFIA -------
+
+// mapa de tamaños de fuente
 $font-sizes: (
-  1: 12px,
-  2: 14px,
-  3: 16px,
-  4: 18px,
-  5: 20px
+  1: v.$font-sm,
+  2: v.$font-base,
+  3: v.$font-lg,
+  4: v.$font-xl,
+  5: v.$font-2xl
 );
 
+// genera clases fs-1 hasta fs-5
 @each $key, $value in $font-sizes {
   .fs-#{$key} {
     font-size: $value;
   }
 }
 
-.fw-bold { font-weight: bold; }
+.fw-bold { font-weight: 700; }
 .fw-light { font-weight: 300; }
 
-// alineación
-
+.text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
-.text-left { text-align: left; }
 
+
+// ------- ESPACIADO -------
+
+// mapa de espaciados
 $spacings: (
-  0: 0,
-  1: 4px,
-  2: 8px,
-  3: 16px,
-  4: 24px,
-  5: 32px
+  1: v.$spacing-xs,
+  2: v.$spacing-sm,
+  3: v.$spacing-md,
+  4: v.$spacing-lg,
+  5: v.$spacing-xl
 );
 
-// margin y padding
+// genera margenes y paddings automaticamente
 @each $key, $value in $spacings {
-  .m-#{$key} { margin: $value; }
-  .p-#{$key} { padding: $value; }
-
   .mt-#{$key} { margin-top: $value; }
   .mb-#{$key} { margin-bottom: $value; }
-  .ml-#{$key} { margin-left: $value; }
-  .mr-#{$key} { margin-right: $value; }
-
   .pt-#{$key} { padding-top: $value; }
   .pb-#{$key} { padding-bottom: $value; }
-  .pl-#{$key} { padding-left: $value; }
-  .pr-#{$key} { padding-right: $value; }
 }
 
-//colores
-.text-primary { color: v.$primary; }
-.text-secondary { color: v.$secondary; }
-.text-accent { color: v.$accent; }
 
-.bg-primary { background: v.$primary; }
-.bg-secondary { background: v.$secondary; }
-.bg-accent { background: v.$accent; }
+// ------- COLORES -------
 
-// flexbox
+// mapa de colores
+$colores: (
+  primary: v.$primary,
+  oro: v.$gold-bright,
+  success: v.$success,
+  danger: v.$danger,
+  muted: v.$text-muted
+);
+
+// genera clases de texto y fondo con loop
+@each $nombre, $color in $colores {
+  .text-#{$nombre} { color: $color; }
+  .bg-#{$nombre} { background-color: $color; }
+}
+
+.bg-surface { background-color: v.$surface; }
+
+
+// ------- FLEXBOX -------
+
 .d-flex { display: flex; }
+.jc-center { justify-content: center; }
+.jc-between { justify-content: space-between; }
+.ai-center { align-items: center; }
+.gap-2 { gap: v.$spacing-sm; }
+.gap-3 { gap: v.$spacing-md; }
 
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
 
-.align-center { align-items: center; }
-.align-start { align-items: flex-start; }
-.align-end { align-items: flex-end; }
+// ------- DISPLAY -------
 
-// display 
 .d-none { display: none; }
 .d-block { display: block; }
 .d-inline { display: inline; }
 
-// bordes y sombras
-.rounded {
-  border-radius: 8px;
+// display responsivo para tablets
+@media (max-width: 768px) {
+  .d-md-none { display: none; }
+  .d-md-block { display: block; }
 }
 
-.rounded-lg {
-  border-radius: 12px;
-}
 
-.shadow-sm {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+// ------- BORDES Y SOMBRAS -------
 
-.shadow-lg {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
+.rounded { border-radius: v.$border-radius; }
+.rounded-lg { border-radius: v.$border-radius-lg; }
+.rounded-pill { border-radius: v.$border-radius-pill; }
+
+.shadow-sm { box-shadow: v.$shadow-sm; }
+.shadow-lg { box-shadow: v.$shadow-lg; }

@@ -13,4 +13,9 @@
 @use 'componentes/alertas';
 @use 'componentes/botones';
 @use 'componentes/tablas';
-@use 'componentes/forms';
+@use 'componentes/formularios';
+@use 'componentes/insignias';
+
+
+//Clases utilitarias 
+@use 'utilidades/utilidades';
