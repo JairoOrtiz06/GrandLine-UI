@@ -1,3 +1,15 @@
-@use 'abstractos/variables';
+//  variables y mixins
+@use 'abstractos/variables' as *;
+@use 'abstractos/mixins' as *;
+
+// estilos base de la pagina
+@use 'base/reset';
+@use 'base/typography';
+
+// layout principal
+@use 'layout/container';
+
+// componentes
+@use 'componentes/botones';
+@use 'componentes/tablas';
 @use 'componentes/forms';
-@use 'componentes/tablas'

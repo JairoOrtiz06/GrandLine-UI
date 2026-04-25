@@ -1,84 +1,82 @@
+// colores principales del tema pirata
+$primary: #0D1B2A;
+$secondary: #1B263B;
+$accent: #E09F3E;
+$pirate-red: #E63946;
+$gold-bright: #FFD166;
 
+// fondos de la pagina
+$background: #0A192F;
+$surface: #14213D;
 
-$primary: #0D1B2A;        
-$secondary: #1B263B;      
-$accent: #E09F3E;        
-$pirate-red: #E63946;     
-$gold-bright: #FFD166;    
-$black: #000000;
-$white: #FFFFFF;
-
-
-// FONDOS
-
-$background: #0A192F;     
-$surface: #14213D;        
-
-
-// TEXTO
-
+// colores de texto
 $text: #E0E6F0;
 $text-muted: #A0AEC0;
 
-
-// COLORES SEMÁNTICOS
-
+// colores semanticos para alertas y estados
 $success: #2ECC71;
 $danger: #E63946;
 $warning: #F4A261;
 $info: #3A86FF;
 
+// tipografia del framework
+$font-titulo: 'Cinzel', serif;
+$font-texto: 'Inter', 'Segoe UI', Arial, sans-serif;
+$font-codigo: 'Courier New', monospace;
 
-// ESPACIADOS 
+// tamanos de fuente
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-base: 1rem;
+$font-lg: 1.25rem;
+$font-xl: 1.5rem;
+$font-2xl: 2rem;
+$font-3xl: 2.5rem;
+$font-4xl: 3.5rem;
 
-// Espacioados para margenes y paddings
-$spacing-0: 0px;
-$spacing-4: 4px;
-$spacing-8: 8px;
-$spacing-12: 12px;
-$spacing-16: 16px;
-$spacing-20: 20px;
-$spacing-24: 24px;
-$spacing-28: 28px;
-$spacing-32: 32px;
-$spacing-36: 36px;
-$spacing-48: 48px;
+// pesos de fuente
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
 
-// BORDES Y SOMBRAS
+// espaciados del framework
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
 
-
+// bordes redondeados
+$border-radius-sm: 4px;
 $border-radius: 8px;
 $border-radius-lg: 12px;
+$border-radius-pill: 50rem;
 
+// sombras en tres niveles
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
 
-$shadow-sm: 0 5px 9px rgba(13, 27, 42, 0.5);
-$shadow-md: 0 4px 12px rgba(13, 27, 42, 0.6);
-$shadow-lg: 0 8px 20px rgba(13, 27, 42, 0.7);
+// transiciones estandar
+$transition-rapida: all 0.15s ease;
+$transition-normal: all 0.3s ease;
+$transition-lenta: all 0.5s ease;
 
+// z-index para componentes apilables
+$z-dropdown: 100;
+$z-navbar: 500;
+$z-modal: 1000;
+$z-tooltip: 1500;
 
-
-$focus-accent: 0 0 0 2px rgba(224, 159, 62, 0.35);
-$focus-danger: 0 0 0 2px rgba(230, 57, 70, 0.35);
-$focus-success: 0 0 0 2px rgba(46, 204, 113, 0.35);
-
-$focus-danger-strong: 0 0 0 2px rgba(230, 57, 70, 0.5);
-$focus-success-strong: 0 0 0 2px rgba(46, 204, 113, 0.5);
-
-$shadow-gold: 0 4px 12px rgba(224, 159, 62, 0.3);
-
-$shadow-red: 0 4px 12px rgba(230, 57, 70, 0.3);
-
-
-$shadow-pirate-sm: 2px 2px 0 $black;
-$shadow-pirate-md: 3px 3px 0 $black;
-$shadow-pirate-lg: 5px 5px 0 $black;
-
-
+// puntos de quiebre para diseno responsive
 $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px
 );
+
+// sistema de grilla
 $columns: 12;
 $gutter: 16px;

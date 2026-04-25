@@ -1,0 +1,48 @@
+@use '../abstractos/variables' as *;
+
+// reset basico para todos los elementos
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// configuracion base del html
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+// fondo oscuro y texto claro en toda la pagina
+body {
+  background-color: $background;
+  color: $text;
+  min-height: 100vh;
+  padding: $spacing-lg;
+}
+
+// quitar subrayado por defecto de los enlaces
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// quitar estilos por defecto de listas
+ul, ol {
+  list-style: none;
+}
+
+// imagenes responsivas por defecto
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// botones sin estilos por defecto del navegador
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

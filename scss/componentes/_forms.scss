@@ -3,16 +3,16 @@
 // FORM GROUP
 
 .form-group {
-  margin-bottom: v.$spacing-16;
+  margin-bottom: v.$spacing-md;
 }
 
 // LABEL
 
 .label {
   display: block;
-  margin-bottom: v.$spacing-4;
+  margin-bottom: v.$spacing-xs;
   color: v.$gold-bright;
-  font-weight: 600;
+  font-weight: v.$fw-semibold;
   letter-spacing: 0.5px;
 }
 
@@ -21,14 +21,14 @@
 %input-base {
   width: 100%;
   display: block;
-  margin-bottom: v.$spacing-12;
-  padding: v.$spacing-12 v.$spacing-16;
+  margin-bottom: v.$spacing-md;
+  padding: v.$spacing-sm v.$spacing-md;
   border: 1px solid v.$secondary;
   border-radius: v.$border-radius;
   background: v.$surface;
   color: v.$text;
-  transition: all 0.2s ease;
-   box-shadow: v.$shadow-sm;
+  transition: v.$transition-rapida;
+  box-shadow: v.$shadow-sm;
 
   &::placeholder {
     color: v.$text-muted;
@@ -37,7 +37,7 @@
   &:focus {
     outline: none;
     border-color: v.$accent;
-    box-shadow: v.$focus-accent;
+    box-shadow: 0 0 0 2px rgba(v.$accent, 0.3);
   }
 }
 
@@ -56,16 +56,16 @@ select {
 // TIPOS ESPECIALES
 
 textarea {
-  min-height: v.$spacing-48 + v.$spacing-48 + v.$spacing-32;
+  min-height: v.$spacing-xxl + v.$spacing-xxl + v.$spacing-xl;
   resize: vertical;
 }
 
 input[type="color"] {
   display: block;
-  width: v.$spacing-48;
-  height: v.$spacing-36;
-  padding: v.$spacing-4;
-  margin-bottom: v.$spacing-12;
+  width: v.$spacing-xxl;
+  height: v.$spacing-xl;
+  padding: v.$spacing-xs;
+  margin-bottom: v.$spacing-md;
   border: 1px solid v.$secondary;
   border-radius: v.$border-radius;
   background: v.$surface;
@@ -75,8 +75,8 @@ input[type="color"] {
 input[type="file"] {
   display: block;
   width: 100%;
-  margin-bottom: v.$spacing-12;
-  padding: v.$spacing-8;
+  margin-bottom: v.$spacing-md;
+  padding: v.$spacing-sm;
   border: 1px solid v.$secondary;
   border-radius: v.$border-radius;
   background: v.$surface;
@@ -84,14 +84,14 @@ input[type="file"] {
   cursor: pointer;
 
   &::file-selector-button {
-    margin-right: v.$spacing-12;
-    padding: v.$spacing-4 v.$spacing-12;
-    border: 2px solid v.$black;
+    margin-right: v.$spacing-md;
+    padding: v.$spacing-xs v.$spacing-md;
+    border: 2px solid v.$primary;
     border-radius: v.$border-radius;
     background: v.$pirate-red;
-    color: v.$white;
-    font-weight: 700;
-    box-shadow: v.$shadow-pirate-sm;
+    color: #fff;
+    font-weight: v.$fw-bold;
+    box-shadow: v.$shadow-sm;
     cursor: pointer;
   }
 }
@@ -106,7 +106,7 @@ input[type="month"] {
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
-  margin: 0 v.$spacing-4 0 0;
+  margin: 0 v.$spacing-xs 0 0;
   accent-color: v.$pirate-red;
   cursor: pointer;
   vertical-align: middle;
@@ -115,8 +115,8 @@ input[type="radio"] {
 .form-check {
   display: flex;
   align-items: center;
-  gap: v.$spacing-8;
-  margin-bottom: v.$spacing-8;
+  gap: v.$spacing-sm;
+  margin-bottom: v.$spacing-sm;
   color: v.$text;
 }
 
@@ -130,22 +130,22 @@ textarea:invalid:not(:placeholder-shown) {
 input:not([type="checkbox"]):not([type="radio"]):focus:invalid:not(:placeholder-shown),
 textarea:focus:invalid:not(:placeholder-shown) {
   border-color: v.$danger;
-  box-shadow: v.$focus-danger;
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.3);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):focus:valid:not(:placeholder-shown),
 textarea:focus:valid:not(:placeholder-shown) {
   border-color: v.$success;
-  box-shadow: v.$focus-success;
+  box-shadow: 0 0 0 2px rgba(v.$success, 0.3);
 }
 
 // MENSAJES
 
 .input-error-message {
   display: none;
-  margin-top: v.$spacing-4;
+  margin-top: v.$spacing-xs;
   color: v.$danger;
-  font-size: 12px;
+  font-size: v.$font-xs;
 }
 
 input:invalid:not(:placeholder-shown) + .input-error-message {
@@ -167,38 +167,6 @@ input:invalid:not(:placeholder-shown) + .input-error-message {
   cursor: pointer;
 }
 
-// BOTON
-
-.btn {
-  display: inline-block;
-  padding: v.$spacing-8 v.$spacing-16;
-  border: 2px solid v.$black;
-  border-radius: v.$border-radius;
-  background: v.$pirate-red;
-  color: v.$white;
-  font-weight: bold;
-  box-shadow: v.$shadow-pirate-md;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: v.$shadow-pirate-lg;
-  }
-
-  &:active {
-    transform: translate(1px, 1px);
-    box-shadow: v.$shadow-pirate-sm;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: v.$shadow-pirate-md;
-  }
-}
-
 // ESTADOS MANUALES
 
 .input-success {
@@ -210,11 +178,11 @@ input:invalid:not(:placeholder-shown) + .input-error-message {
 }
 
 .input-success:focus {
-  box-shadow: v.$focus-success-strong;
+  box-shadow: 0 0 0 2px rgba(v.$success, 0.4);
 }
 
 .input-error:focus {
-  box-shadow: v.$focus-danger-strong;
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.4);
 }
 
 // DISABLED

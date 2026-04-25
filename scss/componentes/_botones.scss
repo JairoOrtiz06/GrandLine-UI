@@ -1,0 +1,85 @@
+@use '../abstractos/variables' as *;
+@use '../abstractos/mixins' as *;
+
+
+// CLASE BASE: .btn
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  // Estado: deshabilitado
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+
+// VARIANTES SOLID (con relleno de color)
+
+// Primario - color principal del framework
+.btn-p {
+  @include boton-color($accent, $primary);
+}
+
+// boton secundario 
+.btn-s {
+  @include boton-color($gold-bright, $primary);
+}
+
+// Éxito (verde)
+.btn-e {
+  @include boton-color($success, #fff);
+}
+
+// Danger / Peligro (rojo)
+.btn-d {
+  @include boton-color($danger, #fff);
+}
+
+// Warning / Advertencia (naranja)
+.btn-w {
+  @include boton-color($warning, $primary);
+}
+
+// Info / Información (azul)
+.btn-i {
+  @include boton-color($info, #fff);
+}
+
+// VARIANTES OUTLINE (solo borde)
+// Se nombran btn-o-X donde X es la inicial
+
+.btn-o-p { @include boton-borde($accent); }   // Outline primario (usa acento por contraste)
+.btn-o-s { @include boton-borde($text-muted); } // Outline secundario
+.btn-o-e { @include boton-borde($success); }   // Outline éxito
+.btn-o-d { @include boton-borde($danger); }    // Outline danger
+.btn-o-w { @include boton-borde($warning); }   // Outline warning
+.btn-o-i { @include boton-borde($info); }      // Outline info
+
+// TAMAÑOS
+// Pequeño
+.btn-sm {
+  padding: $spacing-xs $spacing-md;
+  font-size: 0.85rem;
+}
+
+// Mediano 
+.btn-md {
+  padding: $spacing-sm $spacing-lg;
+  font-size: 1rem;
+}
+
+// Grande
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: 1.2rem;
+}

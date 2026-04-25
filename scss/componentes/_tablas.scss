@@ -19,15 +19,15 @@
 }
 
 .table th {
-  padding: v.$spacing-12 v.$spacing-16;
+  padding: v.$spacing-sm v.$spacing-md;
   text-align: left;
   color: v.$gold-bright;
-  font-weight: bold;
+  font-weight: v.$fw-bold;
   border-bottom: 2px solid v.$secondary;
 }
 
 .table td {
-  padding: v.$spacing-12 v.$spacing-16;
+  padding: v.$spacing-sm v.$spacing-md;
   border-bottom: 1px solid v.$secondary;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .table-striped tbody tr:nth-child(even) {
-
-background: rgba(255, 255, 255, 0.05);}
+  background: rgba(255, 255, 255, 0.05);
+}
 
 .table-bordered {
   border: 2px solid v.$secondary;
@@ -49,5 +49,5 @@ background: rgba(255, 255, 255, 0.05);}
   border: 1px solid v.$secondary;
 }
 .table-pirate {
-  box-shadow: v.$shadow-pirate-md;
+  box-shadow: v.$shadow-md;
 }
