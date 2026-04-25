@@ -459,4 +459,218 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #14213D;
+  color: #E0E6F0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: linear-gradient(to right, #0D1B2A, #1B263B);
+}
+
+.table th {
+  padding: 8px 16px;
+  text-align: left;
+  color: #FFD166;
+  font-weight: 700;
+  border-bottom: 2px solid #1B263B;
+}
+
+.table td {
+  padding: 8px 16px;
+  border-bottom: 1px solid #1B263B;
+}
+
+.table tbody tr:hover {
+  background: rgba(224, 159, 62, 0.15);
+  transform: scale(1.01);
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-bordered {
+  border: 2px solid #1B263B;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #1B263B;
+}
+
+.table-pirate {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  color: #FFD166;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.select, input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file]),
+textarea,
+select, .input {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  padding: 24px 24px;
+  border: 1px solid #1B263B;
+  border-radius: 8px;
+  background: #14213D;
+  color: #E0E6F0;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.select::placeholder, input:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file])::placeholder,
+textarea::placeholder,
+select::placeholder, .input::placeholder {
+  color: #A0AEC0;
+}
+.select:focus, input:focus:not([type=checkbox]):not([type=radio]):not([type=color]):not([type=file]),
+textarea:focus,
+select:focus, .input:focus {
+  outline: none;
+  border-color: #E09F3E;
+  box-shadow: 0 0 0 2px rgba(224, 159, 62, 0.3);
+}
+
+textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+input[type=color] {
+  display: block;
+  width: 48px;
+  height: 32px;
+  padding: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1B263B;
+  border-radius: 8px;
+  background: #14213D;
+  cursor: pointer;
+}
+
+input[type=file] {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #1B263B;
+  border-radius: 8px;
+  background: #14213D;
+  color: #E0E6F0;
+  cursor: pointer;
+}
+input[type=file]::file-selector-button {
+  margin-right: 16px;
+  padding: 4px 16px;
+  border: 2px solid #0D1B2A;
+  border-radius: 8px;
+  background: #E63946;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input[type=date],
+input[type=time],
+input[type=week],
+input[type=month] {
+  cursor: pointer;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  width: auto;
+  margin: 0 4px 0 0;
+  accent-color: #E63946;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #E0E6F0;
+}
+
+input:not([type=checkbox]):not([type=radio]):invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: #E63946;
+}
+
+input:not([type=checkbox]):not([type=radio]):focus:invalid:not(:placeholder-shown),
+textarea:focus:invalid:not(:placeholder-shown) {
+  border-color: #E63946;
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
+}
+
+input:not([type=checkbox]):not([type=radio]):focus:valid:not(:placeholder-shown),
+textarea:focus:valid:not(:placeholder-shown) {
+  border-color: #2ECC71;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.3);
+}
+
+.input-error-message {
+  display: none;
+  margin-top: 4px;
+  color: #E63946;
+  font-size: 0.75rem;
+}
+
+input:invalid:not(:placeholder-shown) + .input-error-message {
+  display: block;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.checkbox {
+  width: auto;
+  accent-color: #E63946;
+  cursor: pointer;
+}
+
+.input-success {
+  border-color: #2ECC71;
+}
+
+.input-error {
+  border-color: #E63946;
+}
+
+.input-success:focus {
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.4);
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.4);
+}
+
+.input:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /*# sourceMappingURL=style.css.map */

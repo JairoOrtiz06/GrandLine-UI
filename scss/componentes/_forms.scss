@@ -1,0 +1,196 @@
+@use '../abstractos/variables' as v;
+
+// FORM GROUP
+
+.form-group {
+  margin-bottom: v.$spacing-md;
+}
+
+// LABEL
+
+.label {
+  display: block;
+  margin-bottom: v.$spacing-xs;
+  color: v.$gold-bright;
+  font-weight: v.$fw-semibold;
+  letter-spacing: 0.5px;
+}
+
+// INPUT BASE
+
+%input-base {
+  width: 100%;
+  display: block;
+  margin-bottom: v.$spacing-md;
+  padding: v.$spacing-lg v.$spacing-lg;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  color: v.$text;
+  transition: v.$transition-rapida;
+  box-shadow: v.$shadow-sm;
+
+  &::placeholder {
+    color: v.$text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$accent;
+    box-shadow: 0 0 0 2px rgba(v.$accent, 0.3);
+  }
+}
+
+.input {
+  @extend %input-base;
+}
+
+// HERENCIA
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]),
+textarea,
+select {
+  @extend %input-base;
+}
+
+// TIPOS ESPECIALES
+
+textarea {
+  min-height: v.$spacing-xxl + v.$spacing-xxl + v.$spacing-xl;
+  resize: vertical;
+}
+
+input[type="color"] {
+  display: block;
+  width: v.$spacing-xxl;
+  height: v.$spacing-xl;
+  padding: v.$spacing-xs;
+  margin-bottom: v.$spacing-md;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  margin-bottom: v.$spacing-md;
+  padding: v.$spacing-sm;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  background: v.$surface;
+  color: v.$text;
+  cursor: pointer;
+
+  &::file-selector-button {
+    margin-right: v.$spacing-md;
+    padding: v.$spacing-xs v.$spacing-md;
+    border: 2px solid v.$primary;
+    border-radius: v.$border-radius;
+    background: v.$pirate-red;
+    color: #fff;
+    font-weight: v.$fw-bold;
+    box-shadow: v.$shadow-sm;
+    cursor: pointer;
+  }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 v.$spacing-xs 0 0;
+  accent-color: v.$pirate-red;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-sm;
+  margin-bottom: v.$spacing-sm;
+  color: v.$text;
+}
+
+// VALIDACIONES
+
+input:not([type="checkbox"]):not([type="radio"]):invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: v.$danger;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus:invalid:not(:placeholder-shown),
+textarea:focus:invalid:not(:placeholder-shown) {
+  border-color: v.$danger;
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.3);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus:valid:not(:placeholder-shown),
+textarea:focus:valid:not(:placeholder-shown) {
+  border-color: v.$success;
+  box-shadow: 0 0 0 2px rgba(v.$success, 0.3);
+}
+
+// MENSAJES
+
+.input-error-message {
+  display: none;
+  margin-top: v.$spacing-xs;
+  color: v.$danger;
+  font-size: v.$font-xs;
+}
+
+input:invalid:not(:placeholder-shown) + .input-error-message {
+  display: block;
+}
+
+// SELECT
+
+.select {
+  @extend %input-base;
+  cursor: pointer;
+}
+
+// CHECKBOX
+
+.checkbox {
+  width: auto;
+  accent-color: v.$pirate-red;
+  cursor: pointer;
+}
+
+// ESTADOS MANUALES
+
+.input-success {
+  border-color: v.$success;
+}
+
+.input-error {
+  border-color: v.$danger;
+}
+
+.input-success:focus {
+  box-shadow: 0 0 0 2px rgba(v.$success, 0.4);
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.4);
+}
+
+// DISABLED
+
+.input:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
