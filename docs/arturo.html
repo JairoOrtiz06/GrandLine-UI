@@ -18,37 +18,104 @@
 
     <!-- BOTONES CON RELLENO (SOLID) -->
 
-    <button class="btn btn-p">Botón Primario</button>
-    <button class="btn btn-s">Botón Secundario</button>
-    <button class="btn btn-e">Botón Éxito</button>
-    <button class="btn btn-d">Botón Peligro</button>
-    <button class="btn btn-w">Botón Advertencia</button>
-    <button class="btn btn-i">Botón Información</button>
+    <button class="btn btn-pr">Botón Primario</button>
+    <button class="btn btn-se">Botón Secundario</button>
+    <button class="btn btn-ex">Botón Éxito</button>
+    <button class="btn btn-pe">Botón Peligro</button>
+    <button class="btn btn-ad">Botón Advertencia</button>
+    <button class="btn btn-in">Botón Información</button>
 
     <!-- BOTONES CON BORDE (OUTLINE) -->
 
-    <button class="btn btn-o-p">Outline Primario</button>
-    <button class="btn btn-o-s">Outline Secundario</button>
-    <button class="btn btn-o-e">Outline Éxito</button>
-    <button class="btn btn-o-d">Outline Peligro</button>
-    <button class="btn btn-o-w">Outline Advertencia</button>
-    <button class="btn btn-o-i">Outline Información</button>
+    <button class="btn btn-o-pr">Outline Primario</button>
+    <button class="btn btn-o-se">Outline Secundario</button>
+    <button class="btn btn-o-ex">Outline Éxito</button>
+    <button class="btn btn-o-pe">Outline Peligro</button>
+    <button class="btn btn-o-ad">Outline Advertencia</button>
+    <button class="btn btn-o-in">Outline Información</button>
 
     <!-- TAMAÑOS -->
 
-    <button class="btn btn-p btn-sm">Botón Pequeño</button>
-    <button class="btn btn-p btn-md">Botón Mediano</button>
-    <button class="btn btn-p btn-lg">Botón Grande</button>
+    <button class="btn btn-pr btn-sm">Botón Pequeño</button>
+    <button class="btn btn-pr btn-md">Botón Mediano</button>
+    <button class="btn btn-pr btn-lg">Botón Grande</button>
 
     <!-- ESTADO DESHABILITADO -->
 
-    <button class="btn btn-p" disabled>Botón Desactivado</button>
-    <button class="btn btn-d" disabled>Peligro Desactivado</button>
+    <button class="btn btn-pr" disabled>Botón Desactivado</button>
+    <button class="btn btn-ad" disabled>Peligro Desactivado</button>
 
     <!-- COMBINACIONES (variante + tamaño) -->
 
-    <button class="btn btn-e btn-lg">Éxito Grande</button>
-    <button class="btn btn-o-d btn-sm">Peligro Outline Pequeño</button>
+    <button class="btn btn-ex btn-lg">Éxito Grande</button>
+    <button class="btn btn-o-ad btn-sm">Peligro Outline Pequeño</button>
+
+    <br>
+    <br>
+    <h1>ALERTAS</h1>
+
+    <h3>Alertas básicas (solo texto)</h3>
+    <div class="alert alert-ex">
+        <span class="alert-icono">✓</span>
+        <span class="alert-contenido">¡Navegación exitosa hacia la Grand Line!</span>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-pe">
+        <span class="alert-icono">⚠</span>
+        <span class="alert-contenido">¡Peligro! Marines detectados en el horizonte.</span>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-ad">
+        <span class="alert-icono">!</span>
+        <span class="alert-contenido">Precaución: tormenta en aguas cercanas.</span>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-in">
+        <span class="alert-icono">ⓘ</span>
+        <span class="alert-contenido">Información: el Log Pose indica una nueva isla.</span>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <h3>Alertas con título y descripción</h3>
+    <div class="alert alert-ex">
+        <span class="alert-icono">⚓</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Éxito en la batalla</h4>
+            <p class="alert-texto">Has derrotado al almirante y liberado la isla.</p>
+        </div>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-pe">
+        <span class="alert-icono">☠</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Peligro extremo</h4>
+            <p class="alert-texto">Un Yonko se aproxima a tu ubicación. ¡Prepara las armas!</p>
+        </div>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-ad">
+        <span class="alert-icono">⚠</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Advertencia del navegante</h4>
+            <p class="alert-texto">Las corrientes cambiarán de dirección en pocas horas.</p>
+        </div>
+        <button class="alert-cerrar">×</button>
+    </div>
+
+    <div class="alert alert-in">
+        <span class="alert-icono">📜</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Mensaje del rey pirata</h4>
+            <p class="alert-texto">El One Piece existe y está en Raftel.</p>
+        </div>
+        <button class="alert-cerrar">×</button>
+    </div>
+
 
 </body>
 

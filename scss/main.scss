@@ -1,4 +1,4 @@
-//  variables y mixins
+// variables y mixins
 @use 'abstractos/variables' as *;
 @use 'abstractos/mixins' as *;
 
@@ -10,6 +10,7 @@
 @use 'layout/container';
 
 // componentes
+@use 'componentes/alertas';
 @use 'componentes/botones';
 @use 'componentes/tablas';
 @use 'componentes/forms';

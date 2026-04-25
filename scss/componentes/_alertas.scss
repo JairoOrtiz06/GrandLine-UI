@@ -1,0 +1,100 @@
+@use '../abstractos/variables' as *;
+@use '../abstractos/mixins' as *;
+
+// clase base para todas las alertas
+.alert {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-md;
+  border-radius: $border-radius;
+  font-family: $font-texto;
+  font-size: $font-base;
+  font-weight: 500;
+  box-shadow: $shadow-sm;
+  transition: $transition-normal;
+}
+
+// efecto hover sutil para todas las alertas
+.alert:hover {
+  transform: translateX(4px);
+  box-shadow: $shadow-md;
+}
+
+// alerta de exito color verde
+.alert-ex {
+  @include alerta-color($success);
+}
+
+// alerta de peligro color rojo
+.alert-pe {
+  @include alerta-color($danger);
+}
+
+// alerta de advertencia color naranja
+.alert-ad {
+  @include alerta-color($warning);
+}
+
+// alerta de informacion color azul
+.alert-in {
+  @include alerta-color($info);
+}
+
+// alerta primaria color dorado
+.alert-pr {
+  @include alerta-color($accent);
+}
+
+// alerta secundaria color dorado brillante
+.alert-se {
+  @include alerta-color($gold-bright);
+}
+
+// titulo dentro de la alerta
+.alert-titulo {
+  font-family: $font-titulo;
+  font-size: $font-lg;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-xs;
+  text-transform: uppercase;
+}
+
+// texto descriptivo de la alerta
+.alert-texto {
+  font-size: $font-sm;
+  opacity: 0.9;
+  margin: 0;
+}
+
+// contenedor del contenido para que tome el espacio disponible
+.alert-contenido {
+  flex: 1;
+}
+
+// icono de la alerta
+.alert-icono {
+  font-size: $font-xl;
+  flex-shrink: 0;
+}
+
+// boton para cerrar la alerta
+.alert-cerrar {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: $font-xl;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 0 $spacing-xs;
+  transition: $transition-rapida;
+}
+
+// efecto hover en el boton cerrar
+.alert-cerrar:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
