@@ -1,26 +1,23 @@
 @use 'variables' as *;
-//BOTONES
-// MIXIN 1: Botón con fondo de color (SOLID)
-// Recibe: color de fondo y color de texto
+@use 'sass:color';
 
+// mixin para botones con relleno de color
 @mixin boton-color($fondo, $texto) {
   background-color: $fondo;
   color: $texto;
   border: 2px solid $fondo;
 
   &:hover {
-    background-color: darken($fondo, 10%);
-    border-color: darken($fondo, 10%);
+    background-color: color.adjust($fondo, $lightness: -10%);
+    border-color: color.adjust($fondo, $lightness: -10%);
   }
 
   &:active {
-    background-color: darken($fondo, 20%);
+    background-color: color.adjust($fondo, $lightness: -20%);
   }
 }
 
-// MIXIN 2: Botón con borde (OUTLINE)
-// Recibe: color del borde y texto
-
+// mixin para botones con solo borde
 @mixin boton-borde($color) {
   background-color: transparent;
   color: $color;
@@ -32,7 +29,7 @@
   }
 
   &:active {
-    background-color: darken($color, 15%);
-    border-color: darken($color, 15%);
+    background-color: color.adjust($color, $lightness: -15%);
+    border-color: color.adjust($color, $lightness: -15%);
   }
 }

@@ -27,12 +27,12 @@
 
 // Primario - color principal del framework
 .btn-p {
-  @include boton-color($primary, $text);
+  @include boton-color($accent, $primary);
 }
 
-// Secundario - color secundario
+// boton secundario 
 .btn-s {
-  @include boton-color($secondary, $text);
+  @include boton-color($gold-bright, $primary);
 }
 
 // Éxito (verde)
@@ -55,10 +55,8 @@
   @include boton-color($info, #fff);
 }
 
-// --------------------------------------------
 // VARIANTES OUTLINE (solo borde)
 // Se nombran btn-o-X donde X es la inicial
-// --------------------------------------------
 
 .btn-o-p { @include boton-borde($accent); }   // Outline primario (usa acento por contraste)
 .btn-o-s { @include boton-borde($text-muted); } // Outline secundario

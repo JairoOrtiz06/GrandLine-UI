@@ -1,52 +1,75 @@
+// colores principales del tema pirata
+$primary: #0D1B2A;
+$secondary: #1B263B;
+$accent: #E09F3E;
+$pirate-red: #E63946;
+$gold-bright: #FFD166;
 
+// fondos de la pagina
+$background: #0A192F;
+$surface: #14213D;
 
-$primary: #0D1B2A;        
-$secondary: #1B263B;      
-$accent: #E09F3E;        
-$pirate-red: #E63946;     
-$gold-bright: #FFD166;    
-
-
-// FONDOS
-
-$background: #0A192F;     
-$surface: #14213D;        
-
-
-// TEXTO
-
+// colores de texto
 $text: #E0E6F0;
 $text-muted: #A0AEC0;
 
-
-// COLORES SEMÁNTICOS
-
+// colores semanticos para alertas y estados
 $success: #2ECC71;
 $danger: #E63946;
 $warning: #F4A261;
 $info: #3A86FF;
 
+// tipografia del framework
+$font-titulo: 'Cinzel', serif;
+$font-texto: 'Inter', 'Segoe UI', Arial, sans-serif;
+$font-codigo: 'Courier New', monospace;
 
-// ESPACIADOS 
+// tamaños de fuente
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-base: 1rem;
+$font-lg: 1.25rem;
+$font-xl: 1.5rem;
+$font-2xl: 2rem;
+$font-3xl: 2.5rem;
+$font-4xl: 3.5rem;
 
+// pesos de fuente
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
 
+// espaciados del framework
 $spacing-xs: 4px;
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 32px;
+$spacing-xxl: 48px;
 
-// BORDES Y SOMBRAS
-
-
+// bordes redondeados
+$border-radius-sm: 4px;
 $border-radius: 8px;
 $border-radius-lg: 12px;
+$border-radius-pill: 50rem;
 
-$shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
-$shadow-md: 0 4px 8px rgba(0,0,0,0.3);
-$shadow-lg: 0 8px 16px rgba(0,0,0,0.4);
+// sombras en tres niveles
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
 
+// transiciones estandar
+$transition-rapida: all 0.15s ease;
+$transition-normal: all 0.3s ease;
+$transition-lenta: all 0.5s ease;
 
+// z-index para componentes apilables
+$z-dropdown: 100;
+$z-navbar: 500;
+$z-modal: 1000;
+$z-tooltip: 1500;
+
+// puntos de quiebre para diseño responsive
 $breakpoints: (
   sm: 576px,
   md: 768px,
@@ -54,7 +77,6 @@ $breakpoints: (
   xl: 1200px
 );
 
-
-
+// sistema de grilla
 $columns: 12;
 $gutter: 16px;
