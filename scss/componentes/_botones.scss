@@ -23,47 +23,45 @@
 }
 
 
-// VARIANTES SOLID (con relleno de color)
+// VARIANTES SOLID 
 
-// Primario - color principal del framework
-.btn-p {
+// Primario 
+.btn-pr {
   @include boton-color($accent, $primary);
 }
 
 // boton secundario 
-.btn-s {
+.btn-se {
   @include boton-color($gold-bright, $primary);
 }
 
 // Éxito (verde)
-.btn-e {
+.btn-ex {
   @include boton-color($success, #fff);
 }
 
 // Danger / Peligro (rojo)
-.btn-d {
+.btn-pe {
   @include boton-color($danger, #fff);
 }
 
 // Warning / Advertencia (naranja)
-.btn-w {
+.btn-ad {
   @include boton-color($warning, $primary);
 }
 
 // Info / Información (azul)
-.btn-i {
+.btn-in {
   @include boton-color($info, #fff);
 }
 
 // VARIANTES OUTLINE (solo borde)
-// Se nombran btn-o-X donde X es la inicial
-
-.btn-o-p { @include boton-borde($accent); }   // Outline primario (usa acento por contraste)
-.btn-o-s { @include boton-borde($text-muted); } // Outline secundario
-.btn-o-e { @include boton-borde($success); }   // Outline éxito
-.btn-o-d { @include boton-borde($danger); }    // Outline danger
-.btn-o-w { @include boton-borde($warning); }   // Outline warning
-.btn-o-i { @include boton-borde($info); }      // Outline info
+.btn-o-pr { @include boton-borde($accent); }   // Outline primario
+.btn-o-se { @include boton-borde($text-muted); } // Outline secundario
+.btn-o-ex { @include boton-borde($success); }   // Outline éxito
+.btn-o-pe { @include boton-borde($danger); }    // Outline danger
+.btn-o-ad { @include boton-borde($warning); }   // Outline warning
+.btn-o-in { @include boton-borde($info); }      // Outline info
 
 // TAMAÑOS
 // Pequeño

@@ -1,6 +1,9 @@
 @use 'variables' as *;
 @use 'sass:color';
 
+
+//MIXINS PARA LOS COMPONENTES (NO ME LOS BAYAN A BORRRAR...)
+//BOTONES
 // mixin para botones con relleno de color
 @mixin boton-color($fondo, $texto) {
   background-color: $fondo;
@@ -32,4 +35,12 @@
     background-color: color.adjust($color, $lightness: -15%);
     border-color: color.adjust($color, $lightness: -15%);
   }
+}
+
+//ALERTAS
+// mixin para crear alertas con color tematico
+@mixin alerta-color($color) {
+  background-color: rgba($color, 0.15);
+  color: $color;
+  border-left: 4px solid $color;
 }
