@@ -1,0 +1,232 @@
+@use '../abstractos/variables' as *;
+@use '../abstractos/mixins' as *;
+
+// --------------------------------------------
+// CLASE BASE .btn
+// --------------------------------------------
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  
+  padding: $spacing-sm $spacing-lg;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  user-select: none;
+  
+  transition: all 0.25s ease-in-out;
+  box-shadow: $shadow-sm;
+
+  // Estado: foco (accesibilidad)
+  &:focus-visible {
+    outline: 3px solid $gold-bright;
+    outline-offset: 2px;
+  }
+
+  // Estado: deshabilitado
+  &:disabled,
+  &.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+// --------------------------------------------
+// 🎨 VARIANTES SOLID (rellenas)
+// Cada una representa a un personaje/facción
+// --------------------------------------------
+
+// 🔴 LUFFY - Capitán de los Sombrero de Paja (rojo pirata)
+.btn-luffy {
+  @include btn-variant($pirate-red, #fff);
+}
+
+// 🟡 SANJI - El cocinero (dorado brillante)
+.btn-sanji {
+  @include btn-variant($gold-bright, $primary);
+}
+
+// 🟠 NAMI - La navegante (acento naranja)
+.btn-nami {
+  @include btn-variant($accent, $primary);
+}
+
+// 🔵 MARINE - La Marina (azul oscuro)
+.btn-marine {
+  @include btn-variant($secondary, #fff);
+}
+
+// 🟢 ZORO - El espadachín (verde éxito)
+.btn-zoro {
+  @include btn-variant($success, #fff);
+}
+
+// ⚫ GHOST - Perona / Fantasma (sutil)
+.btn-ghost {
+  @include btn-variant($surface, $text);
+}
+
+// --------------------------------------------
+// 🎨 VARIANTES OUTLINE (bordeadas)
+// Estilo "Se busca" - contorno sin relleno
+// --------------------------------------------
+
+.btn-outline-luffy {
+  @include btn-outline-variant($pirate-red);
+}
+
+.btn-outline-sanji {
+  @include btn-outline-variant($gold-bright);
+}
+
+.btn-outline-nami {
+  @include btn-outline-variant($accent);
+}
+
+.btn-outline-marine {
+  @include btn-outline-variant($text);
+}
+
+.btn-outline-zoro {
+  @include btn-outline-variant($success);
+}
+
+.btn-outline-ghost {
+  @include btn-outline-variant($text-muted);
+}
+
+// --------------------------------------------
+// 📏 TAMAÑOS
+// --------------------------------------------
+
+// Pequeño - "Chopper" 🦌
+.btn-sm {
+  padding: $spacing-xs $spacing-md;
+  font-size: 0.8125rem;
+  border-radius: $border-radius - 2;
+}
+
+// Mediano (default) - ya definido en .btn
+// "Nakama" ⚓
+
+// Grande - "Jinbei" 🐋
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: 1.125rem;
+  border-radius: $border-radius-lg;
+}
+
+// Extra Grande - "Gear Fifth" 🌟 (bonus)
+.btn-xl {
+  padding: $spacing-lg ($spacing-xl + $spacing-sm);
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: $border-radius-lg;
+  letter-spacing: 1px;
+}
+
+// --------------------------------------------
+// 🎭 MODIFICADORES ESPECIALES
+// --------------------------------------------
+
+// Botón bloque (ocupa todo el ancho)
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Botón redondeado tipo píldora
+.btn-pill {
+  border-radius: 50rem;
+}
+
+// Botón circular (para íconos)
+.btn-circle {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  
+  &.btn-sm { width: 32px; height: 32px; }
+  &.btn-lg { width: 56px; height: 56px; }
+}
+
+// --------------------------------------------
+// ⚡ BOTÓN ESPECIAL: GEAR FIFTH (animado)
+// El poder supremo de Luffy - botón legendario
+// --------------------------------------------
+.btn-gear-fifth {
+  background: linear-gradient(
+    135deg,
+    $pirate-red 0%,
+    $gold-bright 50%,
+    $accent 100%
+  );
+  background-size: 200% 200%;
+  color: $primary;
+  border: 2px solid $gold-bright;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  
+  animation: gear-fifth-pulse 3s ease infinite;
+  box-shadow: 0 0 15px rgba($gold-bright, 0.4);
+
+  &:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 25px rgba($gold-bright, 0.7);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gear-fifth-pulse {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+// --------------------------------------------
+// 👥 GRUPO DE BOTONES
+// --------------------------------------------
+.btn-group {
+  display: inline-flex;
+  
+  .btn {
+    border-radius: 0;
+    
+    &:first-child {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    
+    &:not(:first-child) {
+      margin-left: -2px; // Evita borde doble
+    }
+    
+    &:hover {
+      z-index: 1;
+    }
+  }
+}
