@@ -1,0 +1,4 @@
+@mixin col($num){
+    width: percentage($num / 12);
+    
+}
