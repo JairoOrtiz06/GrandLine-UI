@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba One Piece - Isaías</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-os mb-5">
+        <a href="index.html" class="nav-logo">GrandLine-UI</a>
+
+        <input type="checkbox" id="nav-isaias" class="nav-check">
+
+        <label for="nav-isaias" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#tripulacion" class="nav-link nav-link-activo">Tripulación</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#recompensas" class="nav-link">Recompensas</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#registro" class="nav-link">Registro</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section class="text-center mb-5">
+            <span class="badge badge-pr badge-pi mb-3">
+                Prueba de componentes
+            </span>
+
+            <h1>One Piece</h1>
+
+            <p class="fs-3 text-muted">
+                Página de práctica para probar botones, alertas, badges,
+                tablas, formularios y cards de GrandLine-UI.
+            </p>
+
+            <div class="d-flex jc-center gap-2 mt-4" style="flex-wrap: wrap;">
+                <a href="#tripulacion" class="btn btn-pr btn-lg">
+                    Ver tripulación
+                </a>
+
+                <a href="#registro" class="btn btn-o-pr btn-lg">
+                    Unirse
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-5">
+
+            <div class="alert alert-in">
+                <span class="alert-icono">i</span>
+
+                <div class="alert-contenido">
+                    <h4 class="alert-titulo">Log Pose activo</h4>
+                    <p class="alert-texto">
+                        La ruta apunta hacia una nueva isla de la Grand Line.
+                    </p>
+                </div>
+
+                <button class="alert-cerrar" type="button">×</button>
+            </div>
+
+            <div class="alert alert-ad">
+                <span class="alert-icono">!</span>
+
+                <div class="alert-contenido">
+                    <h4 class="alert-titulo">Advertencia</h4>
+                    <p class="alert-texto">
+                        Hay presencia de la Marina cerca del puerto.
+                    </p>
+                </div>
+
+                <button class="alert-cerrar" type="button">×</button>
+            </div>
+
+        </section>
+
+        <section id="tripulacion" class="mb-5">
+
+            <h2>Tripulación</h2>
+
+            <div class="d-flex gap-3" style="flex-wrap: wrap;">
+
+                <article class="card card-wa" style="flex: 1; min-width: 260px;">
+                    <div class="card-header">Wanted</div>
+
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Monkey D. Luffy</h3>
+
+                        <p class="card-text">
+                            Capitán de los Sombrero de Paja y usuario de la
+                            Gomu Gomu no Mi.
+                        </p>
+
+                        <p class="fw-bold fs-5 text-oro">
+                            3,000,000,000
+                        </p>
+
+                        <p class="text-muted">Berries</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="badge badge-pe badge-pi">
+                            Capitán
+                        </span>
+
+                        <button class="btn btn-pr btn-sm">
+                            Perfil
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card card-pi" style="flex: 1; min-width: 260px;">
+                    <div class="card-header">Espadachín</div>
+
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Roronoa Zoro</h3>
+
+                        <p class="card-text">
+                            Maestro del estilo de tres espadas y mano derecha
+                            del capitán.
+                        </p>
+
+                        <p class="fw-bold fs-5 text-oro">
+                            1,111,000,000
+                        </p>
+
+                        <p class="text-muted">Berries</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="badge badge-ex badge-pi">
+                            Santoryu
+                        </span>
+
+                        <button class="btn btn-o-pr btn-sm">
+                            Perfil
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card" style="flex: 1; min-width: 260px;">
+                    <div class="card-header">Navegante</div>
+
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Nami</h3>
+
+                        <p class="card-text">
+                            Experta en clima, mapas y rutas peligrosas
+                            del Nuevo Mundo.
+                        </p>
+
+                        <p class="fw-bold fs-5 text-oro">
+                            366,000,000
+                        </p>
+
+                        <p class="text-muted">Berries</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="badge badge-in badge-pi">
+                            Clima
+                        </span>
+
+                        <button class="btn btn-o-in btn-sm">
+                            Perfil
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
