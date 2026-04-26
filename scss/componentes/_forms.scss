@@ -1,250 +1,228 @@
 @use '../abstractos/variables' as v;
 
-// FORM GROUP
-
+// contenedor para agrupar label + input
 .form-group {
   margin-bottom: v.$spacing-md;
 }
 
-// LABEL
-
+// etiqueta de los campos
 .label {
   display: block;
   margin-bottom: v.$spacing-xs;
   color: v.$gold-bright;
-  font-weight: v.$fw-semibold;
+  font-weight: v.$fw-bold;
   letter-spacing: 0.5px;
 }
 
-// INPUT BASE
-
-%input-base {
+// estilo base de input select y textarea
+.input,
+.select,
+.textarea,
+.input-wanted,
+.input-treasure,
+.input-marine {
   width: 100%;
   display: block;
-  margin-bottom: v.$spacing-md;
-  padding: v.$spacing-lg v.$spacing-lg;
+  padding: v.$spacing-sm v.$spacing-md;
+  background-color: v.$surface;
+  color: v.$text;
   border: 1px solid v.$secondary;
   border-radius: v.$border-radius;
-  background: v.$surface;
-  color: v.$text;
+  font-family: v.$font-texto;
+  font-size: v.$font-base;
   transition: v.$transition-rapida;
   box-shadow: v.$shadow-sm;
-
-  &::placeholder {
-    color: v.$text-muted;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: v.$accent;
-    box-shadow: 0 0 0 2px rgba(v.$accent, 0.3);
-  }
 }
 
-.input {
-  @extend %input-base;
+// placeholder con color tenue
+.input::placeholder,
+.textarea::placeholder {
+  color: v.$text-muted;
 }
 
-// VARIANTES TEMATICAS
+// estado de foco con borde dorado
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: v.$accent;
+  box-shadow: 0 0 0 2px rgba(v.$accent, 0.3);
+}
 
+// variantes tematicas inspiradas en One Piece
 .input-wanted {
-  @extend %input-base;
   border: 2px solid v.$accent;
   background: #f3d7a3;
   color: v.$primary;
   font-family: v.$font-titulo;
   box-shadow: inset 0 0 0 2px rgba(v.$primary, 0.12), v.$shadow-md;
+}
 
-  &::placeholder {
-    color: rgba(v.$primary, 0.65);
-  }
+.input-wanted::placeholder {
+  color: rgba(v.$primary, 0.65);
+}
 
-  &:focus {
-    border-color: v.$pirate-red;
-    box-shadow: 0 0 0 3px rgba(v.$pirate-red, 0.25), inset 0 0 0 2px rgba(v.$primary, 0.12);
-  }
+.input-wanted:focus {
+  outline: none;
+  border-color: v.$pirate-red;
+  box-shadow: 0 0 0 3px rgba(v.$pirate-red, 0.25), inset 0 0 0 2px rgba(v.$primary, 0.12);
 }
 
 .input-treasure {
-  @extend %input-base;
   border: 2px solid v.$gold-bright;
   background: linear-gradient(135deg, v.$surface, v.$primary);
   color: v.$gold-bright;
   box-shadow: 0 0 0 1px rgba(v.$gold-bright, 0.25), 0 8px 18px rgba(0, 0, 0, 0.35);
+}
 
-  &::placeholder {
-    color: rgba(v.$gold-bright, 0.65);
-  }
+.input-treasure::placeholder {
+  color: rgba(v.$gold-bright, 0.65);
+}
 
-  &:focus {
-    border-color: v.$gold-bright;
-    box-shadow: 0 0 0 3px rgba(v.$gold-bright, 0.28), 0 10px 22px rgba(0, 0, 0, 0.42);
-  }
+.input-treasure:focus {
+  outline: none;
+  border-color: v.$gold-bright;
+  box-shadow: 0 0 0 3px rgba(v.$gold-bright, 0.28), 0 10px 22px rgba(0, 0, 0, 0.42);
 }
 
 .input-marine {
-  @extend %input-base;
   border: 2px solid v.$info;
   background: #eef6ff;
   color: v.$secondary;
   box-shadow: inset 4px 0 0 v.$info, v.$shadow-sm;
-
-  &::placeholder {
-    color: rgba(v.$secondary, 0.55);
-  }
-
-  &:focus {
-    border-color: v.$info;
-    box-shadow: 0 0 0 3px rgba(v.$info, 0.24), inset 4px 0 0 v.$info;
-  }
 }
 
-// HERENCIA
-
-input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not(.input-wanted):not(.input-treasure):not(.input-marine),
-textarea,
-select {
-  @extend %input-base;
+.input-marine::placeholder {
+  color: rgba(v.$secondary, 0.55);
 }
 
-// TIPOS ESPECIALES
+.input-marine:focus {
+  outline: none;
+  border-color: v.$info;
+  box-shadow: 0 0 0 3px rgba(v.$info, 0.24), inset 4px 0 0 v.$info;
+}
 
-textarea {
-  min-height: v.$spacing-xxl + v.$spacing-xxl + v.$spacing-xl;
+// textarea con altura minima y redimensionable
+.textarea {
+  min-height: 120px;
   resize: vertical;
 }
 
-input[type="color"] {
-  display: block;
-  width: v.$spacing-xxl;
-  height: v.$spacing-xl;
-  padding: v.$spacing-xs;
-  margin-bottom: v.$spacing-md;
-  border: 1px solid v.$secondary;
-  border-radius: v.$border-radius;
+// select con cursor pointer
+.select {
+  cursor: pointer;
+}
+
+// estilo para checkboxes y radios
+.checkbox,
+.radio {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+  border: 2px solid v.$accent;
   background: v.$surface;
-  cursor: pointer;
-}
-
-input[type="file"] {
-  display: block;
-  width: 100%;
-  margin-bottom: v.$spacing-md;
-  padding: v.$spacing-sm;
-  border: 1px solid v.$secondary;
-  border-radius: v.$border-radius;
-  background: v.$surface;
-  color: v.$text;
-  cursor: pointer;
-
-  &::file-selector-button {
-    margin-right: v.$spacing-md;
-    padding: v.$spacing-xs v.$spacing-md;
-    border: 2px solid v.$primary;
-    border-radius: v.$border-radius;
-    background: v.$pirate-red;
-    color: #fff;
-    font-weight: v.$fw-bold;
-    box-shadow: v.$shadow-sm;
-    cursor: pointer;
-  }
-}
-
-input[type="date"],
-input[type="time"],
-input[type="week"],
-input[type="month"] {
-  cursor: pointer;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin: 0 v.$spacing-xs 0 0;
-  accent-color: v.$pirate-red;
+  box-shadow: inset 0 0 0 2px rgba(v.$primary, 0.45), v.$shadow-sm;
   cursor: pointer;
   vertical-align: middle;
+  transition: v.$transition-rapida;
 }
 
+.checkbox {
+  border-radius: v.$border-radius-sm;
+}
+
+.radio {
+  border-radius: 50%;
+}
+
+.checkbox:hover,
+.radio:hover {
+  border-color: v.$gold-bright;
+  box-shadow: 0 0 0 3px rgba(v.$gold-bright, 0.18), inset 0 0 0 2px rgba(v.$primary, 0.45);
+}
+
+.checkbox:focus-visible,
+.radio:focus-visible {
+  outline: none;
+  border-color: v.$gold-bright;
+  box-shadow: 0 0 0 3px rgba(v.$gold-bright, 0.32), inset 0 0 0 2px rgba(v.$primary, 0.45);
+}
+
+.checkbox:checked {
+  border-color: v.$gold-bright;
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.2 8.3 6.4 11.4 12.8 4.6' fill='none' stroke='%230D1B2A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px 14px no-repeat,
+    v.$gold-bright;
+}
+
+.radio:checked {
+  border-color: v.$gold-bright;
+  background: radial-gradient(circle, v.$gold-bright 0 38%, v.$surface 42% 100%);
+}
+
+.checkbox:disabled,
+.radio:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+// contenedor para alinear checkbox con su etiqueta
 .form-check {
   display: flex;
   align-items: center;
   gap: v.$spacing-sm;
   margin-bottom: v.$spacing-sm;
   color: v.$text;
+  cursor: pointer;
 }
 
-// VALIDACIONES
-
-input:not([type="checkbox"]):not([type="radio"]):invalid:not(:placeholder-shown),
-textarea:invalid:not(:placeholder-shown) {
-  border-color: v.$danger;
+.form-check label {
+  cursor: pointer;
 }
 
-input:not([type="checkbox"]):not([type="radio"]):focus:invalid:not(:placeholder-shown),
-textarea:focus:invalid:not(:placeholder-shown) {
-  border-color: v.$danger;
-  box-shadow: 0 0 0 2px rgba(v.$danger, 0.3);
+// estado valido borde verde
+.input-ex {
+  border-color: v.$success;
 }
 
-input:not([type="checkbox"]):not([type="radio"]):focus:valid:not(:placeholder-shown),
-textarea:focus:valid:not(:placeholder-shown) {
+.input-ex:focus {
   border-color: v.$success;
   box-shadow: 0 0 0 2px rgba(v.$success, 0.3);
 }
 
-// MENSAJES
-
-.input-error-message {
-  display: none;
-  margin-top: v.$spacing-xs;
-  color: v.$danger;
-  font-size: v.$font-xs;
-}
-
-input:invalid:not(:placeholder-shown) + .input-error-message {
-  display: block;
-}
-
-// SELECT
-
-.select {
-  @extend %input-base;
-  cursor: pointer;
-}
-
-// CHECKBOX
-
-.checkbox {
-  width: auto;
-  accent-color: v.$pirate-red;
-  cursor: pointer;
-}
-
-// ESTADOS MANUALES
-
-.input-success {
-  border-color: v.$success;
-}
-
-.input-error {
+// estado invalido borde rojo
+.input-pe {
   border-color: v.$danger;
 }
 
-.input-success:focus {
-  box-shadow: 0 0 0 2px rgba(v.$success, 0.4);
+.input-pe:focus {
+  border-color: v.$danger;
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.3);
 }
 
-.input-error:focus {
-  box-shadow: 0 0 0 2px rgba(v.$danger, 0.4);
+// mensaje de error debajo del input
+.form-msg-pe {
+  display: block;
+  margin-top: v.$spacing-xs;
+  color: v.$danger;
+  font-size: v.$font-sm;
 }
 
-// DISABLED
+// mensaje de exito debajo del input
+.form-msg-ex {
+  display: block;
+  margin-top: v.$spacing-xs;
+  color: v.$success;
+  font-size: v.$font-sm;
+}
 
+// estado deshabilitado
 .input:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
+.select:disabled,
+.textarea:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  background-color: v.$background;
 }

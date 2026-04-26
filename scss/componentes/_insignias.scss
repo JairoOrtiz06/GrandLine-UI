@@ -1,0 +1,73 @@
+@use '../abstractos/variables' as v;
+@use '../abstractos/mixins' as *;
+
+// clase base para todas las badges
+.badge {
+  display: inline-block;
+  padding: v.$spacing-xs v.$spacing-sm;
+  font-family: v.$font-texto;
+  font-size: v.$font-xs;
+  font-weight: v.$fw-bold;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: v.$border-radius-sm;
+  box-shadow: v.$shadow-sm;
+  transition: v.$transition-rapida;
+}
+
+// efecto hover sutil
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: v.$shadow-md;
+}
+
+// badge primaria color dorado
+.badge-pr {
+  @include badge-color(v.$accent, v.$primary);
+}
+
+// badge secundaria color dorado brillante
+.badge-se {
+  @include badge-color(v.$gold-bright, v.$primary);
+}
+
+// badge de exito color verde
+.badge-ex {
+  @include badge-color(v.$success, #fff);
+}
+
+// badge de peligro color rojo
+.badge-pe {
+  @include badge-color(v.$danger, #fff);
+}
+
+// badge de advertencia color naranja
+.badge-ad {
+  @include badge-color(v.$warning, v.$primary);
+}
+
+// badge de informacion color azul
+.badge-in {
+  @include badge-color(v.$info, #fff);
+}
+
+// modificador tipo pildora bordes completamente redondeados
+.badge-pi {
+  border-radius: v.$border-radius-pill;
+  padding: v.$spacing-xs v.$spacing-md;
+}
+
+// tamaño grande para recompensas importantes
+.badge-lg {
+  font-size: v.$font-sm;
+  padding: v.$spacing-sm v.$spacing-md;
+}
+
+// tamaño pequeño para contadores
+.badge-sm {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+}

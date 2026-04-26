@@ -44,3 +44,10 @@
   color: $color;
   border-left: 4px solid $color;
 }
+
+//BADGES
+// mixin para crear badges con color solido
+@mixin badge-color($fondo, $texto) {
+  background-color: $fondo;
+  color: $texto;
+}

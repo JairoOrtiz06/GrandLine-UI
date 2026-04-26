@@ -4,7 +4,7 @@
 
 // estilos base de la pagina
 @use 'base/reset';
-@use 'base/typography';
+@use 'base/tipografia';
 
 // layout principal
 @use 'layout/container';
@@ -17,3 +17,7 @@
 @use 'componentes/botones';
 @use 'componentes/tablas';
 @use 'componentes/forms';
+@use 'componentes/insignias';
+@use 'componentes/navbar';
+@use 'componentes/tarjetas';
+
