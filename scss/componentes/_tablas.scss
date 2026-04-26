@@ -1,0 +1,61 @@
+@use '../abstractos/variables' as v;
+
+// tabla basica
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: v.$surface;
+  color: v.$text;
+  box-shadow: v.$shadow-sm;
+  border-radius: v.$border-radius;
+  overflow: hidden;
+}
+
+// encabezado con gradiente pirata
+.table thead {
+  background: linear-gradient(
+    to right,
+    v.$primary,
+    v.$secondary
+  );
+}
+
+// celdas del encabezado
+.table th {
+  padding: v.$spacing-sm v.$spacing-md;
+  text-align: left;
+  color: v.$gold-bright;
+  font-weight: v.$fw-bold;
+  border-bottom: 2px solid v.$secondary;
+}
+
+// celdas del cuerpo
+.table td {
+  padding: v.$spacing-sm v.$spacing-md;
+  border-bottom: 1px solid v.$secondary;
+}
+
+// efecto hover en filas
+.table tbody tr:hover {
+  background: rgba(224, 159, 62, 0.15);
+}
+
+// variante rayada con filas alternas
+.table-striped tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+// variante con bordes completos
+.table-bordered {
+  border: 2px solid v.$secondary;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid v.$secondary;
+}
+
+// variante pirata con sombra reforzada
+.table-pirate {
+  box-shadow: v.$shadow-md;
+}

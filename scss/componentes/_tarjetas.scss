@@ -1,0 +1,121 @@
+@use '../abstractos/variables' as v;
+
+// contenedor base de la card
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: v.$surface;
+  color: v.$text;
+  border-radius: v.$border-radius;
+  box-shadow: v.$shadow-md;
+  overflow: hidden;
+  transition: v.$transition-normal;
+  font-family: v.$font-texto;
+}
+
+// efecto hover que eleva la card
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: v.$shadow-lg;
+}
+
+// encabezado de la card
+.card-header {
+  padding: v.$spacing-md v.$spacing-lg;
+  background-color: v.$primary;
+  color: v.$gold-bright;
+  font-family: v.$font-titulo;
+  font-size: v.$font-lg;
+  font-weight: v.$fw-bold;
+  letter-spacing: 1px;
+  border-bottom: 2px solid v.$accent;
+}
+
+// cuerpo principal de la card
+.card-body {
+  padding: v.$spacing-lg;
+  flex: 1;
+}
+
+// titulo dentro del body
+.card-title {
+  font-family: v.$font-titulo;
+  font-size: v.$font-xl;
+  color: v.$gold-bright;
+  margin-bottom: v.$spacing-sm;
+  letter-spacing: 1px;
+}
+
+// texto descriptivo
+.card-text {
+  color: v.$text;
+  font-size: v.$font-base;
+  margin-bottom: v.$spacing-md;
+  line-height: 1.6;
+}
+
+// pie de la card
+.card-footer {
+  padding: v.$spacing-md v.$spacing-lg;
+  background-color: v.$background;
+  border-top: 1px solid v.$secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// imagen en la card
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+// variante pirata con borde dorado
+.card-pi {
+  border: 2px solid v.$gold-bright;
+  background-color: v.$primary;
+}
+
+// variante wanted estilo cartel de recompensa
+.card-wa {
+  background-color: v.$surface;
+  border: 4px double v.$gold-bright;
+  box-shadow: 0 0 20px rgba(255, 209, 102, 0.2);
+}
+
+.card-wa .card-header {
+  background-color: v.$gold-bright;
+  color: v.$primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: v.$font-2xl;
+  letter-spacing: 3px;
+}
+
+// variante horizontal con imagen al lado
+.card-ho {
+  flex-direction: row;
+}
+
+.card-ho .card-img {
+  width: 200px;
+  height: auto;
+}
+
+.card-ho .card-body {
+  flex: 1;
+}
+
+// responsive para cards horizontales en movil
+@media (max-width: 768px) {
+  .card-ho {
+    flex-direction: column;
+  }
+
+  .card-ho .card-img {
+    width: 100%;
+    height: 200px;
+  }
+}

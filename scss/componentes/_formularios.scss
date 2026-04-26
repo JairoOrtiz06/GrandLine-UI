@@ -1,0 +1,121 @@
+@use '../abstractos/variables' as v;
+
+// contenedor para agrupar label + input
+.form-group {
+  margin-bottom: v.$spacing-md;
+}
+
+// etiqueta de los campos
+.label {
+  display: block;
+  margin-bottom: v.$spacing-xs;
+  color: v.$gold-bright;
+  font-weight: v.$fw-bold;
+  letter-spacing: 0.5px;
+}
+
+// estilo base de input select y textarea
+.input,
+.select,
+.textarea {
+  width: 100%;
+  display: block;
+  padding: v.$spacing-sm v.$spacing-md;
+  background-color: v.$surface;
+  color: v.$text;
+  border: 1px solid v.$secondary;
+  border-radius: v.$border-radius;
+  font-family: v.$font-texto;
+  font-size: v.$font-base;
+  transition: v.$transition-rapida;
+  box-shadow: v.$shadow-sm;
+}
+
+// placeholder con color tenue
+.input::placeholder,
+.textarea::placeholder {
+  color: v.$text-muted;
+}
+
+// estado de foco con borde dorado
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: v.$accent;
+  box-shadow: 0 0 0 2px rgba(v.$accent, 0.3);
+}
+
+// textarea con altura minima y redimensionable
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+// select con cursor pointer
+.select {
+  cursor: pointer;
+}
+
+// estilo para checkboxes y radios
+.checkbox,
+.radio {
+  width: auto;
+  margin-right: v.$spacing-xs;
+  accent-color: v.$accent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+// contenedor para alinear checkbox con su etiqueta
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-sm;
+  margin-bottom: v.$spacing-sm;
+}
+
+// estado valido borde verde
+.input-ex {
+  border-color: v.$success;
+}
+
+.input-ex:focus {
+  border-color: v.$success;
+  box-shadow: 0 0 0 2px rgba(v.$success, 0.3);
+}
+
+// estado invalido borde rojo
+.input-pe {
+  border-color: v.$danger;
+}
+
+.input-pe:focus {
+  border-color: v.$danger;
+  box-shadow: 0 0 0 2px rgba(v.$danger, 0.3);
+}
+
+// mensaje de error debajo del input
+.form-msg-pe {
+  display: block;
+  margin-top: v.$spacing-xs;
+  color: v.$danger;
+  font-size: v.$font-sm;
+}
+
+// mensaje de exito debajo del input
+.form-msg-ex {
+  display: block;
+  margin-top: v.$spacing-xs;
+  color: v.$success;
+  font-size: v.$font-sm;
+}
+
+// estado deshabilitado
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: v.$background;
+}
