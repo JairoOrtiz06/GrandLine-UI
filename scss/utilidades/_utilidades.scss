@@ -51,10 +51,16 @@ $spacings: (
 .text-primary { color: v.$primary; }
 .text-secondary { color: v.$secondary; }
 .text-accent { color: v.$accent; }
+.text-gold { color: v.$gold-bright; }
+.text-pirate { color: v.$pirate-red; }
+.text-muted { color: v.$text-muted; }
 
 .bg-primary { background: v.$primary; }
 .bg-secondary { background: v.$secondary; }
 .bg-accent { background: v.$accent; }
+.bg-surface { background: v.$surface; }
+.bg-gold { background: v.$gold-bright; }
+.bg-pirate { background: v.$pirate-red; }
 
 // flexbox
 .d-flex { display: flex; }
@@ -80,8 +86,28 @@ $spacings: (
   border-radius: 12px;
 }
 
+.border {
+  border: 1px solid v.$secondary;
+}
+
+.border-accent {
+  border-color: v.$accent;
+}
+
+.border-gold {
+  border-color: v.$gold-bright;
+}
+
+.border-pirate {
+  border-color: v.$pirate-red;
+}
+
 .shadow-sm {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .shadow-lg {
