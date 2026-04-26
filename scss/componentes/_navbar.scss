@@ -1,0 +1,135 @@
+@use '../abstractos/variables' as v;
+
+// contenedor principal de la navbar
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: v.$spacing-md v.$spacing-xl;
+  background-color: v.$primary;
+  border-bottom: 2px solid v.$accent;
+  box-shadow: v.$shadow-md;
+  font-family: v.$font-texto;
+  flex-wrap: wrap;
+}
+
+// contenedor del logo
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-sm;
+  font-family: v.$font-titulo;
+  font-size: v.$font-xl;
+  color: v.$gold-bright;
+  font-weight: v.$fw-bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+// checkbox oculto que controla el menu hamburguesa
+.nav-check {
+  display: none;
+}
+
+// lista de enlaces de navegacion
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: v.$spacing-lg;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// cada item de la lista
+.nav-item {
+  position: relative;
+}
+
+// enlaces de la navbar
+.nav-link {
+  color: v.$text;
+  text-decoration: none;
+  font-size: v.$font-base;
+  font-weight: v.$fw-semibold;
+  padding: v.$spacing-xs v.$spacing-sm;
+  border-radius: v.$border-radius-sm;
+  transition: v.$transition-rapida;
+}
+
+// efecto hover en los enlaces
+.nav-link:hover {
+  color: v.$gold-bright;
+  background-color: v.$surface;
+}
+
+// enlace activo destacado
+.nav-link-activo {
+  color: v.$gold-bright;
+  border-bottom: 2px solid v.$accent;
+}
+
+// boton hamburguesa oculto en escritorio
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: v.$spacing-xs;
+}
+
+// las 3 lineas del boton hamburguesa
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: v.$gold-bright;
+  border-radius: 2px;
+  transition: v.$transition-rapida;
+}
+
+// variante oscura alternativa
+.navbar-os {
+  background-color: v.$background;
+  border-bottom: 2px solid v.$gold-bright;
+}
+
+// variante transparente
+.navbar-tr {
+  background-color: transparent;
+  border-bottom: 1px solid v.$text-muted;
+  box-shadow: none;
+}
+
+// navbar responsive para moviles
+@media (max-width: 768px) {
+  .navbar {
+    padding: v.$spacing-md;
+  }
+
+  // mostrar boton hamburguesa
+  .nav-toggle {
+    display: flex;
+  }
+
+  // menu oculto por defecto en movil
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: v.$spacing-md;
+    gap: v.$spacing-sm;
+  }
+
+  // cuando el checkbox esta marcado mostrar el menu
+  .nav-check:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  // enlaces ocupan todo el ancho en movil
+  .nav-link {
+    width: 100%;
+    padding: v.$spacing-sm;
+  }
+}
