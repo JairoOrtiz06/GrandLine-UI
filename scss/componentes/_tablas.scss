@@ -4,50 +4,161 @@
   width: 100%;
   border-collapse: collapse;
   background: v.$surface;
-  color: v.$text;
   box-shadow: v.$shadow-sm;
   border-radius: v.$border-radius;
   overflow: hidden;
+  font-family: v.$font-texto;
+  font-size: v.$font-base;
+  line-height: 1.6;
+  color: v.$text;
 }
 
 .table thead {
   background: linear-gradient(
     to right,
     v.$primary,
-    v.$secondary
+    v.$secondary,
+    v.$primary
   );
 }
 
 .table th {
-  padding: v.$spacing-sm v.$spacing-md;
+  padding: v.$spacing-md;
   text-align: left;
   color: v.$gold-bright;
   font-weight: v.$fw-bold;
-  border-bottom: 2px solid v.$secondary;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid v.$accent;
 }
 
 .table td {
-  padding: v.$spacing-sm v.$spacing-md;
+  padding: v.$spacing-md;
   border-bottom: 1px solid v.$secondary;
 }
 
-.table tbody tr:hover {
-  background: rgba(224, 159, 62, 0.15);
-  transform: scale(1.01);
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: rgba(224, 159, 62, 0.08);
 }
 
 .table-striped tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.table-hover tbody tr {
+  transition: v.$transition-normal;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(224, 159, 62, 0.16);
+  color: v.$gold-bright;
+  transform: translateX(v.$spacing-xs);
 }
 
 .table-bordered {
-  border: 2px solid v.$secondary;
+  border: 2px solid v.$accent;
+  box-shadow: inset 0 0 0 1px rgba(255, 209, 102, 0.25);
+}
+
+.table-bordered thead {
+  background: v.$secondary;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid v.$secondary;
+  border: 1px solid rgba(224, 159, 62, 0.45);
 }
+
+.table-sm th,
+.table-sm td {
+  padding: v.$spacing-xs v.$spacing-sm;
+  font-size: v.$font-sm;
+}
+
 .table-pirate {
+  background: v.$primary;
+  border: 3px solid v.$gold-bright;
+  box-shadow: 6px 6px 0 v.$pirate-red;
+}
+
+.table-pirate thead {
+  background: linear-gradient(
+    to right,
+    v.$pirate-red,
+    v.$primary 45%,
+    v.$accent
+  );
+}
+
+.table-pirate th {
+  color: v.$gold-bright;
+  font-family: v.$font-titulo;
+  border-bottom: 3px solid v.$gold-bright;
+}
+
+.table-pirate td {
+  border-bottom-color: rgba(255, 209, 102, 0.25);
+}
+
+.table-pirate tbody tr:nth-child(even) {
+  background: rgba(230, 57, 70, 0.12);
+}
+
+.table-pirate.table-hover tbody tr:hover,
+.table-pirate tbody tr:hover {
+  background: rgba(255, 209, 102, 0.18);
+  color: v.$gold-bright;
+  transform: translateX(v.$spacing-xs);
+}
+
+.table-pirate.table-bordered,
+.table-pirate.table-bordered td,
+.table-pirate.table-bordered th {
+  border-color: v.$gold-bright;
+}
+
+.table-wanted {
+  background: v.$warning;
+  color: v.$primary;
+  border: 3px double v.$primary;
   box-shadow: v.$shadow-md;
+}
+
+.table-wanted thead {
+  background: v.$gold-bright;
+}
+
+.table-wanted th {
+  color: v.$primary;
+  font-family: v.$font-titulo;
+  border-bottom: 3px double v.$primary;
+}
+
+.table-wanted td {
+  border-bottom: 1px solid rgba(13, 27, 42, 0.25);
+}
+
+.table-wanted tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.table-wanted tbody tr:nth-child(even) {
+  background: rgba(13, 27, 42, 0.08);
+}
+
+.table-wanted.table-hover tbody tr:hover,
+.table-wanted tbody tr:hover {
+  background: rgba(13, 27, 42, 0.16);
+  color: v.$pirate-red;
+  transform: translateX(v.$spacing-xs);
+}
+
+.table-wanted.table-bordered,
+.table-wanted.table-bordered td,
+.table-wanted.table-bordered th {
+  border-color: v.$primary;
 }
