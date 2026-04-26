@@ -1,15 +1,16 @@
-// variables y mixins
+//Variables y mixins
 @use 'abstractos/variables' as *;
 @use 'abstractos/mixins' as *;
 
-// estilos base de la pagina
+//estilos base de la pagina
 @use 'base/reset';
-@use 'base/tipografia';
+@use 'base/typography';
 
-// layout principal
+//layout principal
 @use 'layout/container';
+@use 'layout/grid';
 
-// componentes
+//Componentes
 @use 'componentes/alertas';
 @use 'componentes/botones';
 @use 'componentes/tablas';
@@ -19,5 +20,6 @@
 @use 'componentes/tarjetas';
 
 
-//Clases utilitarias 
 @use 'utilidades/utilidades';
+
+
