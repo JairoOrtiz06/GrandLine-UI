@@ -2,6 +2,12 @@
 @use 'sass:color';
 
 
+@mixin col($num){
+    width: percentage($num / 12);
+    
+
+}
+
 //MIXINS PARA LOS COMPONENTES (NO ME LOS BAYAN A BORRRAR...)
 //BOTONES
 // mixin para botones con relleno de color
