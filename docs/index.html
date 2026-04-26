@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandLine-UI - Framework Pirata</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">🏴‍☠️ GrandLine-UI</a>
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link nav-link-activo">Inicio</a></li>
+            <li class="nav-item"><a href="botones.html" class="nav-link">Botones</a></li>
+            <li class="nav-item"><a href="alertas.html" class="nav-link">Alertas</a></li>
+            <li class="nav-item"><a href="badges.html" class="nav-link">Badges</a></li>
+            <li class="nav-item"><a href="tablas.html" class="nav-link">Tablas</a></li>
+            <li class="nav-item"><a href="formularios.html" class="nav-link">Forms</a></li>
+            <li class="nav-item"><a href="cards.html" class="nav-link">Cards</a></li>
+        </ul>
+    </nav>
+
+    <div class="text-center mt-5 mb-5">
+        <h1>🏴‍☠️ GrandLine-UI</h1>
+        <p class="fs-lg text-muted">Framework CSS con temática One Piece</p>
+        <div class="d-flex jc-center gap-2 mt-3">
+            <span class="badge badge-pr badge-pi">v1.0.0</span>
+            <span class="badge badge-ex badge-pi">Estable</span>
+            <span class="badge badge-in badge-pi">MIT License</span>
+        </div>
+    </div>
+
+    <h2>Sobre el Proyecto</h2>
+    <div class="card card-pi mb-5">
+        <div class="card-body">
+            <p class="card-text">
+                GrandLine-UI es un framework CSS desarrollado desde cero con SASS, inspirado en el universo de One
+                Piece.
+                Incluye 7 componentes reutilizables, clases utilitarias generadas con mapas y loops, sistema de
+                nomenclatura
+                consistente con dos iniciales en español, y una identidad temática pirata con la fuente Cinzel para
+                títulos
+                y una paleta de colores del Grand Line.
+            </p>
+        </div>
+    </div>
+
+    <h2>Integrantes</h2>
+    <div class="d-flex gap-3 mb-5" style="flex-wrap: wrap;">
+        <div class="card" style="flex: 1; min-width: 280px;">
+            <div class="card-header">Jairo Ortiz</div>
+            <div class="card-body">
+                <p class="card-text">Desarrollador</p>
+                <a href="https://github.com/JairoOrtiz06" class="text-oro">github.com/JairoOrtiz06</a>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-pr badge-pi">Dev</span>
+            </div>
+        </div>
+        <div class="card" style="flex: 1; min-width: 280px;">
+            <div class="card-header">Isaias Miranda</div>
+            <div class="card-body">
+                <p class="card-text">Desarrollador</p>
+                <a href="#" class="text-oro">github.com/isaiasmiranad</a>
+            </div>
+            <div class="card-footer">
+                <span class="badge badge-pr badge-pi">Dev</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>Características</h2>
+    <div class="d-flex gap-3 mb-5" style="flex-wrap: wrap;">
+        <div class="card" style="flex: 1; min-width: 220px;">
+            <div class="card-body text-center">
+                <h4 class="card-title">🎨</h4>
+                <p class="card-text fw-bold">7 Componentes</p>
+                <p class="text-muted">Botones, alertas, badges, tablas, formularios, navbar y cards</p>
+            </div>
+        </div>
+        <div class="card" style="flex: 1; min-width: 220px;">
+            <div class="card-body text-center">
+                <h4 class="card-title">⚡</h4>
+                <p class="card-text fw-bold">SASS Moderno</p>
+                <p class="text-muted">Variables, mixins, loops con @each y arquitectura 7-1</p>
+            </div>
+        </div>
+        <div class="card" style="flex: 1; min-width: 220px;">
+            <div class="card-body text-center">
+                <h4 class="card-title">📱</h4>
+                <p class="card-text fw-bold">Responsive</p>
+                <p class="text-muted">Diseño adaptable a móviles, tablets y escritorio</p>
+            </div>
+        </div>
+        <div class="card" style="flex: 1; min-width: 220px;">
+            <div class="card-body text-center">
+                <h4 class="card-title">🏴‍☠️</h4>
+                <p class="card-text fw-bold">Temática Pirata</p>
+                <p class="text-muted">Inspirado en One Piece con paleta dorada y azul</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Instalación Rápida</h2>
+    <p class="mb-3">Sigue estos pasos para integrar GrandLine-UI en tu proyecto.</p>
+
+    <div class="alert alert-in mb-4">
+        <span class="alert-icono">ⓘ</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Paso 1: Incluye las fuentes de Google</h4>
+            <p class="alert-texto">En el head de tu HTML agrega el link de Cinzel e Inter.</p>
+        </div>
+    </div>
+
+    <div class="alert alert-in mb-4">
+        <span class="alert-icono">ⓘ</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Paso 2: Incluye el CSS del framework</h4>
+            <p class="alert-texto">Agrega el link a style.css después de las fuentes.</p>
+        </div>
+    </div>
+
+    <div class="alert alert-in mb-4">
+        <span class="alert-icono">ⓘ</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">Paso 3: Comienza a usar los componentes</h4>
+            <p class="alert-texto">Ya puedes usar las clases del framework en tu HTML.</p>
+        </div>
+    </div>
+
+    <div class="alert alert-ex mt-4 mb-5">
+        <span class="alert-icono">✓</span>
+        <div class="alert-contenido">
+            <h4 class="alert-titulo">¡Listo para navegar!</h4>
+            <p class="alert-texto">Explora los componentes en el menú superior para ver ejemplos y códigos.</p>
+        </div>
+    </div>
+
+    <h2>Componentes Disponibles</h2>
+    <table class="table table-striped mb-5">
+        <thead>
+            <tr>
+                <th>Componente</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Botones</td>
+                <td>Acciones interactivas con 6 variantes</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="botones.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Alertas</td>
+                <td>Mensajes informativos semánticos</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="alertas.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Badges</td>
+                <td>Insignias y etiquetas de estado</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="badges.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Tablas</td>
+                <td>Tablas con bordes, rayas y hover</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="tablas.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Formularios</td>
+                <td>Inputs, selects y validación</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="formularios.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Navbar</td>
+                <td>Navegación responsive sin JS</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="navbar.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+                <td>Cards</td>
+                <td>Tarjetas con header, body y footer</td>
+                <td><span class="badge badge-ex badge-pi">Listo</span></td>
+                <td><a href="cards.html" class="btn btn-pr btn-sm">Ver</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="card card-wa mb-5">
+        <div class="card-header">WANTED</div>
+        <div class="card-body text-center">
+            <h3 class="card-title">GRANDLINE-UI</h3>
+            <p class="card-text fw-bold fs-xl text-oro">100% FUNCIONAL</p>
+            <p class="text-muted">Framework pirata listo para zarpar</p>
+        </div>
+        <div class="card-footer">
+            <span class="text-muted">DEPARTAMENTO DE DESARROLLO</span>
+            <span class="badge badge-pe">ACTIVO</span>
+        </div>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <a href="botones.html" class="btn btn-pr btn-lg">Comenzar a explorar</a>
+        <a href="https://github.com/JairoOrtiz06/GrandLine-UI" class="btn btn-o-pr btn-lg">Ver en GitHub</a>
+    </div>
+
+    <!--PIE DE PAGINA -->
+
+    <footer class="bg-surface mt-5" style="margin-left: -24px; margin-right: -24px; padding: 32px 24px;">
+
+        <div class="d-flex jc-between" style="flex-wrap: wrap; gap: 32px; max-width: 1200px; margin: 0 auto;">
+
+            <div style="flex: 1; min-width: 200px;">
+                <h4 class="text-oro mb-2">Componentes</h4>
+                <p class="mb-1"><a href="botones.html" class="text-muted">Botones</a></p>
+                <p class="mb-1"><a href="alertas.html" class="text-muted">Alertas</a></p>
+                <p class="mb-1"><a href="badges.html" class="text-muted">Badges</a></p>
+                <p class="mb-1"><a href="tablas.html" class="text-muted">Tablas</a></p>
+                <p class="mb-1"><a href="cards.html" class="text-muted">Cards</a></p>
+            </div>
+
+            <div style="flex: 1; min-width: 200px;">
+                <h4 class="text-oro mb-2">Recursos</h4>
+                <p class="mb-1"><a href="index.html" class="text-muted">Inicio</a></p>
+                <p class="mb-1"><a href="formularios.html" class="text-muted">Formularios</a></p>
+                <p class="mb-1"><a href="navbar.html" class="text-muted">Navbar</a></p>
+                <p class="mb-1"><a href="utilidades.html" class="text-muted">Utilidades</a></p>
+                <p class="mb-1"><a href="https://github.com/JairoOrtiz06/GrandLine-UI" class="text-muted">GitHub</a></p>
+            </div>
+
+            <div style="flex: 1; min-width: 200px;">
+                <h4 class="text-oro mb-2">Equipo</h4>
+                <p class="text-muted mb-1">Jairo Ortiz</p>
+                <p class="text-muted mb-1">Isaias Cañas</p>
+                <p class="text-muted mb-3">Arturo Hernandez</p>
+                <p class="text-muted">2026</p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-4 pt-3"
+            style="border-top: 1px solid #1B263B; max-width: 1200px; margin: 24px auto 0;">
+            <p class="text-muted mb-0 fs-3">
+                FMO — Proyecto de Herramientas de Productividad
+            </p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
