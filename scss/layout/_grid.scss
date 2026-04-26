@@ -1,0 +1,133 @@
+@use "../abstractos/mixins";
+
+/* filas*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* columnas*/
+[class^="col-"]{
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.col-1{
+    @include mixins.col(1);
+}
+.col-2{
+    @include mixins.col(2);
+}
+.col-3{
+    @include mixins.col(3);
+}
+.col-4{
+    @include mixins.col(4);
+}
+.col-5{
+    @include mixins.col(5);
+}
+.col-6{
+    @include mixins.col(6);
+}
+.col-7{
+    @include mixins.col(7);
+}
+.col-8{
+    @include mixins.col(8);
+}
+.col-9{
+    @include mixins.col(9);
+}
+.col-10{
+    @include mixins.col(10);
+}
+.col-11{
+    @include mixins.col(11);
+}
+.col-12{
+    @include mixins.col(12);
+}
+
+/*tablet*/
+
+@media (max-width: 768px){
+    .col-md-1{
+        @include mixins.col(1);
+    }
+    .col-md-2{
+        @include mixins.col(2);
+    }
+    .col-md-3{
+        @include mixins.col(3);
+    }
+    .col-md-4{
+        @include mixins.col(4);
+    }
+    .col-md-5{
+        @include mixins.col(5);
+    }
+    .col-md-6{
+        @include mixins.col(6);
+    }
+    .col-md-7{
+        @include mixins.col(7);
+    }
+    .col-md-8{
+        @include mixins.col(8);
+    }
+    .col-md-9{
+        @include mixins.col(9);
+    }
+    .col-md-10{
+        @include mixins.col(10);
+    }
+    .col-md-11{
+        @include mixins.col(11);
+    }
+    .col-md-12{
+        @include mixins.col(12);
+    }
+}
+
+/*computadora*/
+
+@media (max-width: 992px){
+    .col-lg-1{
+        @include mixins.col(1);
+    }
+    .col-lg-2{
+        @include mixins.col(2);
+    }
+    .col-lg-3{
+        @include mixins.col(3);
+    }
+    .col-lg-4{
+        @include mixins.col(4);
+    }
+    .col-lg-5{
+        @include mixins.col(5);
+    }
+    .col-lg-6{
+        @include mixins.col(6);
+    }
+    .col-lg-7{
+        @include mixins.col(7);
+    }
+    .col-lg-8{
+        @include mixins.col(8);
+    }
+    .col-lg-9{
+        @include mixins.col(9);
+    }
+    .col-lg-10{
+        @include mixins.col(10);
+    }
+    .col-lg-11{
+        @include mixins.col(11);
+    }
+    .col-lg-12{
+        @include mixins.col(12);
+    }
+}
