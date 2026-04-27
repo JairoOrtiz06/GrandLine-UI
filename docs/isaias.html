@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba One Piece - Isaias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-os mb-5">
+            <a href="index.html" class="nav-logo">GrandLine-UI</a>
+
+            <input type="checkbox" id="nav-isaias" class="nav-check">
+            <label for="nav-isaias" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#tripulacion" class="nav-link nav-link-activo">Tripulacion</a></li>
+                <li class="nav-item"><a href="#recompensas" class="nav-link">Recompensas</a></li>
+                <li class="nav-item"><a href="#registro" class="nav-link">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-center mb-5" aria-labelledby="titulo-principal">
+            <span class="badge badge-pr badge-pi mb-3">Prueba de componentes</span>
+            <h1 id="titulo-principal">One Piece</h1>
+            <p class="fs-3 text-muted">
+                Pagina de practica para probar botones, alertas, badges, tablas, formularios y cards de GrandLine-UI.
+            </p>
+
+            <div class="d-flex jc-center gap-2 mt-4" style="flex-wrap: wrap;">
+                <a href="#tripulacion" class="btn btn-pr btn-lg">Ver tripulacion</a>
+                <a href="#registro" class="btn btn-o-pr btn-lg">Unirse</a>
+            </div>
+        </section>
+
+        <section class="mb-5" aria-labelledby="titulo-alertas">
+            <h2 id="titulo-alertas">Alertas</h2>
+
+            <article class="alert alert-in">
+                <span class="alert-icono">i</span>
+                <div class="alert-contenido">
+                    <h3 class="alert-titulo">Log Pose activo</h3>
+                    <p class="alert-texto">La ruta apunta hacia una nueva isla de la Grand Line.</p>
+                </div>
+                <button class="alert-cerrar" type="button">x</button>
+            </article>
+
+            <article class="alert alert-ad">
+                <span class="alert-icono">!</span>
+                <div class="alert-contenido">
+                    <h3 class="alert-titulo">Advertencia</h3>
+                    <p class="alert-texto">Hay presencia de la Marina cerca del puerto.</p>
+                </div>
+                <button class="alert-cerrar" type="button">x</button>
+            </article>
+        </section>
+
+        <section id="tripulacion" class="mb-5" aria-labelledby="titulo-tripulacion">
+            <h2 id="titulo-tripulacion">Tripulacion</h2>
+
+            <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                <article class="card card-wa" style="flex: 1; min-width: 260px;">
+                    <header class="card-header">Wanted</header>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Monkey D. Luffy</h3>
+                        <p class="card-text">Capitan de los Sombrero de Paja y usuario de la Gomu Gomu no Mi.</p>
+                        <p class="fw-bold fs-5 text-oro">3,000,000,000</p>
+                        <p class="text-muted">Berries</p>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="badge badge-pe badge-pi">Capitan</span>
+                        <button class="btn btn-pr btn-sm">Perfil</button>
+                    </footer>
+                </article>
+
+                <article class="card card-pi" style="flex: 1; min-width: 260px;">
+                    <header class="card-header">Espadachin</header>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Roronoa Zoro</h3>
+                        <p class="card-text">Maestro del estilo de tres espadas y mano derecha del capitan.</p>
+                        <p class="fw-bold fs-5 text-oro">1,111,000,000</p>
+                        <p class="text-muted">Berries</p>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="badge badge-ex badge-pi">Santoryu</span>
+                        <button class="btn btn-o-pr btn-sm">Perfil</button>
+                    </footer>
+                </article>
+
+                <article class="card" style="flex: 1; min-width: 260px;">
+                    <header class="card-header">Navegante</header>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Nami</h3>
+                        <p class="card-text">Experta en clima, mapas y rutas peligrosas del Nuevo Mundo.</p>
+                        <p class="fw-bold fs-5 text-oro">366,000,000</p>
+                        <p class="text-muted">Berries</p>
+                    </div>
+                    <footer class="card-footer">
+                        <span class="badge badge-in badge-pi">Clima</span>
+                        <button class="btn btn-o-in btn-sm">Perfil</button>
+                    </footer>
+                </article>
+            </div>
+        </section>
+
+        <section id="recompensas" class="mb-5" aria-labelledby="titulo-recompensas">
+            <h2 id="titulo-recompensas">Recompensas</h2>
+
+            <table class="table table-striped table-bordered table-pirate">
+                <thead>
+                    <tr>
+                        <th>Personaje</th>
+                        <th>Rol</th>
+                        <th>Recompensa</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monkey D. Luffy</td>
+                        <td>Capitan</td>
+                        <td>3,000,000,000</td>
+                        <td><span class="badge badge-pe badge-pi">Peligroso</span></td>
+                    </tr>
+                    <tr>
+                        <td>Roronoa Zoro</td>
+                        <td>Espadachin</td>
+                        <td>1,111,000,000</td>
+                        <td><span class="badge badge-ad badge-pi">Buscado</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nami</td>
+                        <td>Navegante</td>
+                        <td>366,000,000</td>
+                        <td><span class="badge badge-in badge-pi">Activa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registro" class="mb-5" aria-labelledby="titulo-registro">
+            <h2 id="titulo-registro">Registro Pirata</h2>
+
+            <form class="card card-pi" style="max-width: 760px;">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="label" for="nombre">Nombre del pirata</label>
+                        <input type="text" id="nombre" class="input" placeholder="Ej. Trafalgar Law">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="tripulacion-select">Tripulacion</label>
+                        <select id="tripulacion-select" class="select">
+                            <option>Sombrero de Paja</option>
+                            <option>Heart Pirates</option>
+                            <option>Akagami</option>
+                            <option>Revolucionarios</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="mensaje">Aventura favorita</label>
+                        <textarea id="mensaje" class="textarea"
+                            placeholder="Cuenta que isla quieres visitar..."></textarea>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="acepto" class="checkbox">
+                        <label for="acepto">Acepto zarpar hacia la Grand Line</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-pr">Enviar registro</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="text-center mt-5">
+        <p class="text-muted">GrandLine-UI - Prueba One Piece</p>
+    </footer>
+</body>
+
+</html>
