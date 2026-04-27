@@ -1,4 +1,5 @@
 @use '../abstractos/variables' as v;
+@use '../abstractos/mixins' as m;
 
 // tabla basica
 .table {
@@ -7,7 +8,6 @@
   background: v.$surface;
   box-shadow: v.$shadow-sm;
   border-radius: v.$border-radius;
-  overflow: hidden;
   font-family: v.$font-texto;
   font-size: v.$font-base;
   line-height: 1.6;
@@ -159,4 +159,42 @@
 .table-wanted.table-bordered td,
 .table-wanted.table-bordered th {
   border-color: v.$primary;
+}
+
+// BASE TABLE (mobile first)
+
+.table {
+  width: 100%;
+  font-size: 0.85rem;
+
+  th,
+  td {
+    padding: v.$spacing-sm;
+  }
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// Tablet
+@include m.respond(sm) {
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+// Desktop
+@include m.respond(md) {
+  .table {
+    font-size: v.$font-base;
+
+    th,
+    td {
+      padding: v.$spacing-md;
+    }
+  }
 }
