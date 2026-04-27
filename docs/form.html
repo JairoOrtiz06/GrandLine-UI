@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Documentacion Form</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">🏴‍☠️ GrandLine-UI</a>
+      <input type="checkbox" id="nav-main" class="nav-check" />
+      <label for="nav-main" class="nav-toggle">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link nav-link-activo">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="botones.html" class="nav-link">Documentacion</a>
+        </li>
+        <li class="nav-item">
+          <a href="alertas.html" class="nav-link">Repositorio</a>
+        </li>
+        <li class="nav-item">
+          <a href="badges.html" class="nav-link">Ejemplos</a>
+        </li>
+        <li class="nav-item">
+          <a href="tablas.html" class="nav-link">Desarrollo</a>
+        </li>
+      </ul>
+    </nav>
+    <main class=" mt-5 mb-5 docs">
+      <section class="text-center mb-5">
+        <h1>Documentacion de Formularios</h1>
+        <p class="fs-3 text-muted">
+          Los formularios en GrandLine-UI están diseñados para ser claros,
+          accesibles y altamente personalizables. Incluyen estilos para inputs,
+          estados interactivos y variantes visuales.
+        </p>
+      </section>
+        <div class="row ">
+        
+            <div class="col-12 col-md-6">
+
+                <div class="row align-center">
+
+                    <div class="col-12 col-md-4 card pb-5 pt-5 ">
+                        <div class="form-group">
+                        <label class="label">Nombre</label>
+                        <input type="text" class="input input-wanted">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 card pb-5 pt-5">
+                        <div class="form-group">
+                        <label class="label">Nombre</label>
+                        <input type="text" class="input input-marine">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 card pb-5 pt-5">
+                        <div class="form-group">
+                        <label class="label">Nombre</label>
+                        <input type="text" class="input input-treasure">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                    <div class="card">
+
+                    <div class="card-header">
+                        <span>CODIGO</span>
+                        <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        📋 Copiar
+                        </button>
+                    </div>
+
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;input type="text" class="input input-wanted"&gt;
+&lt;input type="text" class="input input-marine"&gt;
+&lt;input type="text" class="input input-treasure"&gt;</code></pre>
+
+                    </div>
+            </div>
+
+        </div>
+
+    </main>
+  </body>
+</html>
