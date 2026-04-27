@@ -1,11 +1,465 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .docs-ejemplo {
+        background: #0b111d;
+        border: 1px solid rgba(255, 209, 102, 0.35);
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+      }
+
+      .docs-ejemplo-header {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(224, 159, 62, 0.45);
+      }
+
+      .docs-ejemplo-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .docs-preview,
+      .docs-code {
+        min-width: 0;
+      }
+
+      .docs-table-scroll {
+        overflow-x: auto;
+      }
+
+      .docs-code {
+        background: #22251f;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .docs-code-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        color: #fff;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+      }
+
+      .docs-copy {
+        flex: 0 0 auto;
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: #fff;
+        color: #111;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .docs-copy:disabled {
+        opacity: 0.75;
+        cursor: default;
+      }
+
+      .docs-code pre {
+        margin: 0;
+        padding: 18px;
+        overflow-x: auto;
+      }
+
+      .docs-code code {
+        background: transparent;
+        padding: 0;
+        color: #ffd166;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 900px) {
+        .docs-ejemplo-body {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
     <title>Documentacion Tablas</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">🏴‍☠️ GrandLine-UI</a>
+      <input type="checkbox" id="nav-main" class="nav-check" />
+      <label for="nav-main" class="nav-toggle">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link nav-link-activo">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="botones.html" class="nav-link">Documentacion</a>
+        </li>
+        <li class="nav-item">
+          <a href="alertas.html" class="nav-link">Repositorio</a>
+        </li>
+        <li class="nav-item">
+          <a href="badges.html" class="nav-link">Ejemplos</a>
+        </li>
+        <li class="nav-item">
+          <a href="tablas.html" class="nav-link">Desarrollo</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container mt-5 mb-5 docs">
+      <section class="text-center mb-5">
+        <h1>Documentacion de Tablas</h1>
+        <p class="fs-3 text-muted">
+          Usa las clases de tablas de GrandLine-UI para mostrar datos con
+          estilos piratas, variantes visuales y soporte responsive.
+        </p>
+      </section>
+
+      <section class="card card-pi mb-5">
+        <div class="card-header">Como hacer una tabla responsive</div>
+        <div class="card-body">
+          <p class="card-text">
+            Para que una tabla no rompa el diseno en pantallas pequenas,
+            envuelvela con un contenedor que tenga
+            <strong>overflow-x: auto</strong>. Ese contenedor permite scroll
+            horizontal solo cuando hace falta.
+          </p>
+
+          <pre
+            class="bg-surface rounded shadow-sm mb-3"
+            style="overflow-x: auto; padding: 16px"
+          ><code>&lt;div style="overflow-x: auto;"&gt;
+  &lt;table class="table table-striped table-hover"&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+          <div class="alert alert-in mb-0">
+            <span class="alert-icono">i</span>
+            <div class="alert-contenido">
+              <h4 class="alert-titulo">Recomendacion</h4>
+              <p class="alert-texto">
+                Combina <strong>.container</strong>, <strong>.row</strong> y
+                <strong>.col-12</strong> para que la documentacion se adapte a
+                movil, tablet y escritorio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5" >
+        <h2>Tabla basica</h2>
+        <p class="mb-3 text-muted">Clase principal: <strong>.table</strong></p>
+
+        <div class="docs-ejemplo">
+          <div class="docs-ejemplo-body">
+            <div class="docs-preview docs-table-scroll table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Tripulante</th>
+                    <th>Rol</th>
+                    <th>Recompensa</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Luffy</td>
+                    <td>Capitan</td>
+                    <td>3,000,000,000</td>
+                    <td><span class="badge badge-ex badge-pi">Activo</span></td>
+                  </tr>
+                  <tr>
+                    <td>Zoro</td>
+                    <td>Espadachin</td>
+                    <td>1,111,000,000</td>
+                    <td>
+                      <span class="badge badge-in badge-pi">En combate</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nami</td>
+                    <td>Navegante</td>
+                    <td>366,000,000</td>
+                    <td><span class="badge badge-pr badge-pi">Lista</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="docs-code">
+              <div class="docs-code-header">
+                <span>CODIGO</span>
+                <button class="docs-copy" type="button" data-copy-code>
+                  &#128203; Copiar
+                </button>
+              </div>
+              <pre><code>&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tripulante&lt;/th&gt;
+      &lt;th&gt;Rol&lt;/th&gt;
+      &lt;th&gt;Recompensa&lt;/th&gt;
+      &lt;th&gt;Estado&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Luffy&lt;/td&gt;
+      &lt;td&gt;Capitan&lt;/td&gt;
+      &lt;td&gt;3,000,000,000&lt;/td&gt;
+      &lt;td&gt;&lt;span class="badge badge-ex badge-pi"&gt;Activo&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row mb-5">
+        <div class="col-12 col-lg-6 mb-4">
+          <h2>Rayada + Hover</h2>
+          <p class="mb-3 text-muted">
+            Clases: <strong>.table .table-striped .table-hover</strong>
+          </p>
+
+          <div class="docs-table-scroll mb-3 table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Barco</th>
+                  <th>Capitan</th>
+                  <th>Mar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Going Merry</td>
+                  <td>Luffy</td>
+                  <td>East Blue</td>
+                </tr>
+                <tr>
+                  <td>Thousand Sunny</td>
+                  <td>Luffy</td>
+                  <td>Grand Line</td>
+                </tr>
+                <tr>
+                  <td>Red Force</td>
+                  <td>Shanks</td>
+                  <td>Nuevo Mundo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="docs-code">
+            <div class="docs-code-header">
+              <span>CODIGO</span>
+              <button class="docs-copy" type="button" data-copy-code>
+                &#128203; Copiar
+              </button>
+            </div>
+            <pre><code>&lt;table class="table table-striped table-hover"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Barco&lt;/th&gt;
+      &lt;th&gt;Capitan&lt;/th&gt;
+      &lt;th&gt;Mar&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Going Merry&lt;/td&gt;
+      &lt;td&gt;Luffy&lt;/td&gt;
+      &lt;td&gt;East Blue&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 mb-4">
+          <h2>Con bordes</h2>
+          <p class="mb-3 text-muted">
+            Clases: <strong>.table .table-bordered</strong>
+          </p>
+
+          <div class="docs-table-scroll mb-3 table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Tipo</th>
+                  <th>Rareza</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Log Pose</td>
+                  <td>Navegacion</td>
+                  <td>Alta</td>
+                </tr>
+                <tr>
+                  <td>Den Den Mushi</td>
+                  <td>Comunicacion</td>
+                  <td>Media</td>
+                </tr>
+                <tr>
+                  <td>Poneglyph</td>
+                  <td>Historia</td>
+                  <td>Legendaria</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="docs-code">
+            <div class="docs-code-header">
+              <span>CODIGO</span>
+              <button class="docs-copy" type="button" data-copy-code>
+                &#128203; Copiar
+              </button>
+            </div>
+            <pre><code>&lt;table class="table table-bordered"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Tipo&lt;/th&gt;
+      &lt;th&gt;Rareza&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Log Pose&lt;/td&gt;
+      &lt;td&gt;Navegacion&lt;/td&gt;
+      &lt;td&gt;Alta&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Variantes tematicas</h2>
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-4">
+            <div class="docs-table-scroll mb-3 table-responsive">
+              <table class="table table-pirate table-hover">
+                <thead>
+                  <tr>
+                    <th>Clase</th>
+                    <th>Uso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>.table-pirate</td>
+                    <td>Estilo pirata con borde dorado.</td>
+                  </tr>
+                  <tr>
+                    <td>.table-hover</td>
+                    <td>Resalta la fila al pasar el cursor.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="docs-code">
+              <div class="docs-code-header">
+                <span>CODIGO</span>
+                <button class="docs-copy" type="button" data-copy-code>
+                  &#128203; Copiar
+                </button>
+              </div>
+              <pre><code>&lt;table class="table table-pirate table-hover"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 mb-4">
+            <div class="docs-table-scroll mb-3 table-responsive">
+              <table class="table table-wanted table-bordered">
+                <thead>
+                  <tr>
+                    <th>Clase</th>
+                    <th>Uso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>.table-wanted</td>
+                    <td>Estilo cartel de recompensa.</td>
+                  </tr>
+                  <tr>
+                    <td>.table-bordered</td>
+                    <td>Agrega bordes completos.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="docs-code">
+              <div class="docs-code-header">
+                <span>CODIGO</span>
+                <button class="docs-copy" type="button" data-copy-code>
+                  &#128203; Copiar
+                </button>
+              </div>
+              <pre><code>&lt;table class="table table-wanted table-bordered"&gt;
+  ...
+&lt;/table&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card mb-5">
+        <div class="card-header">Codigo recomendado</div>
+        <div class="card-body">
+          <pre
+            class="bg-surface rounded shadow-sm"
+            style="overflow-x: auto; padding: 16px"
+          ><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12"&gt;
+      &lt;div style="overflow-x: auto;"&gt;
+        &lt;table class="table table-striped table-hover"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Nombre&lt;/th&gt;
+              &lt;th&gt;Rol&lt;/th&gt;
+              &lt;th&gt;Estado&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Luffy&lt;/td&gt;
+              &lt;td&gt;Capitan&lt;/td&gt;
+              &lt;td&gt;Activo&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+    <script src="js/copiar-codigo.js"></script>
+  </body>
 </html>
