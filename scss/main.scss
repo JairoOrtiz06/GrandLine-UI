@@ -22,12 +22,3 @@
 @use 'componentes/navbar';
 @use 'componentes/tarjetas';
 
-.docs h1 {
-  overflow-wrap: break-word;
-}
-
-@include respond(sm) {
-  .docs h1 {
-    font-size: 2rem;
-  }
-}

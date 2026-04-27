@@ -7,88 +7,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../css/style.css" />
-    <style>
-      .docs-ejemplo {
-        background: #0b111d;
-        border: 1px solid rgba(255, 209, 102, 0.35);
-        border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-        overflow: hidden;
-      }
 
-      .docs-ejemplo-header {
-        padding: 16px 20px;
-        border-bottom: 1px solid rgba(224, 159, 62, 0.45);
-      }
-
-      .docs-ejemplo-body {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-        gap: 20px;
-        padding: 20px;
-      }
-
-      .docs-preview,
-      .docs-code {
-        min-width: 0;
-      }
-
-      .docs-table-scroll {
-        overflow-x: auto;
-      }
-
-      .docs-code {
-        background: #22251f;
-        border-radius: 6px;
-        overflow: hidden;
-      }
-
-      .docs-code-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 14px 16px;
-        color: #fff;
-        font-family: "Courier New", monospace;
-        font-size: 0.9rem;
-      }
-
-      .docs-copy {
-        flex: 0 0 auto;
-        padding: 6px 10px;
-        border-radius: 4px;
-        background: #fff;
-        color: #111;
-        font: inherit;
-        cursor: pointer;
-      }
-
-      .docs-copy:disabled {
-        opacity: 0.75;
-        cursor: default;
-      }
-
-      .docs-code pre {
-        margin: 0;
-        padding: 18px;
-        overflow-x: auto;
-      }
-
-      .docs-code code {
-        background: transparent;
-        padding: 0;
-        color: #ffd166;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 900px) {
-        .docs-ejemplo-body {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
     <title>Documentacion Tablas</title>
   </head>
   <body>
@@ -163,9 +84,9 @@
         <h2>Tabla basica</h2>
         <p class="mb-3 text-muted">Clase principal: <strong>.table</strong></p>
 
-        <div class="docs-ejemplo">
-          <div class="docs-ejemplo-body">
-            <div class="docs-preview docs-table-scroll table-responsive">
+        <div>
+          <div class=>
+            <div class=" table-responsive">
               <table class="table">
                 <thead>
                   <tr>
@@ -200,31 +121,31 @@
               </table>
             </div>
 
-            <div class="docs-code">
-              <div class="docs-code-header">
+            <div class="card">
+              <div class="card-header">
                 <span>CODIGO</span>
-                <button class="docs-copy" type="button" data-copy-code>
+                <button class="badge badge-ex badge-pi" type="button" data-copy-code>
                   &#128203; Copiar
                 </button>
               </div>
-              <pre><code>&lt;table class="table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Tripulante&lt;/th&gt;
-      &lt;th&gt;Rol&lt;/th&gt;
-      &lt;th&gt;Recompensa&lt;/th&gt;
-      &lt;th&gt;Estado&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Luffy&lt;/td&gt;
-      &lt;td&gt;Capitan&lt;/td&gt;
-      &lt;td&gt;3,000,000,000&lt;/td&gt;
-      &lt;td&gt;&lt;span class="badge badge-ex badge-pi"&gt;Activo&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
+              <pre class="bg-surface rounded shadow-sm "><code>&lt;table class="table"&gt;
+                  &lt;thead&gt;
+                    &lt;tr&gt;
+                      &lt;th&gt;Tripulante&lt;/th&gt;
+                      &lt;th&gt;Rol&lt;/th&gt;
+                      &lt;th&gt;Recompensa&lt;/th&gt;
+                      &lt;th&gt;Estado&lt;/th&gt;
+                    &lt;/tr&gt;
+                  &lt;/thead&gt;
+                  &lt;tbody&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;Luffy&lt;/td&gt;
+                      &lt;td&gt;Capitan&lt;/td&gt;
+                      &lt;td&gt;3,000,000,000&lt;/td&gt;
+                      &lt;td&gt;&lt;span class="badge badge-ex badge-pi"&gt;Activo&lt;/span&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/tbody&gt;
+                &lt;/table&gt;</code></pre>
             </div>
           </div>
         </div>
@@ -266,14 +187,14 @@
             </table>
           </div>
 
-          <div class="docs-code">
-            <div class="docs-code-header">
+          <div class="card">
+            <div class="card-header">
               <span>CODIGO</span>
-              <button class="docs-copy" type="button" data-copy-code>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
                 &#128203; Copiar
               </button>
             </div>
-            <pre><code>&lt;table class="table table-striped table-hover"&gt;
+            <pre class="bg-surface rounded shadow-sm"><code>&lt;table class="table table-striped table-hover"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Barco&lt;/th&gt;
@@ -327,14 +248,14 @@
             </table>
           </div>
 
-          <div class="docs-code">
-            <div class="docs-code-header">
+          <div class="card">
+            <div class="card-header">
               <span>CODIGO</span>
-              <button class="docs-copy" type="button" data-copy-code>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
                 &#128203; Copiar
               </button>
             </div>
-            <pre><code>&lt;table class="table table-bordered"&gt;
+            <pre class="bg-surface rounded shadow-sm"><code>&lt;table class="table table-bordered"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Item&lt;/th&gt;
@@ -358,7 +279,7 @@
         <h2>Variantes tematicas</h2>
         <div class="row">
           <div class="col-12 col-lg-6 mb-4">
-            <div class="docs-table-scroll mb-3 table-responsive">
+            <div class=" mb-3 table-responsive">
               <table class="table table-pirate table-hover">
                 <thead>
                   <tr>
@@ -378,14 +299,14 @@
                 </tbody>
               </table>
             </div>
-            <div class="docs-code">
-              <div class="docs-code-header">
+            <div class="card">
+              <div class="card-header">
                 <span>CODIGO</span>
-                <button class="docs-copy" type="button" data-copy-code>
+                <button class="badge badge-ex badge-pi" type="button" data-copy-code>
                   &#128203; Copiar
                 </button>
               </div>
-              <pre><code>&lt;table class="table table-pirate table-hover"&gt;
+              <pre class="bg-surface rounded shadow-sm"><code>&lt;table class="table table-pirate table-hover"&gt;
   ...
 &lt;/table&gt;</code></pre>
             </div>
@@ -412,14 +333,15 @@
                 </tbody>
               </table>
             </div>
-            <div class="docs-code">
-              <div class="docs-code-header">
+            <div class="card">
+              <div class="card-header">
                 <span>CODIGO</span>
-                <button class="docs-copy" type="button" data-copy-code>
+                <button class="badge badge-ex badge-pi" type="button" data-copy-code> 
                   &#128203; Copiar
                 </button>
               </div>
-              <pre><code>&lt;table class="table table-wanted table-bordered"&gt;
+              <pre class="bg-surface rounded shadow-sm"
+ ><code>&lt;table class="table table-wanted table-bordered"&gt;
   ...
 &lt;/table&gt;</code></pre>
             </div>
@@ -432,7 +354,6 @@
         <div class="card-body">
           <pre
             class="bg-surface rounded shadow-sm"
-            style="overflow-x: auto; padding: 16px"
           ><code>&lt;div class="container"&gt;
   &lt;div class="row"&gt;
     &lt;div class="col-12"&gt;
@@ -460,6 +381,6 @@
         </div>
       </section>
     </main>
-    <script src="js/copiar-codigo.js"></script>
   </body>
+   <script src="js/copiar-codigo.js"></script>
 </html>
