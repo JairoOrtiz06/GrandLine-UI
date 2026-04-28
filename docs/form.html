@@ -37,66 +37,153 @@
         </li>
       </ul>
     </nav>
-    <main class=" mt-5 mb-5 docs">
-      <section class="text-center mb-5">
-        <h1>Documentacion de Formularios</h1>
-        <p class="fs-3 text-muted">
-          Los formularios en GrandLine-UI están diseñados para ser claros,
-          accesibles y altamente personalizables. Incluyen estilos para inputs,
-          estados interactivos y variantes visuales.
-        </p>
-      </section>
-        <div class="row ">
-        
-            <div class="col-12 col-md-6">
+      <main class="mt-5 mb-5 docs">
 
-                <div class="row align-center">
+  <!-- HEADER -->
+  <section class="text-center mb-5">
+    <h1>Documentacion de Formularios</h1>
+    <p class="fs-3 text-muted">
+      Los formularios en GrandLine-UI están diseñados para ser claros,
+      accesibles y altamente personalizables. Incluyen estilos para inputs,
+      estados interactivos y variantes visuales.
+    </p>
+  </section>
 
-                    <div class="col-12 col-md-4 card pb-5 pt-5 ">
-                        <div class="form-group">
-                        <label class="label">Nombre</label>
-                        <input type="text" class="input input-wanted">
-                        </div>
-                    </div>
+  <!-- TITULO -->
+  <h3 class="text-center mb-4">Inputs</h3>
 
-                    <div class="col-12 col-md-4 card pb-5 pt-5">
-                        <div class="form-group">
-                        <label class="label">Nombre</label>
-                        <input type="text" class="input input-marine">
-                        </div>
-                    </div>
+  <!-- CONTENIDO -->
+  <div class="row">
 
-                    <div class="col-12 col-md-4 card pb-5 pt-5">
-                        <div class="form-group">
-                        <label class="label">Nombre</label>
-                        <input type="text" class="input input-treasure">
-                        </div>
-                    </div>
+    <!-- PREVIEW -->
+    <div class="col-12 col-md-6">
+      <div class="card p-4 ">
 
-                </div>
+        <h6 class="mb-3 text-muted text-center mt-5">Variantes</h6>
 
+        <div class="row g-3">
+
+          <div class="col-12 col-md-4 mb-5">
+            <div class="form-group">
+              <label class="label">Wanted</label>
+              <input type="text" class="input input-wanted">
             </div>
+          </div>
 
-
-            <div class="col-12 col-md-6">
-                    <div class="card">
-
-                    <div class="card-header">
-                        <span>CODIGO</span>
-                        <button class="badge badge-ex badge-pi" type="button" data-copy-code>
-                        📋 Copiar
-                        </button>
-                    </div>
-
-                    <pre class="bg-surface rounded shadow-sm"><code>&lt;input type="text" class="input input-wanted"&gt;
-&lt;input type="text" class="input input-marine"&gt;
-&lt;input type="text" class="input input-treasure"&gt;</code></pre>
-
-                    </div>
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label class="label">Marine</label>
+              <input type="text" class="input input-marine">
             </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label class="label">Treasure</label>
+              <input type="text" class="input input-treasure">
+            </div>
+          </div>
 
         </div>
 
-    </main>
+      </div>
+    </div>
+
+    <!-- CODIGO -->
+    <div class="col-12 col-md-6">
+      <div class="card">
+
+        <div class="card-header">
+          <span>CODIGO</span>
+          <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+            📋 Copiar
+          </button>
+        </div>
+
+        <pre class="bg-surface rounded shadow-sm p-3 mb-0"><code>&lt;input type="text" class="input input-wanted"&gt;
+&lt;input type="text" class="input input-marine"&gt;
+&lt;input type="text" class="input input-treasure"&gt;</code></pre>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--Select-------------------------------------------------> 
+    <section class="mb-5">
+
+  <h3 class="text-center mb-4 mt-5">Select</h3>
+
+  <div class="row">
+
+    <!-- PREVIEW -->
+    <div class="col-12 col-md-6">
+      <div class="card p-4">
+
+        <h6 class="mb-3 text-muted text-center mt-5">Variantes</h6>
+
+        <div class="row g-3">
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="form-group">
+              <label class="label">Wanted</label>
+              <select class="select input-wanted">
+                <option>Recompensa</option>
+                <option>1000 berries</option>
+                <option>5000 berries</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label class="label">Marine</label>
+              <select class="select input-marine">
+                <option>Rango</option>
+                <option>Soldado</option>
+                <option>Almirante</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <label class="label">Treasure</label>
+              <select class="select input-treasure">
+                <option>Tesoro</option>
+                <option>Oro</option>
+                <option>Fruta del diablo</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CODIGO -->
+    <div class="col-12 col-md-6">
+      <div class="card">
+
+        <div class="card-header">
+          <span>CODIGO</span>
+          <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+            📋 Copiar
+          </button>
+        </div>
+
+        <pre class="bg-surface rounded shadow-sm p-3 mb-0">
+<code>&lt;select class="select input-wanted"&gt;
+&lt;select class="select input-marine"&gt;
+&lt;select class="select input-treasure"&gt;</code> </pre>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+</main>
   </body>
 </html>

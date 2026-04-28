@@ -1,6 +1,6 @@
 @use '../abstractos/variables' as v;
 
-// contenedor principal de la navbar
+// navbar principal
 .navbar {
   display: flex;
   align-items: center;
@@ -13,8 +13,8 @@
   flex-wrap: wrap;
 }
 
-// contenedor del logo
-.nav-logo {
+// logo o marca del sitio
+.nav-marca {
   display: flex;
   align-items: center;
   gap: v.$spacing-sm;
@@ -26,12 +26,22 @@
   text-decoration: none;
 }
 
-// checkbox oculto que controla el menu hamburguesa
+// imagen dentro del logo
+.nav-marca img {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 7px;
+}
+
+// checkbox oculto para el menu hamburguesa
 .nav-check {
   display: none;
 }
 
-// lista de enlaces de navegacion
+// lista de enlaces
 .nav-menu {
   display: flex;
   align-items: center;
@@ -47,7 +57,7 @@
 }
 
 // enlaces de la navbar
-.nav-link {
+.nav-enlace {
   color: v.$text;
   text-decoration: none;
   font-size: v.$font-base;
@@ -57,14 +67,14 @@
   transition: v.$transition-rapida;
 }
 
-// efecto hover en los enlaces
-.nav-link:hover {
+// efecto hover de los enlaces
+.nav-enlace:hover {
   color: v.$gold-bright;
   background-color: v.$surface;
 }
 
-// enlace activo destacado
-.nav-link-activo {
+// enlace activo
+.nav-enlace--activo {
   color: v.$gold-bright;
   border-bottom: 2px solid v.$accent;
 }
@@ -88,23 +98,30 @@
   transition: v.$transition-rapida;
 }
 
-// variante oscura alternativa
-.navbar-os {
+// variante oscura
+.navbar--oscuro {
   background-color: v.$background;
   border-bottom: 2px solid v.$gold-bright;
 }
 
 // variante transparente
-.navbar-tr {
+.navbar--transparente {
   background-color: transparent;
   border-bottom: 1px solid v.$text-muted;
   box-shadow: none;
 }
 
-// navbar responsive para moviles
+// responsive para moviles
 @media (max-width: 768px) {
+
+  // padding reducido en movil
   .navbar {
     padding: v.$spacing-md;
+  }
+
+  // logo mas pequeño en movil
+  .nav-marca img {
+    height: 50px;
   }
 
   // mostrar boton hamburguesa
@@ -112,7 +129,7 @@
     display: flex;
   }
 
-  // menu oculto por defecto en movil
+  // menu oculto por defecto
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -122,13 +139,13 @@
     gap: v.$spacing-sm;
   }
 
-  // cuando el checkbox esta marcado mostrar el menu
+  // menu visible al marcar el checkbox
   .nav-check:checked ~ .nav-menu {
     display: flex;
   }
 
-  // enlaces ocupan todo el ancho en movil
-  .nav-link {
+  // enlaces al 100% del ancho
+  .nav-enlace {
     width: 100%;
     padding: v.$spacing-sm;
   }

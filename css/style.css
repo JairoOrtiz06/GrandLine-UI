@@ -1328,7 +1328,7 @@ code {
   flex-wrap: wrap;
 }
 
-.nav-logo {
+.nav-marca {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1338,6 +1338,15 @@ code {
   font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
+}
+
+.nav-marca img {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 7px;
 }
 
 .nav-check {
@@ -1357,7 +1366,7 @@ code {
   position: relative;
 }
 
-.nav-link {
+.nav-enlace {
   color: #E0E6F0;
   text-decoration: none;
   font-size: 1rem;
@@ -1367,12 +1376,12 @@ code {
   transition: all 0.15s ease;
 }
 
-.nav-link:hover {
+.nav-enlace:hover {
   color: #FFD166;
   background-color: #14213D;
 }
 
-.nav-link-activo {
+.nav-enlace--activo {
   color: #FFD166;
   border-bottom: 2px solid #E09F3E;
 }
@@ -1394,12 +1403,12 @@ code {
   transition: all 0.15s ease;
 }
 
-.navbar-os {
+.navbar--oscuro {
   background-color: #0A192F;
   border-bottom: 2px solid #FFD166;
 }
 
-.navbar-tr {
+.navbar--transparente {
   background-color: transparent;
   border-bottom: 1px solid #A0AEC0;
   box-shadow: none;
@@ -1408,6 +1417,9 @@ code {
 @media (max-width: 768px) {
   .navbar {
     padding: 16px;
+  }
+  .nav-marca img {
+    height: 50px;
   }
   .nav-toggle {
     display: flex;
@@ -1423,7 +1435,7 @@ code {
   .nav-check:checked ~ .nav-menu {
     display: flex;
   }
-  .nav-link {
+  .nav-enlace {
     width: 100%;
     padding: 8px;
   }
