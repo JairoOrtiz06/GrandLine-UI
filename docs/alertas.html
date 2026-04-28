@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentacion Alertas - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="botones.html" class="nav-enlace">Documentación</a>
+            </li>
+            <li class="nav-item">
+                <a href="alertas.html" class="nav-enlace nav-enlace--activo">Repositorio</a>
+            </li>
+            <li class="nav-item">
+                <a href="badges.html" class="nav-enlace">Ejemplos</a>
+            </li>
+            <li class="nav-item">
+                <a href="tablas.html" class="nav-enlace">Desarrollo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="hero-titulo">Documentacion de Alertas</h1>
+            <p class="hero-subtitulo">
+                Mensajes visuales para comunicar información importante al usuario.
+                Seis variantes de color, iconos, títulos y botón de cierre listos para usar.
+            </p>
+            <div class="hero-acciones">
+                <a href="#uso" class="btn btn-pr btn-lg">Empezar ahora</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- INTRODUCCION -->
+        <section id="uso" class="card card-pi mb-5">
+            <div class="card-header">⚓ Cómo usar una alerta</div>
+            <div class="card-body">
+                <p class="card-text">
+                    Toda alerta parte de la clase base <strong>.alert</strong>, que define la
+                    estructura común (padding, tipografía, sombras y animación hover).
+                    A partir de ahí, le sumas una <strong>variante de color</strong> para
+                    indicar el tipo de mensaje.
+                </p>
+
+                <pre class="bg-surface rounded shadow-sm mb-3"><code>&lt;div class="alert alert-ex"&gt;
+  &lt;span class="alert-icono"&gt;✓&lt;/span&gt;
+  &lt;div class="alert-contenido"&gt;
+    &lt;h4 class="alert-titulo"&gt;Exito&lt;/h4&gt;
+    &lt;p class="alert-texto"&gt;Operacion completada.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <div class="alert alert-in mb-0">
+                    <span class="alert-icono">i</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">Recomendación</h4>
+                        <p class="alert-texto">
+                            Usa el ícono adecuado según el contexto: ✓ para éxito, ⚠ para
+                            advertencia, ✕ para error e i para información. Así el mensaje
+                            se entiende incluso sin leer el texto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTES DE COLOR -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🎨 Variantes de Color</h2>
+                <p class="text-muted">
+                    Seis estilos para comunicar diferentes tipos de mensaje.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Cada variante aplica un color de fondo tenue, un borde lateral resaltado
+                y un color de texto con buen contraste. Las seis opciones son:
+                <strong>éxito</strong>, <strong>peligro</strong>, <strong>advertencia</strong>,
+                <strong>info</strong>, <strong>primaria</strong> y <strong>secundaria</strong>.
+            </p>
+
+            <div class="card card-demo mb-3">
+                <div class="card-header">VISTA PREVIA</div>
+                <div class="card-body">
+                    <div class="alert alert-ex">
+                        <span class="alert-icono">✓</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Éxito</h4>
+                            <p class="alert-texto">La operación se completó correctamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-pe">
+                        <span class="alert-icono">✕</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Peligro</h4>
+                            <p class="alert-texto">Ocurrió un error al procesar la solicitud.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-ad">
+                        <span class="alert-icono">⚠</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Advertencia</h4>
+                            <p class="alert-texto">Revisa los datos antes de continuar.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-in">
+                        <span class="alert-icono">i</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Información</h4>
+                            <p class="alert-texto">Nuevas funciones disponibles en tu cuenta.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-pr">
+                        <span class="alert-icono">★</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Primaria</h4>
+                            <p class="alert-texto">Mensaje destacado con el color principal.</p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-se mb-0">
+                        <span class="alert-icono">☆</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Secundaria</h4>
+                            <p class="alert-texto">Mensaje con estilo dorado brillante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;div class="alert alert-ex"&gt;
+  &lt;span class="alert-icono"&gt;✓&lt;/span&gt;
+  &lt;div class="alert-contenido"&gt;
+    &lt;h4 class="alert-titulo"&gt;Éxito&lt;/h4&gt;
+    &lt;p class="alert-texto"&gt;La operación se completó correctamente.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-pe"&gt; ... &lt;/div&gt;
+&lt;div class="alert alert-ad"&gt; ... &lt;/div&gt;
+&lt;div class="alert alert-in"&gt; ... &lt;/div&gt;
+&lt;div class="alert alert-pr"&gt; ... &lt;/div&gt;
+&lt;div class="alert alert-se"&gt; ... &lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ESTRUCTURA INTERNA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🧩 Estructura Interna</h2>
+                <p class="text-muted">
+                    Los elementos que componen una alerta y cómo combinarlos.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Una alerta se compone de tres partes opcionales: un <strong>icono</strong>
+                (<strong>.alert-icono</strong>), un <strong>contenido</strong>
+                (<strong>.alert-contenido</strong>) que agrupa título y texto, y un
+                <strong>botón de cierre</strong> (<strong>.alert-cerrar</strong>).
+                Puedes usar solo lo que necesites.
+            </p>
+
+            <div class="card card-demo mb-3">
+                <div class="card-header">VISTA PREVIA</div>
+                <div class="card-body">
+
+                    <div class="alert alert-in">
+                        <p class="alert-texto">Alerta simple solo con texto.</p>
+                    </div>
+
+                    <div class="alert alert-ex">
+                        <span class="alert-icono">✓</span>
+                        <p class="alert-texto">Alerta con icono y texto.</p>
+                    </div>
+
+                    <div class="alert alert-ad mb-0">
+                        <span class="alert-icono">⚠</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Completa</h4>
+                            <p class="alert-texto">Alerta con icono, título y texto descriptivo.</p>
+                        </div>
+                        <button class="alert-cerrar" type="button">✕</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Solo texto --&gt;
+&lt;div class="alert alert-in"&gt;
+  &lt;p class="alert-texto"&gt;Alerta simple.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Con icono --&gt;
+&lt;div class="alert alert-ex"&gt;
+  &lt;span class="alert-icono"&gt;✓&lt;/span&gt;
+  &lt;p class="alert-texto"&gt;Alerta con icono.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Completa --&gt;
+&lt;div class="alert alert-ad"&gt;
+  &lt;span class="alert-icono"&gt;⚠&lt;/span&gt;
+  &lt;div class="alert-contenido"&gt;
+    &lt;h4 class="alert-titulo"&gt;Completa&lt;/h4&gt;
+    &lt;p class="alert-texto"&gt;Descripción del mensaje.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class="alert-cerrar" type="button"&gt;✕&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- CASOS DE USO -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🏴‍☠️ Casos de Uso Reales</h2>
+                <p class="text-muted">
+                    Ejemplos prácticos para diferentes situaciones.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Tres escenarios típicos donde las alertas son esenciales: confirmación
+                después de enviar un formulario, advertencia antes de una acción
+                destructiva e información general dentro de un panel.
+            </p>
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">FORMULARIO ENVIADO</div>
+                        <div class="card-body">
+                            <div class="alert alert-ex mb-0">
+                                <span class="alert-icono">✓</span>
+                                <div class="alert-contenido">
+                                    <h4 class="alert-titulo">Guardado</h4>
+                                    <p class="alert-texto">Tus datos fueron registrados con éxito.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">CONFIRMACIÓN</div>
+                        <div class="card-body">
+                            <div class="alert alert-pe mb-0">
+                                <span class="alert-icono">⚠</span>
+                                <div class="alert-contenido">
+                                    <h4 class="alert-titulo">Atención</h4>
+                                    <p class="alert-texto">Esta acción no se puede deshacer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">PANEL DE USUARIO</div>
+                        <div class="card-body">
+                            <div class="alert alert-in mb-0">
+                                <span class="alert-icono">i</span>
+                                <div class="alert-contenido">
+                                    <h4 class="alert-titulo">Nuevo</h4>
+                                    <p class="alert-texto">Tienes 3 notificaciones pendientes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLA DE REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Referencia Completa</h2>
+                <p class="text-muted">
+                    Hoja de consulta con todas las clases disponibles.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.alert</code></td>
+                            <td>Base</td>
+                            <td>Clase obligatoria para cualquier alerta</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-ex</code></td>
+                            <td>Variante</td>
+                            <td>Éxito (verde) — confirmaciones positivas</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-pe</code></td>
+                            <td>Variante</td>
+                            <td>Peligro (rojo) — errores y problemas</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-ad</code></td>
+                            <td>Variante</td>
+                            <td>Advertencia (naranja) — avisos importantes</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-in</code></td>
+                            <td>Variante</td>
+                            <td>Información (azul) — datos generales</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-pr</code></td>
+                            <td>Variante</td>
+                            <td>Primaria (dorado) — mensajes destacados</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-se</code></td>
+                            <td>Variante</td>
+                            <td>Secundaria (dorado brillante)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-icono</code></td>
+                            <td>Elemento</td>
+                            <td>Icono decorativo al inicio de la alerta</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-contenido</code></td>
+                            <td>Elemento</td>
+                            <td>Contenedor que agrupa título y texto</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-titulo</code></td>
+                            <td>Elemento</td>
+                            <td>Título destacado en mayúsculas</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-texto</code></td>
+                            <td>Elemento</td>
+                            <td>Texto descriptivo del mensaje</td>
+                        </tr>
+                        <tr>
+                            <td><code>.alert-cerrar</code></td>
+                            <td>Elemento</td>
+                            <td>Botón para ocultar la alerta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CODIGO RECOMENDADO -->
+        <section class="card mb-5">
+            <div class="card-header">⚓ Código recomendado con Grid System</div>
+            <div class="card-body">
+                <p class="card-text mb-3">
+                    Combina las alertas con el sistema de rejillas
+                    (<strong>.container</strong>, <strong>.row</strong>,
+                    <strong>.col-*</strong>) para posicionarlas correctamente
+                    dentro de tu layout.
+                </p>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-8 col-lg-6"&gt;
+      &lt;div class="alert alert-ex"&gt;
+        &lt;span class="alert-icono"&gt;✓&lt;/span&gt;
+        &lt;div class="alert-contenido"&gt;
+          &lt;h4 class="alert-titulo"&gt;Bienvenido&lt;/h4&gt;
+          &lt;p class="alert-texto"&gt;Tu sesión inició correctamente.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;button class="alert-cerrar" type="button"&gt;✕&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>
