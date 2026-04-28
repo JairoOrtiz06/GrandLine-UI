@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentacion Tarjetas - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="tarjetas.html" class="nav-enlace">Documentación</a>
+            </li>
+            <li class="nav-item">
+                <a href="alertas.html" class="nav-enlace">Repositorio</a>
+            </li>
+            <li class="nav-item">
+                <a href="badges.html" class="nav-enlace">Ejemplos</a>
+            </li>
+            <li class="nav-item">
+                <a href="cards.html" class="nav-enlace nav-enlace--activo">Tarjetas</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="hero-titulo">Tarjetas</h1>
+            <p class="hero-subtitulo">
+                Contenedores versátiles para mostrar información agrupada. Perfectas para
+                perfiles, productos, estadísticas o cualquier contenido que merezca destacar.
+            </p>
+            <div class="hero-acciones">
+                <a href="#plantillas" class="btn btn-pr btn-lg">Ver plantillas</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- DISECCION ARQUEOLOGICA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🗿 Disección Arqueológica</h2>
+                <p class="text-muted">
+                    Las partes de una tarjeta, descubiertas capa por capa.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Una tarjeta completa tiene <strong>cinco zonas</strong> bien definidas.
+                Cada una cumple un papel específico y puedes usar solo las que necesites.
+                La única obligatoria es el contenedor <strong>.card</strong>.
+            </p>
+
+            <div class="row">
+
+                <!-- DEMO -->
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card">
+                        <img src="../img/img1.png" alt="Demo" class="card-img">
+                        <div class="card-header">CARD-HEADER</div>
+                        <div class="card-body">
+                            <h3 class="card-title">CARD-TITLE</h3>
+                            <p class="card-text">
+                                CARD-TEXT — Aquí va el contenido descriptivo
+                                principal de la tarjeta.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <span>CARD-FOOTER</span>
+                            <button class="btn btn-pr btn-sm">Acción</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPLICACION -->
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="diseccion-lista">
+
+                        <div class="diseccion-item">
+                            <span class="diseccion-numero">01</span>
+                            <div>
+                                <code>.card-img</code>
+                                <p>Imagen superior opcional</p>
+                            </div>
+                        </div>
+
+                        <div class="diseccion-item">
+                            <span class="diseccion-numero">02</span>
+                            <div>
+                                <code>.card-header</code>
+                                <p>Encabezado destacado en color primario</p>
+                            </div>
+                        </div>
+
+                        <div class="diseccion-item">
+                            <span class="diseccion-numero">03</span>
+                            <div>
+                                <code>.card-body</code>
+                                <p>Contenido principal. Alberga título y texto</p>
+                            </div>
+                        </div>
+
+                        <div class="diseccion-item">
+                            <span class="diseccion-numero">04</span>
+                            <div>
+                                <code>.card-title</code> + <code>.card-text</code>
+                                <p>Título dorado y párrafo descriptivo</p>
+                            </div>
+                        </div>
+
+                        <div class="diseccion-item">
+                            <span class="diseccion-numero">05</span>
+                            <div>
+                                <code>.card-footer</code>
+                                <p>Pie con acciones o información adicional</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO COMPLETO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;div class="card"&gt;
+  &lt;img src="..." alt="..." class="card-img"&gt;
+  &lt;div class="card-header"&gt;Encabezado&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Título&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Descripción del contenido.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;span&gt;Info&lt;/span&gt;
+    &lt;button class="btn btn-pr btn-sm"&gt;Acción&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- GALERIA DE ESTILOS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🖼️ Galería de Estilos</h2>
+                <p class="text-muted">
+                    Tres variantes visuales para distintas ocasiones.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Además de la tarjeta estándar, GrandLine UI ofrece tres variantes especiales
+                que transforman por completo su aspecto. Cada una está pensada para un
+                escenario distinto dentro de una interfaz.
+            </p>
+
+            <div class="row">
+
+                <!-- VARIANTE PIRATE -->
+                <div class="col-12 col-lg-4 mb-4">
+                    <span class="badge badge-pr badge-pi mb-2">.card-pi</span>
+                    <h4 class="variante-nombre">Estilo Pirata</h4>
+                    <p class="text-muted mb-3">
+                        Borde dorado brillante con fondo oscuro. Ideal para destacar
+                        información premium.
+                    </p>
+
+                    <div class="card card-pi">
+                        <div class="card-header">CAPITÁN</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Luffy</h3>
+                            <p class="card-text">
+                                Líder de los Sombrero de Paja.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VARIANTE WANTED -->
+                <div class="col-12 col-lg-4 mb-4">
+                    <span class="badge badge-pe badge-pi mb-2">.card-wa</span>
+                    <h4 class="variante-nombre">Cartel Wanted</h4>
+                    <p class="text-muted mb-3">
+                        Inspirado en los carteles de recompensa. Borde doble y resplandor dorado.
+                    </p>
+
+                    <div class="card card-wa">
+                        <div class="card-header">WANTED</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Roronoa Zoro</h3>
+                            <p class="card-text">
+                                Recompensa: 1,111,000,000 Berries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VARIANTE HORIZONTAL -->
+                <div class="col-12 col-lg-4 mb-4">
+                    <span class="badge badge-in badge-pi mb-2">.card-ho</span>
+                    <h4 class="variante-nombre">Horizontal</h4>
+                    <p class="text-muted mb-3">
+                        Imagen al costado en lugar de arriba. Perfecta para listados o artículos.
+                    </p>
+
+                    <div class="card card-ho">
+                        <img src="../img/nami.png" alt="Demo" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Nami</h3>
+                            <p class="card-text">
+                                Navegante experta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO DE LAS VARIANTES</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Estilo Pirata --&gt;
+&lt;div class="card card-pi"&gt; ... &lt;/div&gt;
+
+&lt;!-- Cartel Wanted --&gt;
+&lt;div class="card card-wa"&gt; ... &lt;/div&gt;
+
+&lt;!-- Horizontal --&gt;
+&lt;div class="card card-ho"&gt;
+  &lt;img src="..." class="card-img"&gt;
+  &lt;div class="card-body"&gt; ... &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- PLANTILLAS LISTAS -->
+        <section id="plantillas" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📐 Plantillas Listas</h2>
+                <p class="text-muted">
+                    Copia, pega y adapta. Cuatro casos de uso reales.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Las tarjetas se adaptan a muchísimos escenarios. Aquí tienes cuatro
+                plantillas listas para producción: producto, perfil, estadística y artículo.
+                Cada una combina cards con botones, insignias y el sistema de rejilla.
+            </p>
+
+            <div class="row">
+
+                <!-- PLANTILLA PRODUCTO -->
+                <div class="col-12 col-md-6 mb-4">
+                    <span class="badge badge-se badge-pi mb-2">PLANTILLA · PRODUCTO</span>
+                    <div class="card">
+                        <img src="..//img/mapa.png" alt="Producto" class="card-img">
+                        <div class="card-body">
+                            <span class="badge badge-ex badge-sm mb-2">EN STOCK</span>
+                            <h3 class="card-title">Mapa del Tesoro</h3>
+                            <p class="card-text">
+                                Pergamino antiguo con la ruta completa hacia One Piece.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>$999</strong>
+                            <button class="btn btn-pr btn-sm">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLANTILLA PERFIL -->
+                <div class="col-12 col-md-6 mb-4">
+                    <span class="badge badge-se badge-pi mb-2">PLANTILLA · PERFIL</span>
+                    <div class="card card-pi">
+                        <div class="card-body text-center">
+                            <img src="..//img/avatar.png" alt="Avatar" class="rounded-circle mb-3" style="width:100px;height:100px;border-radius:50%;">
+                            <h3 class="card-title">Monkey D. Luffy</h3>
+                            <p class="card-text">Capitán de los Sombrero de Paja</p>
+                            <div>
+                                <span class="badge badge-pr">CAPITÁN</span>
+                                <span class="badge badge-ex">ACTIVO</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🏆 3 mil millones</span>
+                            <button class="btn btn-o-ex btn-sm">Seguir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLANTILLA ESTADISTICA -->
+                <div class="col-12 col-md-6 mb-4">
+                    <span class="badge badge-se badge-pi mb-2">PLANTILLA · ESTADÍSTICA</span>
+                    <div class="card">
+                        <div class="card-header">RECOMPENSAS TOTALES</div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title" style="font-size:3rem;">8.9B</h3>
+                            <p class="card-text mb-0">Berries acumulados por la tripulación</p>
+                            <span class="badge badge-ex mt-3">↑ 23% esta semana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLANTILLA ARTICULO -->
+                <div class="col-12 col-md-6 mb-4">
+                    <span class="badge badge-se badge-pi mb-2">PLANTILLA · ARTÍCULO</span>
+                    <div class="card card-ho">
+                        <img src="..//img/isla.png" alt="Noticia" class="card-img">
+                        <div class="card-body">
+                            <span class="badge badge-in badge-sm mb-2">NOTICIAS</span>
+                            <h3 class="card-title">Nueva isla descubierta</h3>
+                            <p class="card-text">
+                                Los exploradores han encontrado territorio desconocido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARTEL WANTED DESTACADO -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🏴‍☠️ El Cartel Wanted Completo</h2>
+                <p class="text-muted">
+                    La variante más característica del framework, en acción.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                La variante <strong>.card-wa</strong> brilla con luz propia cuando se usa
+                en todo su esplendor: imagen, título gigante, recompensa y botón de acción.
+                Perfecta para fichas de personaje o elementos destacados.
+            </p>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-wa">
+                        <img src="..//img/lufy.png" alt="Luffy" class="card-img">
+                        <div class="card-header">WANTED</div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Luffy</h3>
+                            <p class="card-text">Dead or Alive</p>
+                            <span class="badge badge-pe badge-lg">3,000,000,000</span>
+                        </div>
+                        <div class="card-footer">
+                            <span>Marine HQ</span>
+                            <button class="btn btn-pe btn-sm">Reportar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-wa">
+                        <img src="..//img/zoro.png" alt="Zoro" class="card-img">
+                        <div class="card-header">WANTED</div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Zoro</h3>
+                            <p class="card-text">Dead or Alive</p>
+                            <span class="badge badge-pe badge-lg">1,111,000,000</span>
+                        </div>
+                        <div class="card-footer">
+                            <span>Marine HQ</span>
+                            <button class="btn btn-pe btn-sm">Reportar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-wa">
+                        <img src="..//img/sanji.png" alt="Sanji" class="card-img">
+                        <div class="card-header">WANTED</div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Sanji</h3>
+                            <p class="card-text">Only Alive</p>
+                            <span class="badge badge-pe badge-lg">1,032,000,000</span>
+                        </div>
+                        <div class="card-footer">
+                            <span>Marine HQ</span>
+                            <button class="btn btn-pe btn-sm">Reportar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Referencia Completa</h2>
+                <p class="text-muted">
+                    Todas las clases disponibles del componente tarjeta.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.card</code></td>
+                            <td>Base</td>
+                            <td>Contenedor principal obligatorio</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-header</code></td>
+                            <td>Elemento</td>
+                            <td>Encabezado con fondo primario y borde dorado</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-body</code></td>
+                            <td>Elemento</td>
+                            <td>Contenido principal de la tarjeta</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-title</code></td>
+                            <td>Elemento</td>
+                            <td>Título destacado en dorado</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-text</code></td>
+                            <td>Elemento</td>
+                            <td>Párrafo descriptivo</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-footer</code></td>
+                            <td>Elemento</td>
+                            <td>Pie con layout flex para acciones</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-img</code></td>
+                            <td>Elemento</td>
+                            <td>Imagen responsiva superior</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-pi</code></td>
+                            <td>Variante</td>
+                            <td>Estilo pirata con borde dorado</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-wa</code></td>
+                            <td>Variante</td>
+                            <td>Cartel Wanted con borde doble y resplandor</td>
+                        </tr>
+                        <tr>
+                            <td><code>.card-ho</code></td>
+                            <td>Variante</td>
+                            <td>Layout horizontal con imagen al costado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>
