@@ -98,6 +98,8 @@
   transition: v.$transition-rapida;
 }
 
+// VARIANTES DE COLOR
+
 // variante oscura
 .navbar--oscuro {
   background-color: v.$background;
@@ -111,7 +113,28 @@
   box-shadow: none;
 }
 
-// responsive para moviles
+// VARIANTES DE ESTRUCTURA
+
+// logo a la derecha, menu a la izquierda
+.navbar--derecha {
+  flex-direction: row-reverse;
+}
+
+// logo arriba, menu abajo centrado
+.navbar--vertical {
+  flex-direction: column;
+  gap: v.$spacing-md;
+  justify-content: center;
+}
+
+.navbar--vertical .nav-menu {
+  justify-content: center;
+  width: 100%;
+}
+
+// RESPONSIVE
+
+
 @media (max-width: 768px) {
 
   // padding reducido en movil
@@ -148,5 +171,81 @@
   .nav-enlace {
     width: 100%;
     padding: v.$spacing-sm;
+  }
+
+  // reset de las variantes de estructura en movil
+  .navbar--derecha,
+  .navbar--centrado,
+  .navbar--vertical {
+    flex-direction: row;
+  }
+
+  .navbar--centrado .nav-marca,
+  .navbar--centrado .nav-menu,
+  .navbar--centrado .nav-menu-derecha {
+    order: 0;
+    margin: 0;
+  }
+}
+
+// DROPDOWN DE NAVBAR
+
+// contenedor del dropdown
+.nav-dropdown {
+  position: relative;
+}
+
+// enlace que abre el dropdown (hereda de nav-enlace pero con flecha)
+.nav-dropdown > .nav-enlace::after {
+  content: ' ▾';
+  font-size: 0.8em;
+}
+
+// menu desplegable oculto por defecto
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: v.$primary;
+  border: 1px solid v.$accent;
+  border-radius: v.$border-radius-sm;
+  box-shadow: v.$shadow-md;
+  list-style: none;
+  margin: v.$spacing-xs 0 0;
+  padding: v.$spacing-xs 0;
+  z-index: 100;
+}
+
+// mostrar dropdown al hacer hover
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+// enlaces dentro del dropdown
+.nav-dropdown-menu .nav-enlace {
+  display: block;
+  width: 100%;
+  padding: v.$spacing-xs v.$spacing-md;
+  border-radius: 0;
+  border-bottom: none;
+}
+
+// responsive: dropdown en movil
+@media (max-width: 768px) {
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid v.$accent;
+    border-radius: 0;
+    margin-left: v.$spacing-md;
+    background-color: transparent;
+  }
+
+  // en movil se muestra siempre dentro del menu abierto
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
   }
 }
