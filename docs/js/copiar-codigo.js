@@ -4,9 +4,7 @@ document.addEventListener('click', (event) => {
 
   const container = button.closest('.card');
   const code = container.querySelector('code');
-  console.log('BUTTON:', button);
-  console.log('CONTAINER:', container);
-  console.log('CODE:', code);
+
   if (!code) {
     console.log('No encontró <code>');
     return;
