@@ -393,12 +393,20 @@ a:hover {
   margin-bottom: 4px;
 }
 
+.m-1 {
+  margin: 4px;
+}
+
 .pt-1 {
   padding-top: 4px;
 }
 
 .pb-1 {
   padding-bottom: 4px;
+}
+
+.p-1 {
+  padding: 4px;
 }
 
 .mt-2 {
@@ -409,12 +417,20 @@ a:hover {
   margin-bottom: 8px;
 }
 
+.m-2 {
+  margin: 8px;
+}
+
 .pt-2 {
   padding-top: 8px;
 }
 
 .pb-2 {
   padding-bottom: 8px;
+}
+
+.p-2 {
+  padding: 8px;
 }
 
 .mt-3 {
@@ -425,12 +441,20 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.m-3 {
+  margin: 16px;
+}
+
 .pt-3 {
   padding-top: 16px;
 }
 
 .pb-3 {
   padding-bottom: 16px;
+}
+
+.p-3 {
+  padding: 16px;
 }
 
 .mt-4 {
@@ -441,12 +465,20 @@ a:hover {
   margin-bottom: 24px;
 }
 
+.m-4 {
+  margin: 24px;
+}
+
 .pt-4 {
   padding-top: 24px;
 }
 
 .pb-4 {
   padding-bottom: 24px;
+}
+
+.p-4 {
+  padding: 24px;
 }
 
 .mt-5 {
@@ -457,12 +489,20 @@ a:hover {
   margin-bottom: 32px;
 }
 
+.m-5 {
+  margin: 32px;
+}
+
 .pt-5 {
   padding-top: 32px;
 }
 
 .pb-5 {
   padding-bottom: 32px;
+}
+
+.p-5 {
+  padding: 32px;
 }
 
 .text-primary {
