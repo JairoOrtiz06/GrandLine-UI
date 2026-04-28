@@ -1084,6 +1084,19 @@ code {
   margin-bottom: 16px;
 }
 
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #E0E6F0;
+  cursor: pointer;
+}
+.form-check label {
+  margin: 0;
+  cursor: pointer;
+}
+
 .label {
   display: block;
   margin-bottom: 4px;
@@ -1094,10 +1107,7 @@ code {
 
 .input,
 .select,
-.textarea,
-.input-wanted,
-.input-treasure,
-.input-marine {
+.textarea {
   width: 100%;
   display: block;
   padding: 8px 16px;
@@ -1116,12 +1126,20 @@ code {
   color: #A0AEC0;
 }
 
-.input:focus,
-.select:focus,
-.textarea:focus {
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
   outline: none;
   border-color: #E09F3E;
   box-shadow: 0 0 0 2px rgba(224, 159, 62, 0.3);
+}
+
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #0A192F;
 }
 
 .input-wanted {
@@ -1131,13 +1149,10 @@ code {
   font-family: "Cinzel", serif;
   box-shadow: inset 0 0 0 2px rgba(13, 27, 42, 0.12), 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 .input-wanted::placeholder {
   color: rgba(13, 27, 42, 0.65);
 }
-
-.input-wanted:focus {
-  outline: none;
+.input-wanted:focus-visible {
   border-color: #E63946;
   box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.25), inset 0 0 0 2px rgba(13, 27, 42, 0.12);
 }
@@ -1148,13 +1163,10 @@ code {
   color: #FFD166;
   box-shadow: 0 0 0 1px rgba(255, 209, 102, 0.25), 0 8px 18px rgba(0, 0, 0, 0.35);
 }
-
 .input-treasure::placeholder {
   color: rgba(255, 209, 102, 0.65);
 }
-
-.input-treasure:focus {
-  outline: none;
+.input-treasure:focus-visible {
   border-color: #FFD166;
   box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.28), 0 10px 22px rgba(0, 0, 0, 0.42);
 }
@@ -1165,13 +1177,10 @@ code {
   color: #1B263B;
   box-shadow: inset 4px 0 0 #3A86FF, 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 .input-marine::placeholder {
   color: rgba(27, 38, 59, 0.55);
 }
-
-.input-marine:focus {
-  outline: none;
+.input-marine:focus-visible {
   border-color: #3A86FF;
   box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.24), inset 4px 0 0 #3A86FF;
 }
@@ -1196,7 +1205,6 @@ code {
   background: #14213D;
   box-shadow: inset 0 0 0 2px rgba(13, 27, 42, 0.45), 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  vertical-align: middle;
   transition: all 0.15s ease;
 }
 
@@ -1237,24 +1245,10 @@ code {
   cursor: not-allowed;
 }
 
-.form-check {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  color: #E0E6F0;
-  cursor: pointer;
-}
-
-.form-check label {
-  cursor: pointer;
-}
-
 .input-ex {
   border-color: #2ECC71;
 }
-
-.input-ex:focus {
+.input-ex:focus-visible {
   border-color: #2ECC71;
   box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.3);
 }
@@ -1262,17 +1256,9 @@ code {
 .input-pe {
   border-color: #E63946;
 }
-
-.input-pe:focus {
+.input-pe:focus-visible {
   border-color: #E63946;
   box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
-}
-
-.form-msg-pe {
-  display: block;
-  margin-top: 4px;
-  color: #E63946;
-  font-size: 0.875rem;
 }
 
 .form-msg-ex {
@@ -1282,12 +1268,11 @@ code {
   font-size: 0.875rem;
 }
 
-.input:disabled,
-.select:disabled,
-.textarea:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  background-color: #0A192F;
+.form-msg-pe {
+  display: block;
+  margin-top: 4px;
+  color: #E63946;
+  font-size: 0.875rem;
 }
 
 .badge {
