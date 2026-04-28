@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentacion Navbar - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR DEMO -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="botones.html" class="nav-enlace">Documentación</a>
+            </li>
+            <li class="nav-item">
+                <a href="alertas.html" class="nav-enlace">Repositorio</a>
+            </li>
+            <li class="nav-item">
+                <a href="badges.html" class="nav-enlace">Ejemplos</a>
+            </li>
+            <li class="nav-item">
+                <a href="navbar.html" class="nav-enlace nav-enlace--activo">Desarrollo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO BRUJULA -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="hero-titulo">Navbar</h1>
+            <p class="hero-subtitulo">
+                El timón de tu interfaz. La barra de navegación es el punto de partida
+                de cualquier aventura digital, y la nuestra viene con tres rutas listas
+                para zarpar y un menú hamburguesa que funciona sin una sola línea de JavaScript.
+            </p>
+            <div class="hero-acciones">
+                <a href="#variantes" class="btn btn-pr btn-lg">Ver variantes</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- VISTA AEREA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🛰️ Vista Aérea</h2>
+                <p class="text-muted">
+                    La anatomía completa de una navbar desde arriba.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Una navbar se construye con <strong>tres zonas principales</strong>:
+                la marca a la izquierda, el menú de enlaces a la derecha y un botón
+                hamburguesa que aparece solo en móvil. Todas las piezas trabajan juntas
+                gracias a un <strong>checkbox oculto</strong> que controla la apertura
+                del menú sin necesidad de JavaScript.
+            </p>
+
+            <div class="mapa-navbar mb-4">
+                <div class="mapa-zona zona-marca">
+                    <span class="mapa-label">ZONA 1</span>
+                    <code>.nav-marca</code>
+                    <p>Logo o nombre del sitio</p>
+                </div>
+                <div class="mapa-zona zona-toggle">
+                    <span class="mapa-label">ZONA 2</span>
+                    <code>.nav-toggle</code>
+                    <p>Hamburguesa (móvil)</p>
+                </div>
+                <div class="mapa-zona zona-menu">
+                    <span class="mapa-label">ZONA 3</span>
+                    <code>.nav-menu</code>
+                    <p>Lista de enlaces</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>ESTRUCTURA BASE</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;nav class="navbar"&gt;
+  &lt;a href="#" class="nav-marca"&gt;
+    &lt;img src="logo.png" alt="Logo"&gt;
+  &lt;/a&gt;
+
+  &lt;input type="checkbox" id="nav-main" class="nav-check"&gt;
+  &lt;label for="nav-main" class="nav-toggle"&gt;
+    &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;ul class="nav-menu"&gt;
+    &lt;li class="nav-item"&gt;&lt;a href="#" class="nav-enlace"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="nav-item"&gt;&lt;a href="#" class="nav-enlace"&gt;Docs&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- RUTAS DISPONIBLES -->
+        <section id="variantes" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🗺️ Rutas Disponibles</h2>
+                <p class="text-muted">
+                    Tres estilos de navegación para distintos destinos.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Cada variante cambia completamente la personalidad de la navbar sin
+                modificar su estructura. Elige la que mejor se adapte al carácter
+                de tu proyecto.
+            </p>
+
+            <!-- RUTA 1: DEFAULT -->
+            <div class="ruta-bloque mb-4">
+                <div class="ruta-info">
+                    <span class="badge badge-pr badge-pi mb-2">RUTA 1 · CLÁSICA</span>
+                    <h4 class="variante-nombre">Navbar Por Defecto</h4>
+                    <p class="text-muted">
+                        Fondo oscuro primario con borde dorado. La elección estándar
+                        para cualquier proyecto.
+                    </p>
+                    <code>.navbar</code>
+                </div>
+                <div class="ruta-preview">
+                    <nav class="navbar">
+                        <a href="#" class="nav-marca" style="font-size:1.2rem">⚓ BARCO</a>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Puerto</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Mapa</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- RUTA 2: OSCURO -->
+            <div class="ruta-bloque mb-4">
+                <div class="ruta-info">
+                    <span class="badge badge-in badge-pi mb-2">RUTA 2 · NOCTURNA</span>
+                    <h4 class="variante-nombre">Navbar Oscuro</h4>
+                    <p class="text-muted">
+                        Fondo negro profundo con borde dorado brillante. Perfecta
+                        para landings dramáticas o apps nocturnas.
+                    </p>
+                    <code>.navbar--oscuro</code>
+                </div>
+                <div class="ruta-preview">
+                    <nav class="navbar navbar--oscuro">
+                        <a href="#" class="nav-marca" style="font-size:1.2rem">🌙 NOCHE</a>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Estrellas</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Luna</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- RUTA 3: TRANSPARENTE -->
+            <div class="ruta-bloque mb-4">
+                <div class="ruta-info">
+                    <span class="badge badge-ex badge-pi mb-2">RUTA 3 · ETÉREA</span>
+                    <h4 class="variante-nombre">Navbar Transparente</h4>
+                    <p class="text-muted">
+                        Sin fondo, ideal para superponer sobre imágenes hero o
+                        banners llamativos.
+                    </p>
+                    <code>.navbar--transparente</code>
+                </div>
+                <div class="ruta-preview ruta-preview--fondo">
+                    <nav class="navbar navbar--transparente">
+                        <a href="#" class="nav-marca" style="font-size:1.2rem">☁️ ETÉREA</a>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Viento</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Nube</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO DE LAS VARIANTES</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Clásica --&gt;
+&lt;nav class="navbar"&gt; ... &lt;/nav&gt;
+
+&lt;!-- Nocturna --&gt;
+&lt;nav class="navbar navbar--oscuro"&gt; ... &lt;/nav&gt;
+
+&lt;!-- Etérea --&gt;
+&lt;nav class="navbar navbar--transparente"&gt; ... &lt;/nav&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- BITACORA RESPONSIVE -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📱 Bitácora Responsive</h2>
+                <p class="text-muted">
+                    Cómo se transforma la navbar al cambiar de barco.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                El verdadero tesoro de esta navbar es que es <strong>100% responsive
+                sin JavaScript</strong>. En pantallas menores a 768px, el menú se
+                colapsa en un botón hamburguesa controlado por un checkbox oculto.
+                Cuando el usuario lo activa, el menú se despliega verticalmente.
+            </p>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>🖥️ ESCRITORIO</span>
+                            <span class="badge badge-ex badge-pi">≥ 768px</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Menú horizontal completo, sin botón hamburguesa.
+                                Todos los enlaces visibles a la derecha de la marca.
+                            </p>
+                            <ul class="caracteristica-lista">
+                                <li>✓ Menú siempre visible</li>
+                                <li>✓ Layout horizontal</li>
+                                <li>✓ Toggle oculto</li>
+                                <li>✓ Enlaces separados por gap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>📱 MÓVIL</span>
+                            <span class="badge badge-pe badge-pi">&lt; 768px</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Menú oculto por defecto, se activa al tocar el botón
+                                hamburguesa. Los enlaces se apilan verticalmente al 100%.
+                            </p>
+                            <ul class="caracteristica-lista">
+                                <li>✓ Hamburguesa visible</li>
+                                <li>✓ Menú colapsable</li>
+                                <li>✓ Layout vertical</li>
+                                <li>✓ Sin JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="alert alert-in">
+                <span class="alert-icono">⚡</span>
+                <div class="alert-contenido">
+                    <h4 class="alert-titulo">Magia CSS Pura</h4>
+                    <p class="alert-texto">
+                        El selector <code>.nav-check:checked ~ .nav-menu</code> permite
+                        mostrar el menú cuando el checkbox está activo, sin necesidad
+                        de JavaScript. Es uno de los trucos más elegantes de CSS moderno.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLANTILLAS DE CAPITANES -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>⚔️ Plantillas de Capitanes</h2>
+                <p class="text-muted">
+                    Navbars listas con personalidad propia.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Tres ejemplos completos que combinan variantes con diferentes tipos
+                de contenido. Copia, pega y adapta a tu proyecto.
+            </p>
+
+            <!-- PLANTILLA 1: E-COMMERCE -->
+            <div class="plantilla-bloque mb-4">
+                <div class="card-header-custom mb-0">
+                    <span>🛒 PLANTILLA E-COMMERCE</span>
+                    <span class="badge badge-se badge-pi">NAVBAR + BADGES</span>
+                </div>
+                <nav class="navbar">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">🏴‍☠️ TIENDA</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace">Productos</a></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-enlace">Carrito <span class="badge badge-pe badge-sm">3</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-enlace">Ofertas <span class="badge badge-ad badge-sm">HOT</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- PLANTILLA 2: DASHBOARD -->
+            <div class="plantilla-bloque mb-4">
+                <div class="card-header-custom mb-0">
+                    <span>📊 PLANTILLA DASHBOARD</span>
+                    <span class="badge badge-se badge-pi">NAVBAR + BOTÓN CTA</span>
+                </div>
+                <nav class="navbar navbar--oscuro">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">⚓ PANEL</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Dashboard</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Reportes</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Usuarios</a></li>
+                        <li class="nav-item"><a href="#" class="btn btn-pr btn-sm">Nuevo</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- PLANTILLA 3: LANDING -->
+            <div class="plantilla-bloque mb-4">
+                <div class="card-header-custom mb-0">
+                    <span>🚀 PLANTILLA LANDING</span>
+                    <span class="badge badge-se badge-pi">NAVBAR + CTA DESTACADO</span>
+                </div>
+                <nav class="navbar navbar--transparente" style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d);">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">⭐ LANDING</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace">Características</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Precios</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Contacto</a></li>
+                        <li class="nav-item"><a href="#" class="btn btn-ex btn-sm">Empezar</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+
+        <!-- REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Diario de Bitácora</h2>
+                <p class="text-muted">
+                    Todas las clases del componente navbar.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.navbar</code></td>
+                            <td>Base</td>
+                            <td>Contenedor principal obligatorio</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-marca</code></td>
+                            <td>Elemento</td>
+                            <td>Logo o nombre del sitio (soporta imagen)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-check</code></td>
+                            <td>Elemento</td>
+                            <td>Checkbox oculto que controla el menú móvil</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-toggle</code></td>
+                            <td>Elemento</td>
+                            <td>Botón hamburguesa visible solo en móvil</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-menu</code></td>
+                            <td>Elemento</td>
+                            <td>Lista de enlaces principal</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-item</code></td>
+                            <td>Elemento</td>
+                            <td>Cada ítem dentro del menú</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-enlace</code></td>
+                            <td>Elemento</td>
+                            <td>Enlace de navegación</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-enlace--activo</code></td>
+                            <td>Estado</td>
+                            <td>Resalta el enlace de la página actual</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--oscuro</code></td>
+                            <td>Variante</td>
+                            <td>Fondo negro con borde dorado brillante</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--transparente</code></td>
+                            <td>Variante</td>
+                            <td>Fondo transparente para superponer sobre imágenes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>
