@@ -57,3 +57,15 @@
   background-color: $fondo;
   color: $texto;
 }
+
+@mixin respond($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint no existe: #{$breakpoint}";
+  }
+}

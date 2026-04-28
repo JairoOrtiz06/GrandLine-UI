@@ -1,38 +1,92 @@
-<!doctype html>
-<html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrandLine-UI - Framework Pirata</title>
+    <title>Layout - GrandLine-UI</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-  <body>
+
+<body>
+
     <nav class="navbar">
-      <a href="index.html" class="nav-logo">🏴‍☠️ GrandLine-UI</a>
-      <input type="checkbox" id="nav-main" class="nav-check" />
-      <label for="nav-main" class="nav-toggle">
-        <span></span><span></span><span></span>
-      </label>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link nav-link-activo">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="botones.html" class="nav-link">Documentacion</a>
-        </li>
-        <li class="nav-item">
-          <a href="alertas.html" class="nav-link">Repositorio</a>
-        </li>
-        <li class="nav-item">
-          <a href="badges.html" class="nav-link">Ejemplos</a>
-        </li>
-        <li class="nav-item">
-          <a href="tablas.html" class="nav-link">Desarrollo</a>
-        </li>
-      </ul>
+        <a href="index.html" class="nav-logo">🏴‍☠️ GrandLine-UI</a>
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link nav-link-activo">Inicio</a></li>
+            <li class="nav-item"><a href="botones.html" class="nav-link">Documentacion</a></li>
+            <li class="nav-item"><a href="alertas.html" class="nav-link">Repositorio</a></li>
+            <li class="nav-item"><a href="badges.html" class="nav-link">Ejemplos</a></li>
+            <li class="nav-item"><a href="tablas.html" class="nav-link">Desarrollo</a></li>
+        </ul>
     </nav>
-  </body>
+
+    <main class="container mt-5 mb-5">
+        <section class="text-center mb-5">
+            <span class="badge badge-pr badge-pi mb-3">Documentacion</span>
+            <h1>Layout</h1>
+            <p class="fs-3 text-muted">
+                Sistema de contenedores y grilla responsive de GrandLine-UI.
+            </p>
+        </section>
+
+        <section class="mb-5">
+            <h2>Contenedores</h2>
+            <p class="text-muted mb-3">
+                Los contenedores ayudan a controlar el ancho del contenido y mantener una separacion lateral uniforme.
+            </p>
+
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Uso</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.container</code></td>
+                        <td>Contenido centrado</td>
+                        <td>Ancho de 90%, maximo de 1200px y padding lateral.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.container-fluid</code></td>
+                        <td>Contenido completo</td>
+                        <td>Ocupa el 100% del ancho disponible con padding lateral.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-5">
+            <h2>Sistema de grilla</h2>
+            <p class="text-muted mb-3">
+                La grilla usa filas flexibles con 12 columnas. Puedes combinar columnas base, tablet y escritorio.
+            </p>
+
+            <div class="row mb-3">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">col-12 col-md-6 col-lg-4</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">col-12 col-md-6 col-lg-4</div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mb-3">
+                    <div class="bg-primary p-3 rounded text-center">col-12 col-md-12 col-lg-4</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
 </html>

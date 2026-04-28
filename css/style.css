@@ -61,6 +61,11 @@ h1 {
   letter-spacing: 3px;
 }
 
+h1, h2, h3 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 h2 {
   font-size: 2.5rem;
   color: #E09F3E;
@@ -136,6 +141,28 @@ code {
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.875rem;
+  white-space: pre;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-family: "Courier New", monospace;
+  background-color: #14213D;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre code {
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 a {
@@ -546,6 +573,12 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+pre,
+code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .alert {
   position: relative;
   display: flex;
@@ -842,7 +875,6 @@ a:hover {
   background: #14213D;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  overflow: hidden;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -979,6 +1011,35 @@ a:hover {
   border-color: #0D1B2A;
 }
 
+.table {
+  width: 100%;
+  font-size: 0.85rem;
+}
+.table th,
+.table td {
+  padding: 8px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 576px) {
+  .table {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  .table {
+    font-size: 1rem;
+  }
+  .table th,
+  .table td {
+    padding: 16px;
+  }
+}
 .form-group {
   margin-bottom: 16px;
 }
