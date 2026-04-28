@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentación - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="documentacion.html" class="nav-enlace nav-enlace--activo">Documentación</a>
+            </li>
+            <li class="nav-item">
+                <a href="alertas.html" class="nav-enlace">Repositorio</a>
+            </li>
+            <li class="nav-item">
+                <a href="badges.html" class="nav-enlace">Ejemplos</a>
+            </li>
+            <li class="nav-item">
+                <a href="navbar.html" class="nav-enlace">Desarrollo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO CREATIVO CENTRADO -->
+    <header class="container mt-5 mb-5 text-center">
+
+        <!-- SELLO DE BIENVENIDA -->
+        <div class="mb-4">
+            <span class="badge badge-se badge-lg">⚜ BIBLIOTECA OFICIAL ⚜</span>
+        </div>
+
+        <!-- TITULO PRINCIPAL -->
+        <h1 class="mb-3" style="font-size:4rem;letter-spacing:6px;">
+            GrandLine UI
+        </h1>
+
+        <!-- SUBTITULO -->
+        <p class="fs-3 text-muted mb-4">
+            Documentación completa del framework
+        </p>
+
+        <!-- BADGES FLOTANTES -->
+        <div class="mb-5">
+            <span class="badge badge-pr badge-pi">HTML5</span>
+            <span class="badge badge-ex badge-pi">SCSS</span>
+            <span class="badge badge-in badge-pi">RESPONSIVE</span>
+            <span class="badge badge-ad badge-pi">OPEN SOURCE</span>
+            <span class="badge badge-pe badge-pi">v1.0</span>
+        </div>
+
+        <!-- DESCRIPCION -->
+        <div class="row mb-5">
+            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                <p class="card-text fs-3">
+                    El compendio completo de componentes y fundamentos.
+                    Toda la sabiduría pirata en un solo lugar, lista para zarpar.
+                </p>
+            </div>
+        </div>
+
+        <!-- STATS EN CARDS -->
+        <div class="row mb-5">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card card-pi">
+                    <div class="card-body text-center">
+                        <h2 class="card-title" style="font-size:3rem;margin:0;">7</h2>
+                        <p class="card-text mb-0">Componentes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card card-pi">
+                    <div class="card-body text-center">
+                        <h2 class="card-title" style="font-size:3rem;margin:0;">60+</h2>
+                        <p class="card-text mb-0">Clases Disponibles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card card-pi">
+                    <div class="card-body text-center">
+                        <h2 class="card-title" style="font-size:3rem;margin:0;">100%</h2>
+                        <p class="card-text mb-0">Responsive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTONES CTA -->
+        <div class="mb-4">
+            <a href="#componentes" class="btn btn-pr btn-lg">Ver componentes</a>
+            <a href="#inicio" class="btn btn-o-se btn-lg">Empezar ahora</a>
+        </div>
+
+    </header>
+
+    <!-- SEPARADOR -->
+    <div class="container text-center mb-5">
+        <span class="badge badge-pr badge-pi">⚓ ⚔️ ⚓</span>
+    </div>
+
+    <main class="container mt-5 mb-5">
+
+        <!-- INTRO CON ALERTA -->
+        <section class="row mb-5">
+            <div class="col-12 col-lg-10 mx-auto">
+                <div class="alert alert-in">
+                    <span class="alert-icono">📜</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">Cómo navegar esta biblioteca</h4>
+                        <p class="alert-texto">
+                            Cada componente tiene su propia página con ejemplos, vistas previas,
+                            código copiable y tabla de referencia. Haz clic en cualquier tarjeta
+                            para explorar su documentación completa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPITULO 1: COMPONENTES -->
+<section id="componentes" class="mb-5">
+
+    <!-- ENCABEZADO DEL CAPITULO -->
+    <div class="text-center mb-5">
+        <span class="badge badge-pr badge-pi mb-3">CAPÍTULO I</span>
+        <h2>⚔️ El Arsenal del Pirata</h2>
+        <p class="text-muted">
+            Seis componentes forjados con maestría para construir cualquier interfaz.
+        </p>
+    </div>
+
+    <!-- GRID UNIFORME DE COMPONENTES -->
+    <div class="row">
+
+        <!-- 01 · BOTONES -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>⚔️ BOTONES</span>
+                    <span class="badge badge-ex badge-pi">01</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Elementos interactivos con 6 variantes sólidas, 6 outline y 3 tamaños.
+                    </p>
+                    <div class="mb-3">
+                        <button class="btn btn-pr btn-sm">Primario</button>
+                        <button class="btn btn-ex btn-sm">Éxito</button>
+                        <button class="btn btn-o-pe btn-sm">Peligro</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">16 CLASES</span>
+                    <a href="botones.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02 · ALERTAS -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>📢 ALERTAS</span>
+                    <span class="badge badge-ex badge-pi">02</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Mensajes visuales con 6 variantes de color y estructura modular.
+                    </p>
+                    <div class="mb-3">
+                        <div class="alert alert-ex mb-2">
+                            <span class="alert-icono">✓</span>
+                            <p class="alert-texto">Operación exitosa</p>
+                        </div>
+                        <div class="alert alert-pe mb-0">
+                            <span class="alert-icono">✕</span>
+                            <p class="alert-texto">Error detectado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">12 CLASES</span>
+                    <a href="alertas.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 · INSIGNIAS -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>🏷️ INSIGNIAS</span>
+                    <span class="badge badge-ex badge-pi">03</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Distintivos compactos con 6 colores y modificadores de forma.
+                    </p>
+                    <div class="mb-3">
+                        <span class="badge badge-pr">HTML</span>
+                        <span class="badge badge-ex badge-pi">ACTIVO</span>
+                        <span class="badge badge-pe badge-sm">3</span>
+                        <span class="badge badge-ad">AVISO</span>
+                        <span class="badge badge-in badge-pi">NUEVO</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">10 CLASES</span>
+                    <a href="insignias.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 · TARJETAS -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>🎴 TARJETAS</span>
+                    <span class="badge badge-ex badge-pi">04</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Contenedores versátiles con 3 variantes: estándar, Wanted y horizontal.
+                    </p>
+                    <div class="mb-3">
+                        <div class="card card-wa">
+                            <div class="card-header">WANTED</div>
+                            <div class="card-body">
+                                <p class="card-text mb-0">Vista previa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">10 CLASES</span>
+                    <a href="tarjetas.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 05 · NAVBAR -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>🧭 NAVBAR</span>
+                    <span class="badge badge-ex badge-pi">05</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Barra responsive con menú hamburguesa sin JavaScript.
+                    </p>
+                    <div class="mb-3">
+                        <div class="alert alert-ex mb-0">
+                            <span class="alert-icono">⚡</span>
+                            <div class="alert-contenido">
+                                <p class="alert-texto">3 variantes: clásica, oscura y transparente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">10 CLASES</span>
+                    <a href="navbar.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 06 · TABLAS -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card card-pi h-100">
+                <div class="card-header">
+                    <span>📊 TABLAS</span>
+                    <span class="badge badge-ex badge-pi">06</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Tablas estilizadas con rayado, hover y bordes.
+                    </p>
+                    <div class="mb-3">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luffy</td>
+                                    <td><span class="badge badge-ex badge-sm">OK</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Zoro</td>
+                                    <td><span class="badge badge-ad badge-sm">WAIT</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge badge-in">8 CLASES</span>
+                    <a href="tabla.html" class="btn btn-pr btn-sm">Ver doc →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- SEPARADOR -->
+        <div class="text-center mb-5">
+            <span class="badge badge-pr badge-pi">⚓ ⚔️ ⚓</span>
+        </div>
+
+        <!-- CAPITULO 2: RUTA DE APRENDIZAJE USANDO ALERTAS -->
+        <section id="ruta" class="mb-5">
+
+            <div class="text-center mb-5">
+                <span class="badge badge-se badge-pi mb-3">CAPÍTULO II</span>
+                <h2>🗺️ Ruta del Navegante</h2>
+                <p class="text-muted">
+                    Recorre el camino recomendado para dominar el framework.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-10 mx-auto">
+
+                    <div class="alert alert-pr mb-3">
+                        <span class="alert-icono">1</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Fundamentos</h4>
+                            <p class="alert-texto">
+                                Empieza con el sistema de grid de 12 columnas y las clases utilitarias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-ex mb-3">
+                        <span class="alert-icono">2</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Componentes Simples</h4>
+                            <p class="alert-texto">
+                                Aprende Botones, Insignias y Alertas. La base de cualquier interfaz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-in mb-3">
+                        <span class="alert-icono">3</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Componentes Estructurales</h4>
+                            <p class="alert-texto">
+                                Pasa a Tarjetas, Tablas y Navbar para construir layouts completos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-ad mb-3">
+                        <span class="alert-icono">4</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Combinación Total</h4>
+                            <p class="alert-texto">
+                                Mezcla todos los componentes con el sistema de grid para crear interfaces legendarias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-se mb-0">
+                        <span class="alert-icono">⚓</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">¡A Zarpar!</h4>
+                            <p class="alert-texto">
+                                Ya dominas GrandLine UI. Tu próxima aventura digital te espera.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARADOR -->
+        <div class="text-center mb-5">
+            <span class="badge badge-pr badge-pi">⚓ ⚔️ ⚓</span>
+        </div>
+
+        <!-- CAPITULO 3: FUNDAMENTOS EN CARDS -->
+        <section id="fundamentos" class="mb-5">
+
+            <div class="text-center mb-5">
+                <span class="badge badge-in badge-pi mb-3">CAPÍTULO III</span>
+                <h2>🏛️ Los Fundamentos</h2>
+                <p class="text-muted">
+                    Las bases sobre las que se construye todo el framework.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <span class="badge badge-pr badge-lg mb-3">I</span>
+                            <h4 class="card-title">Grid System</h4>
+                            <p class="card-text">
+                                Sistema de 12 columnas con breakpoints responsivos.
+                            </p>
+                            <span class="badge badge-in">.container .row .col-*</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <span class="badge badge-pr badge-lg mb-3">II</span>
+                            <h4 class="card-title">Espaciado</h4>
+                            <p class="card-text">
+                                Clases de margen y padding para control preciso.
+                            </p>
+                            <span class="badge badge-in">.mt-* .mb-* .p-*</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <span class="badge badge-pr badge-lg mb-3">III</span>
+                            <h4 class="card-title">Tipografía</h4>
+                            <p class="card-text">
+                                Tamaños y alineación de texto consistentes.
+                            </p>
+                            <span class="badge badge-in">.fs-* .text-center</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <span class="badge badge-pr badge-lg mb-3">IV</span>
+                            <h4 class="card-title">Efectos</h4>
+                            <p class="card-text">
+                                Sombras, bordes y transiciones predefinidas.
+                            </p>
+                            <span class="badge badge-in">.shadow-* .rounded</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEPARADOR -->
+        <div class="text-center mb-5">
+            <span class="badge badge-pr badge-pi">⚓ ⚔️ ⚓</span>
+        </div>
+
+        <!-- CAPITULO FINAL: INICIO RAPIDO -->
+        <section id="inicio" class="mb-5">
+
+            <div class="text-center mb-5">
+                <span class="badge badge-pe badge-pi mb-3">CAPÍTULO FINAL</span>
+                <h2>🚀 Iza las Velas</h2>
+                <p class="text-muted">
+                    Todo lo que necesitas para empezar tu primera aventura.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-8 mb-4">
+                    <div class="card card-pi h-100">
+                        <div class="card-header">📦 Instalación y Uso</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Enlaza el archivo CSS compilado y comienza a usar las clases.
+                                No requiere JavaScript ni dependencias externas.
+                            </p>
+                            <pre class="bg-surface rounded shadow-sm"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;button class="btn btn-pr btn-lg"&gt;Zarpar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">⚡ Enlaces Directos</div>
+                        <div class="card-body">
+                            <a href="botones.html" class="btn btn-o-pr mb-2" style="width:100%">Botones</a>
+                            <a href="alertas.html" class="btn btn-o-ex mb-2" style="width:100%">Alertas</a>
+                            <a href="badges.html" class="btn btn-o-ad mb-2" style="width:100%">Insignias</a>
+                            <a href="cards.html" class="btn btn-o-in mb-2" style="width:100%">Tarjetas</a>
+                            <a href="navbar.html" class="btn btn-o-pe mb-2" style="width:100%">Navbar</a>
+                            <a href="tablas.html" class="btn btn-o-se mb-0" style="width:100%">Tablas</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 col-lg-10 mx-auto">
+                    <div class="alert alert-ex mb-0">
+                        <span class="alert-icono">🏴‍☠️</span>
+                        <div class="alert-contenido">
+                            <h4 class="alert-titulo">Consejo del Capitán</h4>
+                            <p class="alert-texto">
+                                Combina los componentes con el sistema de grid para aprovechar
+                                todo el poder del framework. La creatividad es tu único límite.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>
