@@ -195,27 +195,65 @@
   position: relative;
 }
 
-// enlace que abre el dropdown (hereda de nav-enlace pero con flecha)
+// flecha indicadora del enlace principal
 .nav-dropdown > .nav-enlace::after {
   content: ' ▾';
-  font-size: 0.8em;
+  font-size: 0.75em;
+  margin-left: 4px;
+  transition: v.$transition-rapida;
 }
 
-// menu desplegable oculto por defecto
+// rotar la flecha al abrir
+.nav-dropdown:hover > .nav-enlace::after {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+// menu desplegable
 .nav-dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
+  min-width: 220px;
   background-color: v.$primary;
-  border: 1px solid v.$accent;
-  border-radius: v.$border-radius-sm;
-  box-shadow: v.$shadow-md;
+  border-radius: v.$border-radius;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 209, 102, 0.15);
   list-style: none;
-  margin: v.$spacing-xs 0 0;
-  padding: v.$spacing-xs 0;
+  margin: 0;
+  padding: v.$spacing-xs;
   z-index: 100;
+  animation: dropdownFade 0.25s ease;
+}
+
+// puente invisible que mantiene el hover activo
+.nav-dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+// flechita conectora arriba del dropdown
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: v.$primary;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+// animacion de entrada
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 // mostrar dropdown al hacer hover
@@ -227,24 +265,61 @@
 .nav-dropdown-menu .nav-enlace {
   display: block;
   width: 100%;
-  padding: v.$spacing-xs v.$spacing-md;
-  border-radius: 0;
-  border-bottom: none;
+  padding: v.$spacing-sm v.$spacing-md;
+  border-radius: v.$border-radius-sm;
+  color: v.$text;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
 }
 
-// responsive: dropdown en movil
+// barra dorada lateral oculta
+.nav-dropdown-menu .nav-enlace::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: v.$gold-bright;
+  transform: scaleY(0);
+  transition: v.$transition-rapida;
+}
+
+// efecto al pasar el mouse
+.nav-dropdown-menu .nav-enlace:hover {
+  background-color: v.$surface;
+  color: v.$gold-bright;
+  padding-left: v.$spacing-lg;
+}
+
+// mostrar la barra dorada al hacer hover
+.nav-dropdown-menu .nav-enlace:hover::before {
+  transform: scaleY(1);
+}
+
+// dropdown adaptado para movil
 @media (max-width: 768px) {
+
+  // dropdown como submenu indentado en movil
   .nav-dropdown-menu {
     position: static;
     box-shadow: none;
-    border: none;
+    animation: none;
     border-left: 2px solid v.$accent;
     border-radius: 0;
     margin-left: v.$spacing-md;
+    margin-top: v.$spacing-xs;
+    padding: v.$spacing-xs 0 v.$spacing-xs v.$spacing-sm;
     background-color: transparent;
   }
 
-  // en movil se muestra siempre dentro del menu abierto
+  // ocultar flechita conectora en movil
+  .nav-dropdown-menu::before {
+    display: none;
+  }
+
+  // mostrar dropdown en movil
   .nav-dropdown:hover .nav-dropdown-menu {
     display: block;
   }
