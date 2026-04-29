@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use 'variables' as *;
 @use 'sass:color';
 
@@ -55,3 +56,76 @@
   background-color: $fondo;
   color: $texto;
 }
+=======
+@use 'variables' as *;
+@use 'sass:color';
+
+
+@mixin col($num){
+    width: percentage($num / 12);
+    
+
+}
+
+//MIXINS PARA LOS COMPONENTES (NO ME LOS BAYAN A BORRRAR...)
+//BOTONES
+// mixin para botones con relleno de color
+@mixin boton-color($fondo, $texto) {
+  background-color: $fondo;
+  color: $texto;
+  border: 2px solid $fondo;
+
+  &:hover {
+    background-color: color.adjust($fondo, $lightness: -10%);
+    border-color: color.adjust($fondo, $lightness: -10%);
+  }
+
+  &:active {
+    background-color: color.adjust($fondo, $lightness: -20%);
+  }
+}
+
+// mixin para botones con solo borde
+@mixin boton-borde($color) {
+  background-color: transparent;
+  color: $color;
+  border: 2px solid $color;
+
+  &:hover {
+    background-color: $color;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: color.adjust($color, $lightness: -15%);
+    border-color: color.adjust($color, $lightness: -15%);
+  }
+}
+
+//ALERTAS
+// mixin para crear alertas con color tematico
+@mixin alerta-color($color) {
+  background-color: rgba($color, 0.15);
+  color: $color;
+  border-left: 4px solid $color;
+}
+
+//BADGES
+// mixin para crear badges con color solido
+@mixin badge-color($fondo, $texto) {
+  background-color: $fondo;
+  color: $texto;
+}
+
+@mixin respond($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint no existe: #{$breakpoint}";
+  }
+}
+>>>>>>> a208d3f498dcdce447cf2c697945dc63c64efbf5

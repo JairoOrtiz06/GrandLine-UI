@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentacion Botones - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-enlace nav-enlace--activo">Documentación</a>
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+
+            <h1 class="hero-titulo">Documentacion de Botones</h1>
+            <p class="hero-subtitulo">
+                Elementos interactivos con estilo pirata legendario. Variantes sólidas,
+                outline y tres tamaños listos para cualquier aventura en tu interfaz.
+            </p>
+            <div class="hero-acciones">
+                <a href="#uso" class="btn btn-pr btn-lg m-1">Empezar ahora</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg m-1">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- INTRODUCCION -->
+        <section id="uso" class="card card-pi mb-5">
+            <div class="card-header">⚓ Cómo usar un botón</div>
+            <div class="card-body">
+                <p class="card-text">
+                    Todo botón parte de la clase base <strong>.btn</strong>, que define la
+                    estructura común (padding, tipografía, bordes). A partir de ahí, le
+                    sumas una <strong>variante de color</strong> y, si quieres, un
+                    <strong>tamaño</strong>. Las clases se combinan en el mismo elemento
+                    separadas por un espacio.
+                </p>
+
+                <pre class="bg-surface rounded shadow-sm mb-3"><code>&lt;button class="btn btn-pr"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-o-ex btn-lg"&gt;Confirmar&lt;/button&gt;</code></pre>
+
+                <div class="alert alert-in mb-0">
+                    <span class="alert-icono">i</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">Recomendación</h4>
+                        <p class="alert-texto">
+                            Usa el atributo nativo <strong>disabled</strong> para desactivar
+                            un botón. El framework aplica la opacidad y el cursor adecuados
+                            de forma automática.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTES SOLIDAS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🎨 Variantes Sólidas</h2>
+                <p class="text-muted">
+                    Fondo completo con el color del tema. Ideales para acciones principales.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Las variantes sólidas son las más usadas en llamadas a la acción. Cada
+                clase aplica color de fondo, texto con buen contraste y borde del mismo
+                tono. Existen seis: <strong>primario</strong>, <strong>secundario</strong>,
+                <strong>éxito</strong>, <strong>peligro</strong>, <strong>advertencia</strong>
+                e <strong>info</strong>.
+            </p>
+
+            <div class="card card-demo mb-3">
+                <div class="card-header">VISTA PREVIA</div>
+                <div class="card-body demo-grid">
+                    <button class="btn btn-pr m-1">Primario</button>
+                    <button class="btn btn-se m-1">Secundario</button>
+                    <button class="btn btn-ex m-1">Éxito</button>
+                    <button class="btn btn-pe m-1">Peligro</button>
+                    <button class="btn btn-ad m-1">Advertencia</button>
+                    <button class="btn btn-in m-1">Info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-pr"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-se"&gt;Secundario&lt;/button&gt;
+&lt;button class="btn btn-ex"&gt;Éxito&lt;/button&gt;
+&lt;button class="btn btn-pe"&gt;Peligro&lt;/button&gt;
+&lt;button class="btn btn-ad"&gt;Advertencia&lt;/button&gt;
+&lt;button class="btn btn-in"&gt;Info&lt;/button&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- VARIANTES OUTLINE -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🗡️ Variantes Outline</h2>
+                <p class="text-muted">
+                    Solo el borde del color, manteniendo el fondo transparente.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Se crean con el prefijo <strong>.btn-o-</strong> seguido de la
+                abreviatura del color. Son perfectas para acciones secundarias que
+                acompañan a una principal, como el clásico par "Aceptar / Cancelar".
+            </p>
+
+            <div class="card card-demo mb-3">
+                <div class="card-header">VISTA PREVIA</div>
+                <div class="card-body demo-grid">
+                    <button class="btn btn-o-pr m-1">Primario</button>
+                    <button class="btn btn-o-se m-1">Secundario</button>
+                    <button class="btn btn-o-ex m-1">Éxito</button>
+                    <button class="btn btn-o-pe m-1">Peligro</button>
+                    <button class="btn btn-o-ad m-1">Advertencia</button>
+                    <button class="btn btn-o-in m-1">Info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-o-pr"&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-o-se"&gt;Secundario&lt;/button&gt;
+&lt;button class="btn btn-o-ex"&gt;Éxito&lt;/button&gt;
+&lt;button class="btn btn-o-pe"&gt;Peligro&lt;/button&gt;
+&lt;button class="btn btn-o-ad"&gt;Advertencia&lt;/button&gt;
+&lt;button class="btn btn-o-in"&gt;Info&lt;/button&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- TAMAÑOS Y DESHABILITADO -->
+        <section class="row mb-5">
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="seccion-header mb-3">
+                    <h2>📏 Tamaños</h2>
+                    <p class="text-muted">Ajusta el botón al contexto.</p>
+                </div>
+
+                <p class="card-text mb-3">
+                    Usa <strong>.btn-sm</strong> para tablas o toolbars,
+                    <strong>.btn-md</strong> como tamaño estándar y
+                    <strong>.btn-lg</strong> para CTAs principales.
+                </p>
+
+                <div class="card card-demo mb-3">
+                    <div class="card-header">VISTA PREVIA</div>
+                    <div class="card-body demo-grid">
+                        <button class="btn btn-pr btn-sm m-1">Pequeño</button>
+                        <button class="btn btn-pr btn-md m-1">Mediano</button>
+                        <button class="btn btn-pr btn-lg m-1">Grande</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span>CÓDIGO</span>
+                        <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                            &#128203; Copiar
+                        </button>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-pr btn-sm"&gt;Pequeño&lt;/button&gt;
+&lt;button class="btn btn-pr btn-md"&gt;Mediano&lt;/button&gt;
+&lt;button class="btn btn-pr btn-lg"&gt;Grande&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 mb-4">
+                <div class="seccion-header mb-3">
+                    <h2>🚫 Deshabilitado</h2>
+                    <p class="text-muted">Atributo HTML nativo, sin clases extra.</p>
+                </div>
+
+                <p class="card-text mb-3">
+                    Añade <strong>disabled</strong> al botón para bloquear la
+                    interacción. Funciona con variantes sólidas y outline por igual.
+                </p>
+
+                <div class="card card-demo mb-3">
+                    <div class="card-header">VISTA PREVIA</div>
+                    <div class="card-body demo-grid">
+                        <button class="btn btn-pr m-1" disabled>Primario</button>
+                        <button class="btn btn-ex m-1" disabled>Éxito</button>
+                        <button class="btn btn-o-pe m-1" disabled>Peligro</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span>CÓDIGO</span>
+                        <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                            &#128203; Copiar
+                        </button>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-pr" disabled&gt;Primario&lt;/button&gt;
+&lt;button class="btn btn-ex" disabled&gt;Éxito&lt;/button&gt;
+&lt;button class="btn btn-o-pe" disabled&gt;Peligro&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COMBINANDO CLASES -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>⚔️ Combinando Clases</h2>
+                <p class="text-muted">
+                    Mezcla variantes y tamaños según el contexto de tu interfaz.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Puedes acumular clases sobre el mismo elemento en cualquier orden,
+                siempre que incluyas la base <strong>.btn</strong>. Además, funcionan
+                sobre etiquetas <strong>&lt;a&gt;</strong> para que un enlace luzca como
+                botón sin perder su función de navegación.
+            </p>
+
+            <div class="card card-demo mb-3">
+                <div class="card-header">VISTA PREVIA</div>
+                <div class="card-body demo-grid">
+                    <button class="btn btn-ex btn-sm m-1">Guardar</button>
+                    <button class="btn btn-o-pe btn-md m-1">Cancelar</button>
+                    <button class="btn btn-in btn-lg m-1">Más información</button>
+                    <a href="#" class="btn btn-pr m-1">Enlace como botón</a>
+                    <a href="#" class="btn btn-o-ex btn-lg m-1">Descargar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-ex btn-sm"&gt;Guardar&lt;/button&gt;
+&lt;button class="btn btn-o-pe btn-md"&gt;Cancelar&lt;/button&gt;
+&lt;button class="btn btn-in btn-lg"&gt;Más información&lt;/button&gt;
+&lt;a href="#" class="btn btn-pr"&gt;Enlace como botón&lt;/a&gt;
+&lt;a href="#" class="btn btn-o-ex btn-lg"&gt;Descargar&lt;/a&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- CASOS DE USO -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🏴‍☠️ Casos de Uso Reales</h2>
+                <p class="text-muted">
+                    Agrupaciones típicas de botones en diferentes contextos.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Tres ejemplos prácticos que muestran cómo combinar variantes y tamaños
+                según el escenario: un formulario, un CTA principal y un grupo de
+                acciones rápidas para una tabla.
+            </p>
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">FORMULARIO</div>
+                        <div class="card-body demo-grid">
+                            <button class="btn btn-ex btn-md m-1">Guardar</button>
+                            <button class="btn btn-o-pe btn-md m-1">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">CTA PRINCIPAL</div>
+                        <div class="card-body demo-grid">
+                            <a href="#" class="btn btn-pr btn-lg m-1">Zarpar ahora</a>
+                            <a href="#" class="btn btn-o-se btn-lg m-1">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card card-demo h-100">
+                        <div class="card-header">ACCIONES RÁPIDAS</div>
+                        <div class="card-body demo-grid">
+                            <button class="btn btn-in btn-sm m-1">Editar</button>
+                            <button class="btn btn-ad btn-sm m-1">Alertar</button>
+                            <button class="btn btn-pe btn-sm m-1">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLA DE REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Referencia Completa</h2>
+                <p class="text-muted">
+                    Hoja de consulta con todas las clases disponibles.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.btn</code></td>
+                            <td>Base</td>
+                            <td>Clase obligatoria para cualquier botón</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-pr</code></td>
+                            <td>Sólida</td>
+                            <td>Variante primaria (dorado)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-se</code></td>
+                            <td>Sólida</td>
+                            <td>Variante secundaria</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-ex</code></td>
+                            <td>Sólida</td>
+                            <td>Éxito (verde) — confirmaciones</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-pe</code></td>
+                            <td>Sólida</td>
+                            <td>Peligro (rojo) — acciones destructivas</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-ad</code></td>
+                            <td>Sólida</td>
+                            <td>Advertencia (naranja) — avisos</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-in</code></td>
+                            <td>Sólida</td>
+                            <td>Informativo (azul) — información general</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-pr</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde primario</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-se</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde secundario</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-ex</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde verde</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-pe</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde rojo</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-ad</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde naranja</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-o-in</code></td>
+                            <td>Outline</td>
+                            <td>Solo borde azul</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-sm</code></td>
+                            <td>Tamaño</td>
+                            <td>Botón pequeño</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-md</code></td>
+                            <td>Tamaño</td>
+                            <td>Botón mediano (por defecto)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.btn-lg</code></td>
+                            <td>Tamaño</td>
+                            <td>Botón grande</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CODIGO RECOMENDADO -->
+        <section class="card mb-5">
+            <div class="card-header">⚓ Código recomendado con Grid System</div>
+            <div class="card-body">
+                <p class="card-text mb-3">
+                    Combina los botones con el sistema de rejillas
+                    (<strong>.container</strong>, <strong>.row</strong>,
+                    <strong>.col-*</strong>) para que tu diseño se adapte a móvil,
+                    tablet y escritorio sin CSS extra.
+                </p>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+      &lt;button class="btn btn-pr btn-lg"&gt;Zarpar&lt;/button&gt;
+      &lt;button class="btn btn-o-pe btn-md"&gt;Cancelar&lt;/button&gt;
+      &lt;button class="btn btn-ex btn-sm" disabled&gt;Confirmado&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+     <!--PIE DE PAGINA -->
+    <footer class="footer footer--mapa">
+
+        <div class="footer-separador">
+            <span>⚓</span>
+        </div>
+
+        <div class="footer-columnas">
+
+            <div>
+                <h4 class="footer-titulo">⚔️ Marca</h4>
+                <p class="footer-texto">
+                    Framework CSS con estilo pirata para construir interfaces legendarias.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="botones.html" class="footer-link">Botones</a></li>
+                    <li><a href="alertas.html" class="footer-link">Alertas</a></li>
+                    <li><a href="insignias.html" class="footer-link">Insignias</a></li>
+                    <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="tabla.html" class="footer-link">Tablas</a></li>
+                    <li><a href="formularios.html" class="footer-link">Formularios</a></li>
+                    <li><a href="footer.html" class="footer-link">Footer</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">Recursos</h4>
+                <ul class="footer-lista">
+                    <li><a href="documentacion.html" class="footer-link">Documentación</a></li>
+                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main" target="_blank"
+                            class="footer-link">GitHub</a></li>
+                    <li><a href="ejemplos.html" class="footer-link">Ejemplos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-base">
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+        </div>
+    </footer>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>

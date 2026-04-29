@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Documentacion Insignias - GrandLine UI</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+           <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-enlace nav-enlace--activo">Documentación</a>
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
+           
+        </ul>
+    </nav>
+
+    <!-- HERO TIPO CARTEL WANTED -->
+    <header class="hero">
+        <div class="container text-center">
+            <div class="hero-badges-float mb-3">
+                <span class="badge badge-pr badge-pi">NUEVO</span>
+                <span class="badge badge-ex badge-pi">ACTIVO</span>
+                <span class="badge badge-pe badge-pi">HOT</span>
+            </div>
+            <h1 class="hero-titulo">Insignias</h1>
+            <p class="hero-subtitulo">
+                Pequeños distintivos para etiquetar, contar, destacar o marcar estados.
+                Las insignias son la forma más rápida de añadir contexto visual a cualquier elemento.
+            </p>
+            <div class="hero-acciones">
+                <a href="#cofre" class="btn btn-pr btn-lg m-1">Ver el cofre</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg m-1">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+      <!-- RECETA DE LA INSIGNIA -->
+<section class="card card-pi mb-5">
+    <div class="card-header">🔨 Receta de una Insignia</div>
+    <div class="card-body">
+        <p class="card-text mb-4">
+            Construir una insignia es como forjar un arma pirata: combinas piezas
+            hasta conseguir el resultado deseado. Parte siempre de la clase base
+            <strong>.badge</strong> y añade los ingredientes que necesites.
+        </p>
+
+        <div class="row">
+
+            <!-- INGREDIENTES -->
+            <div class="col-12 col-lg-7 mb-3">
+                <div class="receta-ingredientes">
+                    <h4 class="receta-titulo">🧪 Ingredientes</h4>
+
+                    <div class="ingrediente">
+                        <span class="ingrediente-etiqueta obligatorio">Obligatorio</span>
+                        <div class="ingrediente-info">
+                            <code>.badge</code>
+                            <p>Estructura base de la insignia</p>
+                        </div>
+                    </div>
+
+                    <div class="ingrediente">
+                        <span class="ingrediente-etiqueta recomendado">Recomendado</span>
+                        <div class="ingrediente-info">
+                            <code>.badge-ex</code>
+                            <p>Variante de color (6 opciones disponibles)</p>
+                        </div>
+                    </div>
+
+                    <div class="ingrediente">
+                        <span class="ingrediente-etiqueta opcional">Opcional</span>
+                        <div class="ingrediente-info">
+                            <code>.badge-pi</code>
+                            <p>Modificador de forma o tamaño</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTADO -->
+            <div class="col-12 col-lg-5 mb-3">
+                <div class="receta-resultado">
+                    <h4 class="receta-titulo">🎯 Resultado</h4>
+                    <div class="resultado-visual">
+                        <span class="badge badge-ex badge-pi">COMPLETADO</span>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm mb-0"><code>&lt;span class="badge badge-ex badge-pi"&gt;
+  COMPLETADO
+&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- COFRE DEL TESORO (GALERIA DE COLORES) -->
+        <section id="cofre" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>💰 El Cofre del Tesoro</h2>
+                <p class="text-muted">
+                    Las seis variantes de color, cada una para un propósito distinto.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Cada color transmite una intención diferente. Usa la que mejor comunique
+                el estado o categoría que quieres representar.
+            </p>
+
+            <div class="row">
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-pr">.PR</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Primaria</strong>
+                            <p class="text-muted">Dorado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-se">.SE</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Secundaria</strong>
+                            <p class="text-muted">Dorado brillante</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-ex">.EX</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Éxito</strong>
+                            <p class="text-muted">Verde</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-pe">.PE</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Peligro</strong>
+                            <p class="text-muted">Rojo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-ad">.AD</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Advertencia</strong>
+                            <p class="text-muted">Naranja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <div class="tesoro-card">
+                        <div class="tesoro-muestra">
+                            <span class="badge badge-in">.IN</span>
+                        </div>
+                        <div class="tesoro-info">
+                            <strong>Info</strong>
+                            <p class="text-muted">Azul</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;span class="badge badge-pr"&gt;Primaria&lt;/span&gt;
+&lt;span class="badge badge-se"&gt;Secundaria&lt;/span&gt;
+&lt;span class="badge badge-ex"&gt;Éxito&lt;/span&gt;
+&lt;span class="badge badge-pe"&gt;Peligro&lt;/span&gt;
+&lt;span class="badge badge-ad"&gt;Advertencia&lt;/span&gt;
+&lt;span class="badge badge-in"&gt;Info&lt;/span&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- MODIFICADORES -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>⚒️ Modificadores de Forma y Tamaño</h2>
+                <p class="text-muted">
+                    Cambia la apariencia sin tocar el color.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Además de las seis variantes de color, puedes aplicar modificadores para
+                alterar la <strong>forma</strong> o el <strong>tamaño</strong> de cualquier
+                insignia. Se combinan con las clases de color sin conflicto.
+            </p>
+
+            <div class="row">
+
+                <!-- PILDORA -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>FORMA PÍLDORA</span>
+                            <span class="badge badge-in badge-pi">.badge-pi</span>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-muted mb-3">Bordes totalmente redondeados</p>
+                            <div class="demo-grid mb-3">
+                                <span class="badge badge-pr badge-pi">PRIMARIA</span>
+                                <span class="badge badge-ex badge-pi">ÉXITO</span>
+                                <span class="badge badge-pe badge-pi">PELIGRO</span>
+                            </div>
+                            <pre class="bg-surface rounded shadow-sm"><code>&lt;span class="badge badge-ex badge-pi"&gt;ÉXITO&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRANDE -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>TAMAÑO GRANDE</span>
+                            <span class="badge badge-in badge-pi">.badge-lg</span>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-muted mb-3">Para recompensas importantes</p>
+                            <div class="demo-grid mb-3">
+                                <span class="badge badge-pr badge-lg">CAPITÁN</span>
+                                <span class="badge badge-ex badge-lg">LEGENDARIO</span>
+                            </div>
+                            <pre class="bg-surface rounded shadow-sm"><code>&lt;span class="badge badge-pr badge-lg"&gt;CAPITÁN&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PEQUEÑO -->
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>TAMAÑO PEQUEÑO</span>
+                            <span class="badge badge-in badge-pi">.badge-sm</span>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-muted mb-3">Ideal para contadores</p>
+                            <div class="demo-grid mb-3">
+                                <span class="badge badge-pe badge-sm">3</span>
+                                <span class="badge badge-in badge-sm">12</span>
+                                <span class="badge badge-ad badge-sm">99+</span>
+                            </div>
+                            <pre class="bg-surface rounded shadow-sm"><code>&lt;span class="badge badge-pe badge-sm"&gt;3&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BITACORA DEL NAVEGANTE -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📜 Bitácora del Navegante</h2>
+                <p class="text-muted">
+                    Las insignias en su hábitat natural: casos de uso reales.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Las insignias brillan cuando acompañan a otros elementos. Aquí tienes
+                cuatro escenarios comunes donde aportan contexto valioso.
+            </p>
+
+            <!-- CASO 1: Dentro de texto -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <span>📰 DENTRO DE TÍTULOS Y TEXTO</span>
+                    <span class="badge badge-se badge-pi">CASO 1</span>
+                </div>
+                <div class="card-body">
+                    <h3>
+                        Monkey D. Luffy
+                        <span class="badge badge-pr badge-pi">CAPITÁN</span>
+                        <span class="badge badge-ex badge-sm">ACTIVO</span>
+                    </h3>
+                    <p>
+                        Artículo destacado
+                        <span class="badge badge-pe badge-pi">NUEVO</span>
+                        sobre las últimas noticias del Nuevo Mundo.
+                    </p>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;h3&gt;Monkey D. Luffy
+  &lt;span class="badge badge-pr badge-pi"&gt;CAPITÁN&lt;/span&gt;
+&lt;/h3&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- CASO 2: Dentro de botones -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <span>🔘 COMBINADAS CON BOTONES</span>
+                    <span class="badge badge-se badge-pi">CASO 2</span>
+                </div>
+                <div class="card-body">
+                    <div class="demo-grid mb-3">
+                        <button class="btn btn-pr">
+                            Mensajes <span class="badge badge-pe badge-sm">5</span>
+                        </button>
+                        <button class="btn btn-o-in">
+                            Notificaciones <span class="badge badge-ad badge-sm">12</span>
+                        </button>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;button class="btn btn-pr"&gt;
+  Mensajes &lt;span class="badge badge-pe badge-sm"&gt;5&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- CASO 3: En tablas -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <span>📊 COMO ESTADO EN TABLAS</span>
+                    <span class="badge badge-se badge-pi">CASO 3</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive mb-3">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Tripulante</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luffy</td>
+                                    <td>Capitán</td>
+                                    <td><span class="badge badge-ex badge-pi">ACTIVO</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Zoro</td>
+                                    <td>Espadachín</td>
+                                    <td><span class="badge badge-ad badge-pi">EN COMBATE</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nami</td>
+                                    <td>Navegante</td>
+                                    <td><span class="badge badge-pe badge-pi">AUSENTE</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;td&gt;&lt;span class="badge badge-ex badge-pi"&gt;ACTIVO&lt;/span&gt;&lt;/td&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- CASO 4: Como etiquetas -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <span>🏷️ COMO ETIQUETAS DE CATEGORÍA</span>
+                    <span class="badge badge-se badge-pi">CASO 4</span>
+                </div>
+                <div class="card-body">
+                    <div class="demo-grid mb-3">
+                        <span class="badge badge-pr">HTML</span>
+                        <span class="badge badge-in">CSS</span>
+                        <span class="badge badge-ex">SCSS</span>
+                        <span class="badge badge-ad">JavaScript</span>
+                        <span class="badge badge-pe">Framework</span>
+                        <span class="badge badge-se">Open Source</span>
+                    </div>
+                    <pre class="bg-surface rounded shadow-sm"><code>&lt;span class="badge badge-pr"&gt;HTML&lt;/span&gt;
+&lt;span class="badge badge-in"&gt;CSS&lt;/span&gt;
+&lt;span class="badge badge-ex"&gt;SCSS&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COMBINACIONES EXOTICAS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🎭 Combinaciones Exóticas</h2>
+                <p class="text-muted">
+                    Experimenta mezclando color, forma y tamaño.
+                </p>
+            </div>
+
+            <p class="card-text mb-4">
+                Al combinar las clases obtienes 36 variaciones visuales distintas sin
+                escribir ni una línea de CSS extra. Aquí tienes algunas ideas para inspirarte.
+            </p>
+
+            <div class="card card-demo">
+                <div class="card-header">LABORATORIO DE COMBINACIONES</div>
+                <div class="card-body demo-grid">
+                    <span class="badge badge-pr badge-lg">GRANDE PRIMARIA</span>
+                    <span class="badge badge-ex badge-pi badge-lg">ÉXITO PÍLDORA GRANDE</span>
+                    <span class="badge badge-pe badge-sm">ERROR</span>
+                    <span class="badge badge-ad badge-pi">AVISO PÍLDORA</span>
+                    <span class="badge badge-in badge-sm">INFO MINI</span>
+                    <span class="badge badge-se badge-lg">DORADO GRANDE</span>
+                    <span class="badge badge-pe badge-pi badge-sm">CRÍTICO</span>
+                    <span class="badge badge-ex badge-pi">COMPLETADO</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCIA DE CLASES -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Código Secreto del Pirata</h2>
+                <p class="text-muted">
+                    Todas las clases disponibles del componente insignia.
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Categoría</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.badge</code></td>
+                            <td>Base</td>
+                            <td>Clase obligatoria para cualquier insignia</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-pr</code></td>
+                            <td>Color</td>
+                            <td>Primaria (dorado)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-se</code></td>
+                            <td>Color</td>
+                            <td>Secundaria (dorado brillante)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-ex</code></td>
+                            <td>Color</td>
+                            <td>Éxito (verde)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-pe</code></td>
+                            <td>Color</td>
+                            <td>Peligro (rojo)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-ad</code></td>
+                            <td>Color</td>
+                            <td>Advertencia (naranja)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-in</code></td>
+                            <td>Color</td>
+                            <td>Información (azul)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-pi</code></td>
+                            <td>Forma</td>
+                            <td>Convierte la insignia en píldora redondeada</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-lg</code></td>
+                            <td>Tamaño</td>
+                            <td>Tamaño grande para destacar</td>
+                        </tr>
+                        <tr>
+                            <td><code>.badge-sm</code></td>
+                            <td>Tamaño</td>
+                            <td>Tamaño pequeño para contadores</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+     <!--PIE DE PAGINA -->
+    <footer class="footer footer--mapa">
+
+        <div class="footer-separador">
+            <span>⚓</span>
+        </div>
+
+        <div class="footer-columnas">
+
+            <div>
+                <h4 class="footer-titulo">⚔️ Marca</h4>
+                <p class="footer-texto">
+                    Framework CSS con estilo pirata para construir interfaces legendarias.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="botones.html" class="footer-link">Botones</a></li>
+                    <li><a href="alertas.html" class="footer-link">Alertas</a></li>
+                    <li><a href="insignias.html" class="footer-link">Insignias</a></li>
+                    <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="tabla.html" class="footer-link">Tablas</a></li>
+                    <li><a href="formularios.html" class="footer-link">Formularios</a></li>
+                    <li><a href="footer.html" class="footer-link">Footer</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">Recursos</h4>
+                <ul class="footer-lista">
+                    <li><a href="documentacion.html" class="footer-link">Documentación</a></li>
+                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main" target="_blank"
+                            class="footer-link">GitHub</a></li>
+                    <li><a href="ejemplos.html" class="footer-link">Ejemplos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-base">
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+        </div>
+    </footer>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 @use '../abstractos/variables' as v;
 
-// contenedor principal de la navbar
+// navbar principal
 .navbar {
   display: flex;
   align-items: center;
@@ -13,8 +13,8 @@
   flex-wrap: wrap;
 }
 
-// contenedor del logo
-.nav-logo {
+// logo o marca del sitio
+.nav-marca {
   display: flex;
   align-items: center;
   gap: v.$spacing-sm;
@@ -26,12 +26,22 @@
   text-decoration: none;
 }
 
-// checkbox oculto que controla el menu hamburguesa
+// imagen dentro del logo
+.nav-marca img {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 7px;
+}
+
+// checkbox oculto para el menu hamburguesa
 .nav-check {
   display: none;
 }
 
-// lista de enlaces de navegacion
+// lista de enlaces
 .nav-menu {
   display: flex;
   align-items: center;
@@ -47,7 +57,7 @@
 }
 
 // enlaces de la navbar
-.nav-link {
+.nav-enlace {
   color: v.$text;
   text-decoration: none;
   font-size: v.$font-base;
@@ -57,14 +67,14 @@
   transition: v.$transition-rapida;
 }
 
-// efecto hover en los enlaces
-.nav-link:hover {
+// efecto hover de los enlaces
+.nav-enlace:hover {
   color: v.$gold-bright;
   background-color: v.$surface;
 }
 
-// enlace activo destacado
-.nav-link-activo {
+// enlace activo
+.nav-enlace--activo {
   color: v.$gold-bright;
   border-bottom: 2px solid v.$accent;
 }
@@ -88,23 +98,53 @@
   transition: v.$transition-rapida;
 }
 
-// variante oscura alternativa
-.navbar-os {
+// VARIANTES DE COLOR
+
+// variante oscura
+.navbar--oscuro {
   background-color: v.$background;
   border-bottom: 2px solid v.$gold-bright;
 }
 
 // variante transparente
-.navbar-tr {
+.navbar--transparente {
   background-color: transparent;
   border-bottom: 1px solid v.$text-muted;
   box-shadow: none;
 }
 
-// navbar responsive para moviles
+// VARIANTES DE ESTRUCTURA
+
+// logo a la derecha, menu a la izquierda
+.navbar--derecha {
+  flex-direction: row-reverse;
+}
+
+// logo arriba, menu abajo centrado
+.navbar--vertical {
+  flex-direction: column;
+  gap: v.$spacing-md;
+  justify-content: center;
+}
+
+.navbar--vertical .nav-menu {
+  justify-content: center;
+  width: 100%;
+}
+
+// RESPONSIVE
+
+
 @media (max-width: 768px) {
+
+  // padding reducido en movil
   .navbar {
     padding: v.$spacing-md;
+  }
+
+  // logo mas pequeño en movil
+  .nav-marca img {
+    height: 50px;
   }
 
   // mostrar boton hamburguesa
@@ -112,7 +152,7 @@
     display: flex;
   }
 
-  // menu oculto por defecto en movil
+  // menu oculto por defecto
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -122,14 +162,165 @@
     gap: v.$spacing-sm;
   }
 
-  // cuando el checkbox esta marcado mostrar el menu
+  // menu visible al marcar el checkbox
   .nav-check:checked ~ .nav-menu {
     display: flex;
   }
 
-  // enlaces ocupan todo el ancho en movil
-  .nav-link {
+  // enlaces al 100% del ancho
+  .nav-enlace {
     width: 100%;
     padding: v.$spacing-sm;
+  }
+
+  // reset de las variantes de estructura en movil
+  .navbar--derecha,
+  .navbar--centrado,
+  .navbar--vertical {
+    flex-direction: row;
+  }
+
+  .navbar--centrado .nav-marca,
+  .navbar--centrado .nav-menu,
+  .navbar--centrado .nav-menu-derecha {
+    order: 0;
+    margin: 0;
+  }
+}
+
+// DROPDOWN DE NAVBAR
+
+// contenedor del dropdown
+.nav-dropdown {
+  position: relative;
+}
+
+// flecha indicadora del enlace principal
+.nav-dropdown > .nav-enlace::after {
+  content: ' ▾';
+  font-size: 0.75em;
+  margin-left: 4px;
+  transition: v.$transition-rapida;
+}
+
+// rotar la flecha al abrir
+.nav-dropdown:hover > .nav-enlace::after {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+// menu desplegable
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: v.$primary;
+  border-radius: v.$border-radius;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 209, 102, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: v.$spacing-xs;
+  z-index: 100;
+  animation: dropdownFade 0.25s ease;
+}
+
+// puente invisible que mantiene el hover activo
+.nav-dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+// flechita conectora arriba del dropdown
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: v.$primary;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+// animacion de entrada
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// mostrar dropdown al hacer hover
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+// enlaces dentro del dropdown
+.nav-dropdown-menu .nav-enlace {
+  display: block;
+  width: 100%;
+  padding: v.$spacing-sm v.$spacing-md;
+  border-radius: v.$border-radius-sm;
+  color: v.$text;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+}
+
+// barra dorada lateral oculta
+.nav-dropdown-menu .nav-enlace::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: v.$gold-bright;
+  transform: scaleY(0);
+  transition: v.$transition-rapida;
+}
+
+// efecto al pasar el mouse
+.nav-dropdown-menu .nav-enlace:hover {
+  background-color: v.$surface;
+  color: v.$gold-bright;
+  padding-left: v.$spacing-lg;
+}
+
+// mostrar la barra dorada al hacer hover
+.nav-dropdown-menu .nav-enlace:hover::before {
+  transform: scaleY(1);
+}
+
+// dropdown adaptado para movil
+@media (max-width: 768px) {
+
+  // dropdown como submenu indentado en movil
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    animation: none;
+    border-left: 2px solid v.$accent;
+    border-radius: 0;
+    margin-left: v.$spacing-md;
+    margin-top: v.$spacing-xs;
+    padding: v.$spacing-xs 0 v.$spacing-xs v.$spacing-sm;
+    background-color: transparent;
+  }
+
+  // ocultar flechita conectora en movil
+  .nav-dropdown-menu::before {
+    display: none;
+  }
+
+  // mostrar dropdown en movil
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
   }
 }

@@ -1,5 +1,6 @@
 @use "../abstractos/mixins";
 
+
 /* filas*/
 
 .row{
@@ -13,6 +14,20 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 0 15px;
+    box-sizing: border-box;
+    
+}
+
+/*telefono */
+
 .col-1{
     @include mixins.col(1);
 }
@@ -52,7 +67,10 @@
 
 /*tablet*/
 
+
 @media (max-width: 768px){
+
+@media (min-width: 768px) {
     .col-md-1{
         @include mixins.col(1);
     }
@@ -131,3 +149,47 @@
         @include mixins.col(12);
     }
 }
+
+    
+}
+
+/*desktop*/
+@media (min-width: 992px) {
+    .col-lg-1{
+        @include mixins.col(1);
+    }
+     .col-lg-2{
+        @include mixins.col(2);
+    }
+     .col-lg-3{
+        @include mixins.col(3);
+    }
+     .col-lg-4{
+        @include mixins.col(4);
+    }
+     .col-lg-5{
+        @include mixins.col(5);
+    }
+     .col-lg-6{
+        @include mixins.col(6);
+    }
+     .col-lg-7{
+        @include mixins.col(7);
+    }
+     .col-lg-8{
+        @include mixins.col(8);
+    }
+     .col-lg-9{
+        @include mixins.col(9);
+    }
+     .col-lg-10{
+        @include mixins.col(10);
+    }
+     .col-lg-11{
+        @include mixins.col(11);
+    }
+     .col-lg-12{
+        @include mixins.col(12);
+    }
+}
+

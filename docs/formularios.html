@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <title>Documentacion Form</title>
+</head>
+
+<body>
+   <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-enlace nav-enlace--activo">Documentación</a>
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
+        </ul>
+    </nav>
+  <main class=" container mt-5 mb-5 docs ">
+
+    <!-- HEADER -->
+    <section class="text-center mb-5">
+      <h1>Documentacion de Formularios</h1>
+      <p class="fs-3 text-muted">
+        Los formularios en GrandLine-UI están diseñados para ser claros,
+        accesibles y altamente personalizables. Incluyen estilos para inputs,
+        estados interactivos y variantes visuales.
+      </p>
+      <div class="hero-acciones">
+                <a href="#uso" class="btn btn-pr btn-lg m-1">Empezar ahora</a>
+                <a href="#inputs-tabla" class="btn btn-o-se btn-lg m-1">Ver referencia</a>
+            </div>
+    </section>
+    <section class="card card-pi mb-5">
+
+  <div class="card-header">
+    Como estructurar un formulario
+  </div>
+
+  <div class="card-body">
+
+    <p class="card-text">
+      Para mantener consistencia y accesibilidad, agrupa cada campo dentro de
+      <strong>.form-group</strong>, utiliza <strong>.label</strong> para las etiquetas
+      y aplica la clase <strong>.input</strong> para los campos.
+    </p>
+
+    <pre class="bg-surface rounded shadow-sm mb-3"><code>&lt;form&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label class="label"&gt;Nombre&lt;/label&gt;
+    &lt;input type="text" class="input"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label class="label"&gt;Correo&lt;/label&gt;
+    &lt;input type="email" class="input"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label class="label"&gt;Mensaje&lt;/label&gt;
+    &lt;textarea class="textarea"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+&lt;/form&gt;</code></pre>
+
+    <div class="alert alert-in mb-0">
+      <span class="alert-icono">i</span>
+      <div class="alert-contenido">
+        <h4 class="alert-titulo">Recomendación</h4>
+        <p class="alert-texto">
+          Mantén una jerarquía clara usando <strong>.form-group</strong> para separar campos
+          y utiliza variantes como <strong>.input-wanted</strong>,
+          <strong>.input-marine</strong> o <strong>.input-treasure</strong>
+          para personalizar el estilo.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- TITULO -->
+    <h3 id="uso" class="text-center mb-4">Inputs</h3>
+
+    <!-- CONTENIDO -->
+    <div class="row">
+
+      <!-- PREVIEW -->
+      <div class="col-12 col-md-6">
+        <div class="card p-4 ">
+
+          <h6 class="mb-3 text-muted text-center">Variantes</h6>
+
+          <div class="row g-3">
+
+            <div class="col-12 col-md-4 mb-5">
+              <div class="form-group">
+                <label class="label">Wanted</label>
+                <input type="text" class="input input-wanted">
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="form-group">
+                <label class="label">Marine</label>
+                <input type="text" class="input input-marine">
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="form-group">
+                <label class="label">Treasure</label>
+                <input type="text" class="input input-treasure">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CODIGO -->
+      <div class="col-12 col-md-6">
+        <div class="card">
+
+          <div class="card-header">
+            <span>CODIGO</span>
+            <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+              📋 Copiar
+            </button>
+          </div>
+
+          <pre class="bg-surface rounded shadow-sm p-3 mb-0"><code>&lt;input type="text" class="input input-wanted"&gt;
+&lt;input type="text" class="input input-marine"&gt;
+&lt;input type="text" class="input input-treasure"&gt;</code></pre>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!--Select------------------------------------------------->
+    <section class="mb-5">
+
+      <h3 class="text-center mb-4 mt-5">Select</h3>
+
+      <div class="row">
+
+        <!-- PREVIEW -->
+        <div class="col-12 col-md-6">
+          <div class="card p-4">
+
+            <h6 class="mb-3 text-muted text-center">Variantes</h6>
+
+            <div class="row g-3">
+
+              <div class="col-12 col-md-4 mb-4">
+                <div class="form-group">
+                  <label class="label">Wanted</label>
+                  <select class="select input-wanted">
+                    <option>Recompensa</option>
+                    <option>1000 berries</option>
+                    <option>5000 berries</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Marine</label>
+                  <select class="select input-marine">
+                    <option>Rango</option>
+                    <option>Soldado</option>
+                    <option>Almirante</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Treasure</label>
+                  <select class="select input-treasure">
+                    <option>Tesoro</option>
+                    <option>Oro</option>
+                    <option>Fruta del diablo</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CODIGO -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+
+            <div class="card-header">
+              <span>CODIGO</span>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                📋 Copiar
+              </button>
+            </div>
+
+            <pre class="bg-surface rounded shadow-sm p-3 mb-0">
+<code>&lt;select class="select input-wanted"&gt;
+&lt;select class="select input-marine"&gt;
+&lt;select class="select input-treasure"&gt;</code> </pre>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!------------------------------- TextTarea------------------------------->
+    <section class="mb-5">
+
+      <h3 class="text-center mb-4 mt-5">Textarea</h3>
+
+      <div class="row">
+
+        <!-- PREVIEW -->
+        <div class="col-12 col-md-6">
+          <div class="card p-4">
+
+            <h6 class="mb-3 text-muted text-center">Variantes</h6>
+
+            <div class="row g-3">
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Wanted</label>
+                  <textarea class="textarea input-wanted" placeholder="Escribe tu recompensa..."></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Marine</label>
+                  <textarea class="textarea input-marine" placeholder="Escribe tu reporte..."></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Treasure</label>
+                  <textarea class="textarea input-treasure" placeholder="Describe el tesoro..."></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CODIGO -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+
+            <div class="card-header ">
+              <span>CODIGO</span>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                📋 Copiar
+              </button>
+            </div>
+
+            <pre class="bg-surface rounded shadow-sm p-3 mb-0">
+<code>&lt;textarea class="textarea input-wanted"&gt;&lt;/textarea&gt;
+&lt;textarea class="textarea input-marine"&gt;&lt;/textarea&gt;
+&lt;textarea class="textarea input-treasure"&gt;&lt;/textarea&gt;</code>
+
+</pre>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--------------------------checkboxs----------------->
+
+    <section class="mb-5">
+
+      <h3 class="text-center mb-4 mt-5">Checkbox</h3>
+
+      <div class="row">
+
+        <!-- PREVIEW -->
+        <div class="col-12 col-md-6">
+          <div class="card p-4 ">
+
+            <h6 class="mb-3 text-muted text-center ">Estados</h6>
+
+            <div class="form-check">
+              <input type="checkbox" class="checkbox " id="check1">
+              <label for="check1">Aceptar misión</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="checkbox" id="check2" checked>
+              <label for="check2">Ya soy pirata</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="checkbox" id="check3" disabled>
+              <label for="check3">Misión bloqueada</label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CODIGO -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+
+            <div class="card-header">
+              <span>CODIGO</span>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                📋 Copiar
+              </button>
+            </div>
+
+            <pre class="bg-surface rounded shadow-sm ">
+<code>&lt;input type="checkbox" class="checkbox"&gt;
+&lt;input type="checkbox" class="checkbox" checked&gt;
+&lt;input type="checkbox" class="checkbox" disabled&gt;</code></pre>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-------------------------------RadioButton--------------------->
+
+    <section class="mb-5">
+
+      <h3 class="text-center mb-4 mt-5">RadioButton</h3>
+
+      <div class="row">
+
+        <!-- PREVIEW -->
+        <div class="col-12 col-md-6">
+          <div class="card p-4">
+
+            <h6 class="mb-3 text-muted text-center">Estados</h6>
+
+            <div class="form-check">
+              <input type="radio" name="rol" class="radio" id="radio1">
+              <label for="radio1">Pirata</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="rol" class="radio" id="radio2" checked>
+              <label for="radio2">Marine</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="rol" class="radio" id="radio3" disabled>
+              <label for="radio3">Revolucionario (bloqueado)</label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CODIGO -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+
+            <div class="card-header">
+              <span>CODIGO</span>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                📋 Copiar
+              </button>
+            </div>
+
+            <pre class="bg-surface rounded shadow-sm p-3 mb-0">
+<code>&lt;input type="radio" name="rol" class="radio"&gt;
+&lt;input type="radio" name="rol" class="radio" checked&gt;
+&lt;input type="radio" name="rol" class="radio" disabled&gt;</code></pre>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--------------------------Data Time ---------------------->
+    <section class="mb-5">
+
+      <h3 class="text-center mb-4 mt-5">Date & Time</h3>
+
+      <div class="row">
+
+        <!-- PREVIEW -->
+        <div class="col-12 col-md-6">
+          <div class="card p-4">
+
+            <h6 class="mb-3 text-muted text-center">Variantes</h6>
+
+            <div class="row g-3">
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Wanted</label>
+                  <input type="date" class="input input-wanted">
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Marine</label>
+                  <input type="time" class="input input-marine">
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label class="label">Treasure</label>
+                  <input type="datetime-local" class="input input-treasure">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CODIGO -->
+        <div class="col-12 col-md-6">
+          <div class="card">
+
+            <div class="card-header">
+              <span>CODIGO</span>
+              <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                📋 Copiar
+              </button>
+            </div>
+
+            <pre class="bg-surface rounded shadow-sm p-3 mb-0">
+<code>&lt;input type="date" class="input input-wanted"&gt;
+&lt;input type="time" class="input input-marine"&gt;
+&lt;input type="datetime-local" class="input input-treasure"&gt;</code></pre>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-----------------------referencias---------------------->
+
+    <section id="inputs-tabla" class="mb-5">
+
+    <div class="seccion-header mb-3">
+        <h2>📝 Formularios del Navegante</h2>
+        <p class="text-muted">
+            Clases disponibles para inputs, selects, textarea y estados.
+        </p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <!-- BASE -->
+                <tr>
+                    <td><code>.input</code></td>
+                    <td>Base</td>
+                    <td>Estilo base para inputs de texto</td>
+                </tr>
+                <tr>
+                    <td><code>.select</code></td>
+                    <td>Base</td>
+                    <td>Estilo base para selects</td>
+                </tr>
+                <tr>
+                    <td><code>.textarea</code></td>
+                    <td>Base</td>
+                    <td>Estilo base para áreas de texto</td>
+                </tr>
+
+                <!-- VARIANTES -->
+                <tr>
+                    <td><code>.input-wanted</code></td>
+                    <td>Variante</td>
+                    <td>Estilo tipo cartel WANTED (tono antiguo)</td>
+                </tr>
+                <tr>
+                    <td><code>.input-marine</code></td>
+                    <td>Variante</td>
+                    <td>Estilo marine (azul limpio)</td>
+                </tr>
+                <tr>
+                    <td><code>.input-treasure</code></td>
+                    <td>Variante</td>
+                    <td>Estilo tesoro (dorado brillante)</td>
+                </tr>
+
+                <!-- CHECKBOX / RADIO -->
+                <tr>
+                    <td><code>.checkbox</code></td>
+                    <td>Control</td>
+                    <td>Checkbox personalizado</td>
+                </tr>
+                <tr>
+                    <td><code>.radio</code></td>
+                    <td>Control</td>
+                    <td>Radio button personalizado</td>
+                </tr>
+                <tr>
+                    <td><code>.form-check</code></td>
+                    <td>Layout</td>
+                    <td>Alinea checkbox o radio con su etiqueta</td>
+                </tr>
+
+                <!-- ESTADOS -->
+                <tr>
+                    <td><code>.input-ex</code></td>
+                    <td>Estado</td>
+                    <td>Input válido (borde verde)</td>
+                </tr>
+                <tr>
+                    <td><code>.input-pe</code></td>
+                    <td>Estado</td>
+                    <td>Input inválido (borde rojo)</td>
+                </tr>
+                <tr>
+                    <td><code>.form-msg-ex</code></td>
+                    <td>Mensaje</td>
+                    <td>Texto de éxito debajo del input</td>
+                </tr>
+                <tr>
+                    <td><code>.form-msg-pe</code></td>
+                    <td>Mensaje</td>
+                    <td>Texto de error debajo del input</td>
+                </tr>
+
+                <!-- OTROS -->
+                <tr>
+                    <td><code>:focus</code></td>
+                    <td>Interacción</td>
+                    <td>Resalta el input al enfocarlo</td>
+                </tr>
+                <tr>
+                    <td><code>:disabled</code></td>
+                    <td>Estado</td>
+                    <td>Desactiva el input con opacidad reducida</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</section>
+  </main>
+
+   <!--PIE DE PAGINA -->
+    <footer class="footer footer--mapa">
+
+        <div class="footer-separador">
+            <span>⚓</span>
+        </div>
+
+        <div class="footer-columnas">
+
+            <div>
+                <h4 class="footer-titulo">⚔️ Marca</h4>
+                <p class="footer-texto">
+                    Framework CSS con estilo pirata para construir interfaces legendarias.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="botones.html" class="footer-link">Botones</a></li>
+                    <li><a href="alertas.html" class="footer-link">Alertas</a></li>
+                    <li><a href="insignias.html" class="footer-link">Insignias</a></li>
+                    <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="tabla.html" class="footer-link">Tablas</a></li>
+                    <li><a href="formularios.html" class="footer-link">Formularios</a></li>
+                    <li><a href="footer.html" class="footer-link">Footer</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">Recursos</h4>
+                <ul class="footer-lista">
+                    <li><a href="documentacion.html" class="footer-link">Documentación</a></li>
+                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main" target="_blank"
+                            class="footer-link">GitHub</a></li>
+                    <li><a href="ejemplos.html" class="footer-link">Ejemplos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-base">
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+        </div>
+    </footer>
+</body>
+
+</html>

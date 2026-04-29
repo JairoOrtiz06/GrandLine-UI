@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandLine-UI - Framework Pirata</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace ">Inicio</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-enlace nav-enlace--activo">Documentación</a>
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                </ul>
+            </li>
+            
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="hero-titulo">Navbar</h1>
+            <p class="hero-subtitulo">
+                Barra de navegación responsive con menú hamburguesa sin JavaScript.
+                Tres variantes de color, tres estructuras y soporte completo para dropdowns.
+            </p>
+            <div class="hero-acciones">
+                <a href="#estructura" class="btn btn-pr btn-lg m-1">Ver estructura</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg m-1">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- INTRODUCCION -->
+        <section id="estructura" class="card card-pi mb-5">
+            <div class="card-header">⚓ Cómo usar una navbar</div>
+            <div class="card-body">
+                <p class="card-text">
+                    La navbar se construye con tres piezas: una <strong>marca</strong>
+                    (logo o nombre), un <strong>menú de enlaces</strong> y un
+                    <strong>botón hamburguesa</strong> que aparece solo en móvil.
+                    Todo funciona sin JavaScript gracias a un checkbox oculto.
+                </p>
+
+                <pre class="bg-surface rounded shadow-sm mb-3"><code>&lt;nav class="navbar"&gt;
+  &lt;a href="#" class="nav-marca"&gt;...&lt;/a&gt;
+  &lt;input type="checkbox" id="nav-main" class="nav-check"&gt;
+  &lt;label for="nav-main" class="nav-toggle"&gt;...&lt;/label&gt;
+  &lt;ul class="nav-menu"&gt;...&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+                <div class="alert alert-in mb-0">
+                    <span class="alert-icono">⚡</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">Magia CSS Pura</h4>
+                        <p class="alert-texto">
+                            El menú hamburguesa funciona con <strong>.nav-check:checked ~ .nav-menu</strong>,
+                            un selector que muestra el menú cuando el checkbox está activo.
+                            Sin una sola línea de JavaScript.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTES DE COLOR -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🎨 Variantes de Color</h2>
+                <p class="text-muted">Tres estilos para distintos proyectos.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                Cambia el aspecto de la navbar aplicando una clase modificadora.
+                Cada variante está pensada para un contexto diferente.
+            </p>
+
+            <!-- CLASICA -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>CLÁSICA</span>
+                    <span class="badge badge-ex badge-pi">.navbar</span>
+                </div>
+                <nav class="navbar" style="margin:0;border-radius:0;">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">⚓ BARCO</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Mapa</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Tripulación</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+
+            <!-- OSCURA -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>OSCURA</span>
+                    <span class="badge badge-ex badge-pi">.navbar--oscuro</span>
+                </div>
+                <nav class="navbar navbar--oscuro" style="margin:0;border-radius:0;">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">🌙 NOCHE</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Estrellas</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Luna</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+
+            <!-- TRANSPARENTE -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>TRANSPARENTE</span>
+                    <span class="badge badge-ex badge-pi">.navbar--transparente</span>
+                </div>
+                <div style="background:linear-gradient(135deg,#2d1b4e 0%,#8b3a62 50%,#d4a84b 100%);">
+                    <nav class="navbar navbar--transparente" style="margin:0;border-radius:0;">
+                        <a href="#" class="nav-marca" style="font-size:1.2rem">☁️ CIELO</a>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Viento</a></li>
+                            <li class="nav-item"><a href="#" class="nav-enlace">Nube</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Clásica --&gt;
+&lt;nav class="navbar"&gt;...&lt;/nav&gt;
+
+&lt;!-- Oscura --&gt;
+&lt;nav class="navbar navbar--oscuro"&gt;...&lt;/nav&gt;
+
+&lt;!-- Transparente --&gt;
+&lt;nav class="navbar navbar--transparente"&gt;...&lt;/nav&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- VARIANTES DE ESTRUCTURA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📐 Variantes de Estructura</h2>
+                <p class="text-muted">Cambia la disposición del contenido.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                Además de los colores, puedes modificar cómo se organizan los elementos
+                dentro de la navbar con estas variantes estructurales.
+            </p>
+
+            <!-- INVERTIDA -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>INVERTIDA</span>
+                    <span class="badge badge-ex badge-pi">.navbar--derecha</span>
+                </div>
+                <nav class="navbar navbar--derecha" style="margin:0;border-radius:0;">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem"><img src="../img/logo.png" alt=""></a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Mapa</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+
+            <!-- VERTICAL -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>VERTICAL</span>
+                    <span class="badge badge-ex badge-pi">.navbar--vertical</span>
+                </div>
+                <nav class="navbar navbar--vertical" style="margin:0;border-radius:0;">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem"><img src="../img/logo.png" alt=""></a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace nav-enlace--activo">Inicio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Mapa</a></li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Logo a la derecha --&gt;
+&lt;nav class="navbar navbar--derecha"&gt;...&lt;/nav&gt;
+
+&lt;!-- Logo arriba, menu abajo --&gt;
+&lt;nav class="navbar navbar--vertical"&gt;...&lt;/nav&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- DROPDOWN -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📂 Menú Dropdown</h2>
+                <p class="text-muted">Submenús desplegables sin JavaScript.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                Agrega la clase <strong>.nav-dropdown</strong> al item que debe tener
+                submenú, y dentro coloca un <strong>.nav-dropdown-menu</strong> con
+                los enlaces. El menú aparece al hacer hover con una animación suave
+                y una flechita conectora.
+            </p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>VISTA PREVIA</span>
+                    <span class="badge badge-ex badge-pi">Pasa el mouse sobre "Menú"</span>
+                </div>
+                <nav class="navbar" style="margin:0;border-radius:0;">
+                    <a href="#" class="nav-marca" style="font-size:1.2rem">⚓ DEMO</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="#" class="nav-enlace">Inicio</a></li>
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-enlace nav-enlace--activo">Menú</a>
+                            <ul class="nav-dropdown-menu">
+                                <li class="nav-item"><a href="#" class="nav-enlace">Opción 1</a></li>
+                                <li class="nav-item"><a href="#" class="nav-enlace">Opción 2</a></li>
+                                <li class="nav-item"><a href="#" class="nav-enlace">Opción 3</a></li>
+                                <li class="nav-item"><a href="#" class="nav-enlace">Opción 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-enlace">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;li class="nav-item nav-dropdown"&gt;
+  &lt;a href="#" class="nav-enlace"&gt;Menú&lt;/a&gt;
+  &lt;ul class="nav-dropdown-menu"&gt;
+    &lt;li class="nav-item"&gt;&lt;a href="#" class="nav-enlace"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="nav-item"&gt;&lt;a href="#" class="nav-enlace"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- RESPONSIVE -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📱 Comportamiento Responsive</h2>
+                <p class="text-muted">Cómo se adapta la navbar a cada dispositivo.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>🖥️ ESCRITORIO</span>
+                            <span class="badge badge-ex badge-pi">≥ 768px</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="footer-lista">
+                                <li>✓ Menú horizontal siempre visible</li>
+                                <li>✓ Todos los enlaces alineados a la derecha</li>
+                                <li>✓ Dropdowns abren al hacer hover</li>
+                                <li>✓ Botón hamburguesa oculto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>📱 MÓVIL</span>
+                            <span class="badge badge-pe badge-pi">&lt; 768px</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="footer-lista">
+                                <li>✓ Menú oculto por defecto</li>
+                                <li>✓ Botón hamburguesa visible</li>
+                                <li>✓ Al tocar: menú vertical desplegado</li>
+                                <li>✓ Dropdowns como submenús indentados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Referencia Completa</h2>
+                <p class="text-muted">Todas las clases del componente navbar.</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.navbar</code></td>
+                            <td>Base</td>
+                            <td>Contenedor principal obligatorio</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-marca</code></td>
+                            <td>Elemento</td>
+                            <td>Logo o nombre del sitio</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-check</code></td>
+                            <td>Elemento</td>
+                            <td>Checkbox oculto que controla el menú móvil</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-toggle</code></td>
+                            <td>Elemento</td>
+                            <td>Botón hamburguesa (solo móvil)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-menu</code></td>
+                            <td>Elemento</td>
+                            <td>Lista principal de enlaces</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-item</code></td>
+                            <td>Elemento</td>
+                            <td>Cada ítem dentro del menú</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-enlace</code></td>
+                            <td>Elemento</td>
+                            <td>Enlace de navegación</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-enlace--activo</code></td>
+                            <td>Estado</td>
+                            <td>Resalta el enlace de la página actual</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-dropdown</code></td>
+                            <td>Elemento</td>
+                            <td>Ítem que contiene un submenú</td>
+                        </tr>
+                        <tr>
+                            <td><code>.nav-dropdown-menu</code></td>
+                            <td>Elemento</td>
+                            <td>Lista desplegable del submenú</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--oscuro</code></td>
+                            <td>Variante</td>
+                            <td>Fondo negro con borde dorado</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--transparente</code></td>
+                            <td>Variante</td>
+                            <td>Fondo transparente para superponer</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--derecha</code></td>
+                            <td>Estructura</td>
+                            <td>Invierte el orden (logo a la derecha)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.navbar--vertical</code></td>
+                            <td>Estructura</td>
+                            <td>Apila logo arriba y menú abajo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+     <!--PIE DE PAGINA -->
+    <footer class="footer footer--mapa">
+
+        <div class="footer-separador">
+            <span>⚓</span>
+        </div>
+
+        <div class="footer-columnas">
+
+            <div>
+                <h4 class="footer-titulo">⚔️ Marca</h4>
+                <p class="footer-texto">
+                    Framework CSS con estilo pirata para construir interfaces legendarias.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="botones.html" class="footer-link">Botones</a></li>
+                    <li><a href="alertas.html" class="footer-link">Alertas</a></li>
+                    <li><a href="insignias.html" class="footer-link">Insignias</a></li>
+                    <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <ul class="footer-lista">
+                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="tabla.html" class="footer-link">Tablas</a></li>
+                    <li><a href="formularios.html" class="footer-link">Formularios</a></li>
+                    <li><a href="footer.html" class="footer-link">Footer</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-titulo">Recursos</h4>
+                <ul class="footer-lista">
+                    <li><a href="documentacion.html" class="footer-link">Documentación</a></li>
+                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main" target="_blank"
+                            class="footer-link">GitHub</a></li>
+                    <li><a href="ejemplos.html" class="footer-link">Ejemplos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-base">
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+        </div>
+    </footer>
+
+    <script src="js/copiar-codigo.js"></script>
+</body>
+
+</html>

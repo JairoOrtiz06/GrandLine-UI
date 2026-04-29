@@ -73,7 +73,15 @@
 // contenedor del contenido para que tome el espacio disponible
 .alert-contenido {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
+
+.alert-contenido code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 
 // icono de la alerta
 .alert-icono {
