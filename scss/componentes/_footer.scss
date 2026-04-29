@@ -1,0 +1,185 @@
+@use '../abstractos/variables' as v;
+
+// footer principal
+.footer {
+  background-color: v.$primary;
+  border-top: 2px solid v.$accent;
+  padding: v.$spacing-xl v.$spacing-lg;
+  margin-top: v.$spacing-xl;
+  font-family: v.$font-texto;
+  color: v.$text;
+}
+
+// titulo de cada columna o bloque
+.footer-titulo {
+  font-family: v.$font-titulo;
+  color: v.$gold-bright;
+  font-size: v.$font-lg;
+  letter-spacing: 2px;
+  margin: 0 0 v.$spacing-md;
+  text-transform: uppercase;
+}
+
+// parrafo descriptivo
+.footer-texto {
+  color: v.$text-muted;
+  font-size: v.$font-sm;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// lista de enlaces
+.footer-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// enlace del footer
+.footer-link {
+  color: v.$text-muted;
+  text-decoration: none;
+  font-size: v.$font-sm;
+  display: block;
+  padding: 4px 0;
+  transition: v.$transition-rapida;
+}
+
+// hover del enlace
+.footer-link:hover {
+  color: v.$gold-bright;
+  transform: translateX(6px);
+}
+
+// zona inferior del footer
+.footer-base {
+  max-width: 1200px;
+  margin: v.$spacing-lg auto 0;
+  padding-top: v.$spacing-md;
+  border-top: 1px dashed rgba(255, 209, 102, 0.2);
+  text-align: center;
+  color: v.$text-muted;
+  font-size: v.$font-sm;
+}
+
+// variante cartel wanted
+.footer--wanted {
+  background-color: v.$surface;
+  border: 4px double v.$gold-bright;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  box-shadow: inset 0 0 50px rgba(255, 209, 102, 0.1);
+}
+
+// marca gigante del wanted
+.footer--wanted .footer-titulo {
+  font-size: 3rem;
+  letter-spacing: 8px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: v.$spacing-sm;
+}
+
+// subtitulo del wanted
+.footer--wanted .footer-texto {
+  font-family: v.$font-titulo;
+  color: v.$accent;
+  letter-spacing: 4px;
+  font-size: v.$font-lg;
+  margin-bottom: v.$spacing-lg;
+}
+
+// lista horizontal en wanted
+.footer--wanted .footer-lista {
+  display: flex;
+  justify-content: center;
+  gap: v.$spacing-lg;
+  flex-wrap: wrap;
+  padding: v.$spacing-md 0;
+  border-top: 2px solid v.$accent;
+  border-bottom: 2px solid v.$accent;
+  margin: v.$spacing-lg 0;
+}
+
+// enlaces horizontales en wanted
+.footer--wanted .footer-link {
+  font-family: v.$font-titulo;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0;
+  display: inline;
+}
+
+// hover del enlace wanted
+.footer--wanted .footer-link:hover {
+  color: v.$gold-bright;
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.6);
+  transform: none;
+}
+
+// variante mapa del tesoro
+.footer--mapa {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 209, 102, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 50%, rgba(255, 209, 102, 0.08) 0%, transparent 40%),
+    v.$primary;
+}
+
+// grid de columnas en mapa
+.footer--mapa .footer-columnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: v.$spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// titulo de columna en mapa
+.footer--mapa .footer-titulo {
+  padding-bottom: v.$spacing-xs;
+  border-bottom: 1px dashed rgba(255, 209, 102, 0.3);
+  font-size: v.$font-base;
+}
+
+// separador decorativo con ancla
+.footer--mapa .footer-separador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: v.$spacing-md;
+  margin-bottom: v.$spacing-xl;
+  color: v.$gold-bright;
+  font-size: v.$font-xl;
+}
+
+// lineas del separador
+.footer--mapa .footer-separador::before,
+.footer--mapa .footer-separador::after {
+  content: '';
+  flex: 1;
+  max-width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, v.$accent, transparent);
+}
+
+// variante oscura
+.footer--oscuro {
+  background-color: v.$background;
+  border-top: 2px solid v.$gold-bright;
+}
+
+// responsive para moviles
+@media (max-width: 768px) {
+
+  // reducir titulo wanted en movil
+  .footer--wanted .footer-titulo {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  // columnas del mapa en 2 filas
+  .footer--mapa .footer-columnas {
+    grid-template-columns: 1fr 1fr;
+    gap: v.$spacing-lg;
+  }
+}
