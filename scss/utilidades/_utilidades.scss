@@ -41,8 +41,11 @@ $spacings: (
 @each $key, $value in $spacings {
   .mt-#{$key} { margin-top: $value; }
   .mb-#{$key} { margin-bottom: $value; }
+  .m-#{$key} { margin: $value; }
   .pt-#{$key} { padding-top: $value; }
   .pb-#{$key} { padding-bottom: $value; }
+  .p-#{$key} { padding: $value; }
+
 }
 
 
