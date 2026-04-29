@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrandLine-UI - Framework Pirata</title>
+    <title>Documentación Footer - GrandLine UI</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -13,6 +13,7 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="index.html" class="nav-marca">
             <img src="../img/logo.png" alt="Logo GrandLine UI">
@@ -27,7 +28,7 @@
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.html" class="nav-enlace ">Inicio</a>
+                <a href="index.html" class="nav-enlace">Inicio</a>
             </li>
             <li class="nav-item nav-dropdown">
                 <a href="documentacion.html" class="nav-enlace nav-enlace--activo">Documentación</a>
@@ -39,18 +40,453 @@
                     <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
                     <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
                     <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
-                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace nav-enlace--activo">Footer</a></li>
                 </ul>
             </li>
-            
             <li class="nav-item">
                 <a href="repositorio.html" class="nav-enlace">Repositorio</a>
             </li>
         </ul>
     </nav>
 
-    
-     <!--PIE DE PAGINA -->
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="hero-titulo">Documentación de Footer</h1>
+            <p class="hero-subtitulo">
+                Pie de página con dos diseños temáticos: el clásico mapa del tesoro
+                con columnas organizadas y el impactante cartel Wanted pirata.
+            </p>
+            <div class="hero-acciones">
+                <a href="#uso" class="btn btn-pr btn-lg">Ver variantes</a>
+                <a href="#tabla" class="btn btn-o-se btn-lg">Ver referencia</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- INTRODUCCION -->
+        <section id="uso" class="card card-pi mb-5">
+            <div class="card-header">⚓ Cómo usar un footer</div>
+            <div class="card-body">
+                <p class="card-text">
+                    El footer se construye con una clase base <strong>.footer</strong>
+                    y una variante de diseño (<strong>.footer--mapa</strong> o
+                    <strong>.footer--wanted</strong>). Dentro colocas los elementos
+                    modulares: títulos, texto, listas de enlaces y una zona base.
+                </p>
+
+                <pre class="bg-surface rounded shadow-sm mb-3"><code>&lt;footer class="footer footer--mapa"&gt;
+  &lt;div class="footer-columnas"&gt;...&lt;/div&gt;
+  &lt;div class="footer-base"&gt;...&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+                <div class="alert alert-in mb-0">
+                    <span class="alert-icono">💡</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">Tip del Capitán</h4>
+                        <p class="alert-texto">
+                            Las clases internas (<strong>.footer-titulo</strong>,
+                            <strong>.footer-lista</strong>, etc.) se adaptan automáticamente
+                            al diseño de la variante que elijas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTE MAPA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🗺️ Variante Mapa del Tesoro</h2>
+                <p class="text-muted">Diseño clásico con columnas organizadas.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                La variante <strong>.footer--mapa</strong> usa un grid de 4 columnas,
+                un separador decorativo con ancla y fondos radiales que simulan
+                iluminación. Ideal para sitios con muchas secciones.
+            </p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>VISTA PREVIA</span>
+                    <span class="badge badge-ex badge-pi">.footer--mapa</span>
+                </div>
+                <footer class="footer footer--mapa">
+                    <div class="footer-separador">
+                        <span>⚓</span>
+                    </div>
+                    <div class="footer-columnas">
+                        <div>
+                            <h4 class="footer-titulo">⚔️ Marca</h4>
+                            <p class="footer-texto">
+                                Framework CSS con estilo pirata legendario.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                            <ul class="footer-lista">
+                                <li><a href="#" class="footer-link">Botones</a></li>
+                                <li><a href="#" class="footer-link">Alertas</a></li>
+                                <li><a href="#" class="footer-link">Tarjetas</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-titulo">🗺️ Recursos</h4>
+                            <ul class="footer-lista">
+                                <li><a href="#" class="footer-link">Documentación</a></li>
+                                <li><a href="#" class="footer-link">GitHub</a></li>
+                                <li><a href="#" class="footer-link">Licencia</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="footer-titulo">⚓ Comunidad</h4>
+                            <ul class="footer-lista">
+                                <li><a href="#" class="footer-link">Contribuir</a></li>
+                                <li><a href="#" class="footer-link">Discord</a></li>
+                                <li><a href="#" class="footer-link">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-base">
+                        © 2026 <strong>GrandLine UI</strong> · Construido con ⚔️
+                    </div>
+                </footer>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;footer class="footer footer--mapa"&gt;
+
+  &lt;div class="footer-separador"&gt;
+    &lt;span&gt;⚓&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="footer-columnas"&gt;
+    &lt;div&gt;
+      &lt;h4 class="footer-titulo"&gt;Marca&lt;/h4&gt;
+      &lt;p class="footer-texto"&gt;Descripción...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h4 class="footer-titulo"&gt;Enlaces&lt;/h4&gt;
+      &lt;ul class="footer-lista"&gt;
+        &lt;li&gt;&lt;a href="#" class="footer-link"&gt;Botones&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="footer-base"&gt;
+    © 2026 GrandLine UI
+  &lt;/div&gt;
+
+&lt;/footer&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- VARIANTE WANTED -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🏴‍☠️ Variante Cartel Wanted</h2>
+                <p class="text-muted">Diseño dramático estilo cartel de recompensa.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                La variante <strong>.footer--wanted</strong> transforma el footer
+                en un cartel de búsqueda pirata con bordes dobles, título gigante
+                y enlaces horizontales. Perfecto para landings llamativas.
+            </p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>VISTA PREVIA</span>
+                    <span class="badge badge-ex badge-pi">.footer--wanted</span>
+                </div>
+                <footer class="footer footer--wanted">
+                    <h2 class="footer-titulo">GRANDLINE UI</h2>
+                    <p class="footer-texto">⚜ FRAMEWORK PIRATA ⚜</p>
+
+                    <ul class="footer-lista">
+                        <li><a href="#" class="footer-link">Inicio</a></li>
+                        <li><a href="#" class="footer-link">Componentes</a></li>
+                        <li><a href="#" class="footer-link">Documentación</a></li>
+                        <li><a href="#" class="footer-link">GitHub</a></li>
+                        <li><a href="#" class="footer-link">Licencia</a></li>
+                    </ul>
+
+                    <div>
+                        <span class="badge badge-pr badge-pi">v1.0</span>
+                        <span class="badge badge-ex badge-pi">MIT</span>
+                        <span class="badge badge-ad badge-pi">OPEN SOURCE</span>
+                    </div>
+
+                    <div class="footer-base">
+                        © 2026 GrandLine UI · Dead or Alive · Forjado con ⚔️
+                    </div>
+                </footer>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;footer class="footer footer--wanted"&gt;
+
+  &lt;h2 class="footer-titulo"&gt;GRANDLINE UI&lt;/h2&gt;
+  &lt;p class="footer-texto"&gt;⚜ FRAMEWORK PIRATA ⚜&lt;/p&gt;
+
+  &lt;ul class="footer-lista"&gt;
+    &lt;li&gt;&lt;a href="#" class="footer-link"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="footer-link"&gt;Documentación&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div class="footer-base"&gt;
+    © 2026 GrandLine UI · Dead or Alive
+  &lt;/div&gt;
+
+&lt;/footer&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- VARIANTE OSCURA -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🌙 Variante Oscura</h2>
+                <p class="text-muted">Combínala con cualquier diseño.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                La clase <strong>.footer--oscuro</strong> cambia el fondo a negro
+                profundo con borde dorado brillante. Se puede combinar con las
+                variantes <strong>.footer--mapa</strong> o <strong>.footer--wanted</strong>.
+            </p>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <span>VISTA PREVIA</span>
+                    <span class="badge badge-ex badge-pi">.footer--oscuro</span>
+                </div>
+                <footer class="footer footer--mapa footer--oscuro">
+                    <div class="footer-separador">
+                        <span>⚓</span>
+                    </div>
+                    <div class="footer-columnas">
+                        <div>
+                            <h4 class="footer-titulo">⚔️ Marca</h4>
+                            <p class="footer-texto">
+                                Framework con fondo nocturno.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="footer-titulo">🏴‍☠️ Links</h4>
+                            <ul class="footer-lista">
+                                <li><a href="#" class="footer-link">Opción 1</a></li>
+                                <li><a href="#" class="footer-link">Opción 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-base">
+                        © 2026 GrandLine UI · Modo oscuro
+                    </div>
+                </footer>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span>CÓDIGO</span>
+                    <button class="badge badge-ex badge-pi" type="button" data-copy-code>
+                        &#128203; Copiar
+                    </button>
+                </div>
+                <pre class="bg-surface rounded shadow-sm"><code>&lt;!-- Mapa + Oscuro --&gt;
+&lt;footer class="footer footer--mapa footer--oscuro"&gt;...&lt;/footer&gt;
+
+&lt;!-- Wanted + Oscuro --&gt;
+&lt;footer class="footer footer--wanted footer--oscuro"&gt;...&lt;/footer&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- ELEMENTOS INTERNOS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🧩 Elementos Internos</h2>
+                <p class="text-muted">Las piezas que puedes combinar dentro del footer.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                El footer se compone de elementos modulares que se adaptan a la
+                variante elegida. Úsalos solo si los necesitas.
+            </p>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>📝 TEXTOS</span>
+                            <span class="badge badge-ex badge-pi">.footer-titulo .footer-texto</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>.footer-titulo</strong> para encabezados de columna
+                                y <strong>.footer-texto</strong> para párrafos descriptivos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>🔗 ENLACES</span>
+                            <span class="badge badge-ex badge-pi">.footer-lista .footer-link</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <strong>.footer-lista</strong> es un <code>&lt;ul&gt;</code>
+                                que contiene enlaces con clase <strong>.footer-link</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>📐 COLUMNAS</span>
+                            <span class="badge badge-ex badge-pi">.footer-columnas</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Grid de 4 columnas para organizar secciones.
+                                Solo funciona con la variante <strong>.footer--mapa</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>⚓ SEPARADOR</span>
+                            <span class="badge badge-ex badge-pi">.footer-separador</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Línea decorativa con icono al centro.
+                                Solo para la variante <strong>.footer--mapa</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <span>📍 ZONA BASE</span>
+                            <span class="badge badge-ex badge-pi">.footer-base</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Parte inferior centrada para el copyright o información
+                                legal. Se adapta a cualquier variante.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- REFERENCIA -->
+        <section id="tabla" class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📖 Referencia Completa</h2>
+                <p class="text-muted">Todas las clases del componente footer.</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.footer</code></td>
+                            <td>Base</td>
+                            <td>Contenedor principal obligatorio</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-titulo</code></td>
+                            <td>Elemento</td>
+                            <td>Título en mayúsculas con letter-spacing</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-texto</code></td>
+                            <td>Elemento</td>
+                            <td>Párrafo descriptivo</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-lista</code></td>
+                            <td>Elemento</td>
+                            <td>Lista de enlaces sin estilos por defecto</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-link</code></td>
+                            <td>Elemento</td>
+                            <td>Enlace con hover desplazante</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-base</code></td>
+                            <td>Elemento</td>
+                            <td>Zona inferior centrada con separador</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-columnas</code></td>
+                            <td>Elemento</td>
+                            <td>Grid de 4 columnas (solo con mapa)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer-separador</code></td>
+                            <td>Elemento</td>
+                            <td>Línea decorativa con icono (solo con mapa)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer--mapa</code></td>
+                            <td>Variante</td>
+                            <td>Diseño con columnas y fondos radiales</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer--wanted</code></td>
+                            <td>Variante</td>
+                            <td>Cartel pirata con bordes dobles</td>
+                        </tr>
+                        <tr>
+                            <td><code>.footer--oscuro</code></td>
+                            <td>Variante</td>
+                            <td>Fondo negro con borde dorado brillante</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
     <footer class="footer footer--mapa">
 
         <div class="footer-separador">
@@ -73,14 +509,13 @@
                     <li><a href="alertas.html" class="footer-link">Alertas</a></li>
                     <li><a href="insignias.html" class="footer-link">Insignias</a></li>
                     <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
-
                 </ul>
             </div>
 
             <div>
-                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <h4 class="footer-titulo">🧭 Estructurales</h4>
                 <ul class="footer-lista">
-                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="navbar.html" class="footer-link">Navbar</a></li>
                     <li><a href="tabla.html" class="footer-link">Tablas</a></li>
                     <li><a href="formularios.html" class="footer-link">Formularios</a></li>
                     <li><a href="footer.html" class="footer-link">Footer</a></li>
@@ -100,7 +535,7 @@
         </div>
 
         <div class="footer-base">
-            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Productividad - FMO UES
         </div>
     </footer>
 

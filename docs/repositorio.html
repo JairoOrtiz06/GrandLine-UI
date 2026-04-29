@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrandLine-UI - Framework Pirata</title>
+    <title>Repositorio - GrandLine UI</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -13,6 +13,7 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="index.html" class="nav-marca">
             <img src="../img/logo.png" alt="Logo GrandLine UI">
@@ -42,15 +43,363 @@
                     <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
                 </ul>
             </li>
-            
             <li class="nav-item">
                 <a href="repositorio.html" class="nav-enlace nav-enlace--activo">Repositorio</a>
             </li>
         </ul>
     </nav>
 
-    
-     <!--PIE DE PAGINA -->
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container text-center">
+            
+            <h1 class="hero-titulo">Repositorio</h1>
+            <p class="hero-subtitulo">
+                GrandLine UI es un proyecto de código abierto disponible en GitHub.
+                Explora el código, reporta bugs, contribuye con mejoras o simplemente
+                dale una estrella si te gusta el framework.
+            </p>
+            <div class="hero-acciones">
+                <a href="#estructura" class="btn btn-o-se btn-lg">Explorar proyecto</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 docs">
+
+        <!-- INFO DEL PROYECTO -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📊 Información del Proyecto</h2>
+                <p class="text-muted">Datos clave de GrandLine UI.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-body text-center">
+                            <h2 class="card-title" style="font-size:2.5rem;">v1.0</h2>
+                            <p class="card-text mb-0">Versión actual</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-body text-center">
+                            <h2 class="card-title" style="font-size:2.5rem;">8</h2>
+                            <p class="card-text mb-0">Componentes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-body text-center">
+                            <h2 class="card-title" style="font-size:2.5rem;">70+</h2>
+                            <p class="card-text mb-0">Clases disponibles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-body text-center">
+                            <h2 class="card-title" style="font-size:2.5rem;">MIT</h2>
+                            <p class="card-text mb-0">Licencia</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ENLACE PRINCIPAL AL REPO -->
+        <section id="estructura" class="card card-pi mb-5">
+            <div class="card-header">🐙 Enlace al Repositorio</div>
+            <div class="card-body">
+                <p class="card-text">
+                    Accede al código fuente completo del framework. Puedes clonarlo,
+                    descargarlo como ZIP o hacer un fork para tus propios proyectos.
+                </p>
+
+                <div class="alert alert-in mb-3">
+                    <span class="alert-icono">🔗</span>
+                    <div class="alert-contenido">
+                        <h4 class="alert-titulo">URL del repositorio</h4>
+                        <p class="alert-texto">
+                            <a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main"
+                               target="_blank" class="footer-link">
+                               github.com/JairoOrtiz06/GrandLine-UI
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main"
+                   target="_blank" class="btn btn-pr btn-lg">
+                   🐙 Abrir en GitHub
+                </a>
+                <a href="https://github.com/JairoOrtiz06/GrandLine-UI/archive/refs/heads/main.zip"
+                   class="btn btn-o-se btn-lg">
+                   📦 Descargar ZIP
+                </a>
+            </div>
+        </section>
+
+        <!-- COMO CLONAR -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>⚙️ Cómo Clonar el Repositorio</h2>
+                <p class="text-muted">Trae el proyecto a tu máquina en 3 pasos.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>PASO 1</span>
+                            <span class="badge badge-pr badge-pi">Clonar</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Abre tu terminal y ejecuta el comando de git clone.
+                            </p>
+                            <pre class="bg-surface rounded shadow-sm"><code>git clone https://github.com/JairoOrtiz06/GrandLine-UI.git</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>PASO 2</span>
+                            <span class="badge badge-ex badge-pi">Entrar</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Navega al directorio del proyecto clonado.
+                            </p>
+                            <pre class="bg-surface rounded shadow-sm"><code>cd GrandLine-UI</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <span>PASO 3</span>
+                            <span class="badge badge-ad badge-pi">Compilar</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Compila el SCSS a CSS con el comando de sass.
+                            </p>
+                            <pre class="bg-surface rounded shadow-sm"><code>sass scss/main.scss css/style.css</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESTRUCTURA DE CARPETAS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>📁 Estructura del Proyecto</h2>
+                <p class="text-muted">Cómo está organizado el código fuente.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                El proyecto sigue una arquitectura modular donde cada componente
+                tiene su propio archivo SCSS. Esto facilita el mantenimiento y
+                permite agregar nuevas piezas sin romper las existentes.
+            </p>
+
+            <div class="card">
+                <div class="card-header">ÁRBOL DE ARCHIVOS</div>
+                <div class="card-body">
+                    <pre class="bg-surface rounded shadow-sm"><code>GrandLine-UI/
+│
+├── css/
+│   ├── style.css           ← CSS compilado listo para usar
+│   └── style.css.map
+│
+├── scss/
+│   ├── abstractos/
+│   │   ├── _variables.scss ← Colores, tipografía, espaciado
+│   │   └── _mixins.scss    ← Funciones reutilizables
+│   │
+│   ├── componentes/
+│   │   ├── _botones.scss
+│   │   ├── _alertas.scss
+│   │   ├── _insignias.scss
+│   │   ├── _tarjetas.scss
+│   │   ├── _navbar.scss
+│   │   ├── _tabla.scss
+│   │   ├── _formularios.scss
+│   │   └── _footer.scss
+│   │
+│   ├── layout/
+│   │   ├── _container.scss
+│   │   └── _grid.scss
+│   │
+│   ├── utilidades/
+│   │   └── _utilities.scss
+│   │
+│   └── main.scss           ← Archivo principal
+│
+├── html/                   ← Páginas de documentación
+├── img/                    ← Imágenes del proyecto
+└── README.md</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS USADAS -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🛠️ Tecnologías Utilizadas</h2>
+                <p class="text-muted">El stack detrás del framework.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">HTML5</h3>
+                            <p class="card-text">
+                                Marcado semántico para la estructura de los componentes.
+                            </p>
+                            <span class="badge badge-pr badge-pi">Base</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">SCSS</h3>
+                            <p class="card-text">
+                                Preprocesador CSS con variables, mixins y arquitectura modular.
+                            </p>
+                            <span class="badge badge-ex badge-pi">Core</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Flexbox + Grid</h3>
+                            <p class="card-text">
+                                Sistema de layout moderno y completamente responsive.
+                            </p>
+                            <span class="badge badge-ad badge-pi">Layout</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- COMO CONTRIBUIR -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>🤝 Cómo Contribuir</h2>
+                <p class="text-muted">Únete a la tripulación de GrandLine UI.</p>
+            </div>
+
+            <p class="card-text mb-4">
+                Este proyecto es colaborativo y toda ayuda es bienvenida. Si quieres
+                aportar nuevas funcionalidades, reportar errores o mejorar la
+                documentación, sigue estos pasos.
+            </p>
+
+            <div class="row">
+
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-header">🍴 FORK Y PULL REQUEST</div>
+                        <div class="card-body">
+                            <ol>
+                                <li>Haz un fork del repositorio</li>
+                                <li>Crea una rama con tu mejora: <code>git checkout -b mejora</code></li>
+                                <li>Haz commit de tus cambios</li>
+                                <li>Haz push a tu fork</li>
+                                <li>Abre un Pull Request al repositorio original</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 mb-3">
+                    <div class="card card-pi h-100">
+                        <div class="card-header">🐛 REPORTAR BUGS</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Si encontraste un error, abre un Issue en GitHub
+                                describiendo:
+                            </p>
+                            <ul>
+                                <li>Qué estabas intentando hacer</li>
+                                <li>Qué esperabas que pasara</li>
+                                <li>Qué pasó realmente</li>
+                                <li>Captura de pantalla si es posible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INFO DEL AUTOR -->
+        <section class="mb-5">
+            <div class="seccion-header mb-3">
+                <h2>👨‍💻 Autor del Proyecto</h2>
+                <p class="text-muted">Conoce a los creadores detrás del framework.</p>
+            </div>
+
+            <div class="card card-wa">
+                <div class="card-header">EQUIPO</div>
+                <div class="card-body text-center">
+                    <h3 class="card-title">Jairo Ortiz</h3>
+                    <a href="https://github.com/JairoOrtiz06" target="_blank" class="btn btn-pr">
+                       🐙 Ver perfil en GitHub
+                    </a>
+                    <br>
+
+                    <h3 class="card-title">Isaias Cañas</h3>
+                    <a href="https://github.com/IsaiasLeonel00012" target="_blank" class="btn btn-pr">
+                       🐙 Ver perfil en GitHub
+                    </a>
+                    <br>
+
+                    <h3 class="card-title">Arturo Gutiérrez</h3>
+                    <a href="https://github.com/arthur-hs" target="_blank" class="btn btn-pr">
+                       🐙 Ver perfil en GitHub
+                    </a>
+                    <br>
+                    <p class="card-text">
+                        Desarrolladores y creadores de GrandLine UI.
+                        Proyecto académico de Herramientas de Productividad.
+                    </p>
+                    <br>
+                    <div class="mb-3">
+                        <span class="badge badge-pr badge-pi">FMO UES</span>
+                        <span class="badge badge-ex badge-pi">2026</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
     <footer class="footer footer--mapa">
 
         <div class="footer-separador">
@@ -73,14 +422,13 @@
                     <li><a href="alertas.html" class="footer-link">Alertas</a></li>
                     <li><a href="insignias.html" class="footer-link">Insignias</a></li>
                     <li><a href="tarjetas.html" class="footer-link">Tarjetas</a></li>
-
                 </ul>
             </div>
 
             <div>
-                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
+                <h4 class="footer-titulo">🧭 Estructurales</h4>
                 <ul class="footer-lista">
-                    <li><a href="tarjetas.html" class="footer-link">Navbar</a></li>
+                    <li><a href="navbar.html" class="footer-link">Navbar</a></li>
                     <li><a href="tabla.html" class="footer-link">Tablas</a></li>
                     <li><a href="formularios.html" class="footer-link">Formularios</a></li>
                     <li><a href="footer.html" class="footer-link">Footer</a></li>
@@ -91,8 +439,8 @@
                 <h4 class="footer-titulo">Recursos</h4>
                 <ul class="footer-lista">
                     <li><a href="documentacion.html" class="footer-link">Documentación</a></li>
-                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main" target="_blank"
-                            class="footer-link">GitHub</a></li>
+                    <li><a href="https://github.com/JairoOrtiz06/GrandLine-UI/tree/main"
+                           target="_blank" class="footer-link">GitHub</a></li>
                     <li><a href="ejemplos.html" class="footer-link">Ejemplos</a></li>
                 </ul>
             </div>
@@ -100,7 +448,7 @@
         </div>
 
         <div class="footer-base">
-            © 2026 <strong>GrandLine UI</strong> · Herramientas de Porductividad - FMO UES
+            © 2026 <strong>GrandLine UI</strong> · Herramientas de Productividad - FMO UES
         </div>
     </footer>
 
