@@ -11,6 +11,7 @@
   overflow: hidden;
   transition: v.$transition-normal;
   font-family: v.$font-texto;
+  width: 100%;
 }
 
 // efecto hover que eleva la card
@@ -106,6 +107,10 @@
 
 .card-ho .card-body {
   flex: 1;
+}
+
+.card a {
+  overflow-wrap: break-word;
 }
 
 // responsive para cards horizontales en movil

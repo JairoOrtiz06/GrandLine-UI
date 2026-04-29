@@ -198,10 +198,10 @@ a:hover {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 12px;
 }
 
 .container-fluid {
@@ -693,6 +693,13 @@ code {
 
 .alert-contenido {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.alert-contenido code {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .alert-icono {
@@ -1622,6 +1629,7 @@ code {
   overflow: hidden;
   transition: all 0.3s ease;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  width: 100%;
 }
 
 .card:hover {
@@ -1707,6 +1715,10 @@ code {
 
 .card-ho .card-body {
   flex: 1;
+}
+
+.card a {
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
@@ -1873,6 +1885,17 @@ code {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
+}
+@media (max-width: 576px) {
+  .footer--mapa .footer-columnas {
+    grid-template-columns: 1fr;
+  }
+  .footer--mapa .footer-columnas > div {
+    min-width: 0;
+  }
+}
+.footer {
+  overflow-wrap: break-word;
 }
 
 /*# sourceMappingURL=style.css.map */
