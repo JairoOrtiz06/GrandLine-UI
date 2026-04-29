@@ -1,6 +1,6 @@
 @use "../abstractos/mixins";
 
-<<<<<<< HEAD
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@
 
 /*telefono */
 
-=======
+
 /* filas*/
 
 .row{
@@ -27,7 +27,7 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
->>>>>>> main
+
 .col-1{
     @include mixins.col(1);
 }
@@ -66,12 +66,12 @@
 }
 
 /*tablet*/
-<<<<<<< HEAD
+
 @media (min-width: 768px) {
-=======
+
 
 @media (max-width: 768px){
->>>>>>> main
+
     .col-md-1{
         @include mixins.col(1);
     }
@@ -108,7 +108,7 @@
     .col-md-12{
         @include mixins.col(12);
     }
-<<<<<<< HEAD
+
     
 }
 
@@ -151,7 +151,7 @@
         @include mixins.col(12);
     }
 }
-=======
+
 }
 
 /*computadora*/
@@ -194,4 +194,4 @@
         @include mixins.col(12);
     }
 }
->>>>>>> main
+
