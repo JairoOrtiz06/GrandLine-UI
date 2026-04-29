@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - GrandLine UI</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
+
+        <input type="checkbox" id="nav-main" class="nav-check">
+
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+
+            <li class="nav-item nav-dropdown">
+                <a href="documentacion.html" class="nav-enlace nav-enlace--activo">Documentación</a>
+
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container mt-5 mb-5">
+
+        <header class="mb-5">
+            <span class="badge badge-pr badge-pi mb-3">Documentación</span>
+
+            <h1>Layout</h1>
+
+            <p class="fs-3 text-muted">
+                El sistema de layout de GrandLine UI define la estructura base para organizar contenido
+                mediante contenedores, filas y columnas responsivas.
+            </p>
+        </header>
+
+        <section class="mb-5">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-pi h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Contenedores</h3>
+                            <p class="card-text">
+                                Controlan el ancho del contenido principal y permiten centrar secciones.
+                            </p>
+                            <span class="badge badge-in badge-pi">.container</span>
+                            <span class="badge badge-in badge-pi">.container-fluid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-pi h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Filas</h3>
+                            <p class="card-text">
+                                Agrupan columnas y activan el comportamiento flexible del sistema.
+                            </p>
+                            <span class="badge badge-ex badge-pi">.row</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-pi h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Columnas</h3>
+                            <p class="card-text">
+                                Distribuyen el contenido en un sistema de 12 columnas adaptables.
+                            </p>
+                            <span class="badge badge-ad badge-pi">.col-*</span>
+                            <span class="badge badge-ad badge-pi">.col-md-*</span>
+                            <span class="badge badge-ad badge-pi">.col-lg-*</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Contenedores</h2>
+
+            <p class="text-muted">
+                Los contenedores definen el ancho horizontal de una sección. Se usan como envoltorio
+                principal antes de crear filas y columnas.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-striped mb-4">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Descripción</th>
+                            <th>Uso recomendado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>.container</td>
+                            <td>Contenedor centrado con ancho del 90% y máximo de 1200px.</td>
+                            <td>Contenido principal, documentación, tarjetas y secciones comunes.</td>
+                        </tr>
+
+                        <tr>
+                            <td>.container-fluid</td>
+                            <td>Contenedor de ancho completo.</td>
+                            <td>Secciones extendidas, fondos completos o bloques de pantalla completa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;main class="container"&gt;
+  Contenido centrado
+&lt;/main&gt;
+
+&lt;section class="container-fluid"&gt;
+  Contenido de ancho completo
+&lt;/section&gt;</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2>Sistema de columnas</h2>
+
+            <p class="text-muted">
+                El grid trabaja con 12 columnas. Cada columna debe ir dentro de una fila
+                para mantener la alineación y el espaciado correcto.
+            </p>
+
+            <div class="card mb-4">
+                <div class="card-header">Ejemplo visual</div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="bg-primary p-3 rounded text-center">.col-12</div>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <div class="bg-surface p-3 rounded text-center">.col-6</div>
+                        </div>
+
+                        <div class="col-6 mb-3">
+                            <div class="bg-surface p-3 rounded text-center">.col-6</div>
+                        </div>
+
+                        <div class="col-4 mb-3">
+                            <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                        </div>
+
+                        <div class="col-4 mb-3">
+                            <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                        </div>
+
+                        <div class="col-4 mb-3">
+                            <div class="bg-primary p-3 rounded text-center">.col-4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;div class="row"&gt;
+  &lt;div class="col-6"&gt;Columna 1&lt;/div&gt;
+  &lt;div class="col-6"&gt;Columna 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2>Layout responsive</h2>
+
+            <p class="text-muted">
+                Las columnas pueden combinar clases base, medianas y grandes para cambiar
+                su distribución según el tamaño de pantalla.
+            </p>
+
+            <div class="card card-pi mb-4">
+                <div class="card-header">Patrón recomendado</div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                            <div class="bg-surface p-3 rounded shadow-sm text-center">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                            <div class="bg-surface p-3 rounded shadow-sm text-center">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                            <div class="bg-surface p-3 rounded shadow-sm text-center">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+    Contenido responsive
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="mb-5">
+            <h2>Referencia rápida</h2>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Clases</th>
+                            <th>Función</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Contenedor</td>
+                            <td>.container</td>
+                            <td>Centra el contenido con ancho máximo.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Contenedor fluido</td>
+                            <td>.container-fluid</td>
+                            <td>Ocupa todo el ancho disponible.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fila</td>
+                            <td>.row</td>
+                            <td>Agrupa columnas con flexbox.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Columnas base</td>
+                            <td>.col-1 a .col-12</td>
+                            <td>Define el ancho de columna en el sistema de 12 partes.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Columnas medianas</td>
+                            <td>.col-md-1 a .col-md-12</td>
+                            <td>Ajusta columnas para pantallas medianas.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Columnas grandes</td>
+                            <td>.col-lg-1 a .col-lg-12</td>
+                            <td>Ajusta columnas para pantallas grandes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Ejemplo completo</h2>
+
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;main class="container"&gt;
+  &lt;section class="row"&gt;
+
+    &lt;article class="col-12 col-md-6 col-lg-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          Tarjeta 1
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class="col-12 col-md-6 col-lg-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          Tarjeta 2
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;article class="col-12 col-md-6 col-lg-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          Tarjeta 3
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @use 'variables' as *;
 @use 'sass:color';
 
@@ -56,7 +56,7 @@
   background-color: $fondo;
   color: $texto;
 }
-=======
+
 @use 'variables' as *;
 @use 'sass:color';
 
@@ -128,4 +128,4 @@
     @warn "Breakpoint no existe: #{$breakpoint}";
   }
 }
->>>>>>> a208d3f498dcdce447cf2c697945dc63c64efbf5
+
