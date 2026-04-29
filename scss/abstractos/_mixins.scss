@@ -1,16 +1,12 @@
 @use 'variables' as *;
 @use 'sass:color';
 
-
-@mixin col($num){
-    width: percentage($num / 12);
-    
-
+// Columnas
+@mixin col($num) {
+  width: percentage($num / 12);
 }
 
-//MIXINS PARA LOS COMPONENTES (NO ME LOS BAYAN A BORRRAR...)
-//BOTONES
-// mixin para botones con relleno de color
+// Botones
 @mixin boton-color($fondo, $texto) {
   background-color: $fondo;
   color: $texto;
@@ -26,7 +22,6 @@
   }
 }
 
-// mixin para botones con solo borde
 @mixin boton-borde($color) {
   background-color: transparent;
   color: $color;
@@ -43,21 +38,20 @@
   }
 }
 
-//ALERTAS
-// mixin para crear alertas con color tematico
+// Alertas
 @mixin alerta-color($color) {
   background-color: rgba($color, 0.15);
   color: $color;
   border-left: 4px solid $color;
 }
 
-//BADGES
-// mixin para crear badges con color solido
+// Badges
 @mixin badge-color($fondo, $texto) {
   background-color: $fondo;
   color: $texto;
 }
 
+// Media queries
 @mixin respond($breakpoint) {
   $size: map-get($breakpoints, $breakpoint);
 

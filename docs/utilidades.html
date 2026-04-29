@@ -2,159 +2,404 @@
 <html lang="es">
 
 <head>
+    <!-- Configuracion principal -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utilidades - GrandLine-UI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Utilidades - GrandLine UI</title>
+
+    <!-- Fuentes del framework -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS de GrandLine UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jairoOrtiz06/GrandLine-UI@main/css/style.css">
 </head>
 
 <body>
 
-  <!-- 1️⃣ FOOTER WANTED -->
-    <footer class="footer footer--wanted">
+    <!-- Encabezado tomado del index -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-marca">
+            <img src="../img/logo.png" alt="Logo GrandLine UI">
+        </a>
 
-        <h2 class="footer-titulo">GRANDLINE UI</h2>
-        <p class="footer-texto">⚜ FRAMEWORK PIRATA ⚜</p>
+        <input type="checkbox" id="nav-main" class="nav-check">
 
-        <ul class="footer-lista">
-            <li><a href="#" class="footer-link">Inicio</a></li>
-            <li><a href="#" class="footer-link">Componentes</a></li>
-            <li><a href="#" class="footer-link">Documentación</a></li>
-            <li><a href="#" class="footer-link">GitHub</a></li>
-            <li><a href="#" class="footer-link">Licencia</a></li>
+        <label for="nav-main" class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-enlace">Inicio</a>
+            </li>
+
+            <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-enlace nav-enlace--activo">Documentación</a>
+
+                <ul class="nav-dropdown-menu">
+                    <li class="nav-item"><a href="botones.html" class="nav-enlace">Botones</a></li>
+                    <li class="nav-item"><a href="alertas.html" class="nav-enlace">Alertas</a></li>
+                    <li class="nav-item"><a href="insignias.html" class="nav-enlace">Insignias</a></li>
+                    <li class="nav-item"><a href="tarjetas.html" class="nav-enlace">Tarjetas</a></li>
+                    <li class="nav-item"><a href="navbar.html" class="nav-enlace">Navbar</a></li>
+                    <li class="nav-item"><a href="tabla.html" class="nav-enlace">Tablas</a></li>
+                    <li class="nav-item"><a href="formularios.html" class="nav-enlace">Formularios</a></li>
+                    <li class="nav-item"><a href="footer.html" class="nav-enlace">Footer</a></li>
+                    <li class="nav-item"><a href="doclayout.html" class="nav-enlace">Layout</a></li>
+                    <li class="nav-item"><a href="utilidades.html" class="nav-enlace">Utilidades</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="repositorio.html" class="nav-enlace">Repositorio</a>
+            </li>
         </ul>
+    </nav>
 
-        <div>
-            <span class="badge badge-pr badge-pi">v1.0</span>
-            <span class="badge badge-ex badge-pi">MIT</span>
-            <span class="badge badge-ad badge-pi">OPEN SOURCE</span>
-        </div>
+    <!-- Contenido principal -->
+    <main class="container mt-5 mb-5">
 
-        <div class="footer-base">
-            © 2025 GrandLine UI · Dead or Alive · Forjado con ⚔️
-        </div>
+        <!-- Presentacion -->
+        <header class="text-center mb-5">
+            <span class="badge badge-pr badge-pi mb-3">Documentación</span>
 
-    </footer>
+            <h1>Utilidades</h1>
 
+            <p class="fs-3 text-muted">
+                Clases auxiliares para aplicar estilos rápidos de texto, espaciado,
+                colores, flexbox, display, bordes y sombras.
+            </p>
 
-    <!-- 2️⃣ FOOTER MAPA DEL TESORO -->
-    <footer class="footer footer--mapa">
+            <div class="d-flex jc-center gap-2 mt-3" style="flex-wrap: wrap;">
+                <span class="badge badge-ex badge-pi">Tipografía</span>
+                <span class="badge badge-in badge-pi">Espaciado</span>
+                <span class="badge badge-ad badge-pi">Colores</span>
+                <span class="badge badge-pe badge-pi">Flexbox</span>
+                <span class="badge badge-se badge-pi">Display</span>
+            </div>
+        </header>
 
-        <div class="footer-separador">
-            <span>⚓</span>
-        </div>
+        <!-- Introduccion -->
+        <section class="mb-5">
+            <div class="alert alert-in">
+                <span class="alert-icono">i</span>
 
-        <div class="footer-columnas">
+                <div class="alert-contenido">
+                    <h4 class="alert-titulo">Uso de utilidades</h4>
+                    <p class="alert-texto">
+                        Las utilidades permiten modificar elementos directamente desde el HTML
+                        sin crear reglas CSS nuevas. Son útiles para ajustes rápidos y consistentes.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-            <div>
-                <h4 class="footer-titulo">⚔️ Marca</h4>
-                <p class="footer-texto">
-                    Framework CSS con estilo pirata para construir interfaces legendarias.
-                </p>
+        <!-- Indice -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Índice</h2>
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#tipografia" class="btn btn-o-pr" style="width:100%">Tipografía</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#espaciado" class="btn btn-o-pr" style="width:100%">Espaciado</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#colores" class="btn btn-o-pr" style="width:100%">Colores</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#flexbox" class="btn btn-o-pr" style="width:100%">Flexbox</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#display" class="btn btn-o-pr" style="width:100%">Display</a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="#bordes-sombras" class="btn btn-o-pr" style="width:100%">Bordes y sombras</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipografia -->
+        <section id="tipografia" class="mb-5">
+            <h2>1. Tipografía</h2>
+
+            <p class="text-muted">
+                Estas clases controlan el tamaño, peso y alineación del texto.
+            </p>
+
+            <div class="card card-pi mb-4">
+                <div class="card-header">Ejemplo visual</div>
+
+                <div class="card-body">
+                    <p class="fs-1">Texto con .fs-1</p>
+                    <p class="fs-2">Texto con .fs-2</p>
+                    <p class="fs-3">Texto con .fs-3</p>
+                    <p class="fs-4">Texto con .fs-4</p>
+                    <p class="fs-5">Texto con .fs-5</p>
+
+                    <p class="fw-bold">Texto con .fw-bold</p>
+                    <p class="fw-light">Texto con .fw-light</p>
+
+                    <p class="text-left">Texto alineado a la izquierda</p>
+                    <p class="text-center">Texto alineado al centro</p>
+                    <p class="text-right">Texto alineado a la derecha</p>
+                </div>
             </div>
 
-            <div>
-                <h4 class="footer-titulo">🏴‍☠️ Componentes</h4>
-                <ul class="footer-lista">
-                    <li><a href="#" class="footer-link">Botones</a></li>
-                    <li><a href="#" class="footer-link">Alertas</a></li>
-                    <li><a href="#" class="footer-link">Insignias</a></li>
-                    <li><a href="#" class="footer-link">Tarjetas</a></li>
-                </ul>
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;p class="fs-5 fw-bold text-center"&gt;
+  Texto destacado
+&lt;/p&gt;</code></pre>
+        </section>
+
+        <!-- Espaciado -->
+        <section id="espaciado" class="mb-5">
+            <h2>2. Espaciado</h2>
+
+            <p class="text-muted">
+                Las clases de espaciado permiten aplicar márgenes y paddings verticales.
+            </p>
+
+            <div class="card mb-4">
+                <div class="card-header">Ejemplo visual</div>
+
+                <div class="card-body">
+                    <div class="bg-primary p-2 rounded mb-1">Elemento con .mb-1</div>
+                    <div class="bg-primary p-2 rounded mb-3">Elemento con .mb-3</div>
+                    <div class="bg-primary p-2 rounded mb-5">Elemento con .mb-5</div>
+                    <div class="bg-surface pt-4 pb-4 rounded">Elemento con .pt-4 .pb-4</div>
+                </div>
             </div>
 
-            <div>
-                <h4 class="footer-titulo">🗺️ Recursos</h4>
-                <ul class="footer-lista">
-                    <li><a href="#" class="footer-link">Documentación</a></li>
-                    <li><a href="#" class="footer-link">GitHub</a></li>
-                    <li><a href="#" class="footer-link">Ejemplos</a></li>
-                    <li><a href="#" class="footer-link">Changelog</a></li>
-                </ul>
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;div class="mt-3 mb-5 pt-4 pb-4"&gt;
+  Contenido con espaciado
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <!-- Colores -->
+        <section id="colores" class="mb-5">
+            <h2>3. Colores</h2>
+
+            <p class="text-muted">
+                GrandLine UI incluye clases para aplicar color al texto y al fondo.
+            </p>
+
+            <div class="row">
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">Texto</div>
+
+                        <div class="card-body">
+                            <p class="text-primary fw-bold">.text-primary</p>
+                            <p class="text-oro fw-bold">.text-oro</p>
+                            <p class="text-success fw-bold">.text-success</p>
+                            <p class="text-danger fw-bold">.text-danger</p>
+                            <p class="text-muted fw-bold">.text-muted</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">Fondos</div>
+
+                        <div class="card-body">
+                            <div class="bg-primary p-3 rounded mb-2">.bg-primary</div>
+                            <div class="bg-oro p-3 rounded mb-2 text-primary fw-bold">.bg-oro</div>
+                            <div class="bg-success p-3 rounded mb-2">.bg-success</div>
+                            <div class="bg-danger p-3 rounded mb-2">.bg-danger</div>
+                            <div class="bg-surface p-3 rounded">.bg-surface</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexbox -->
+        <section id="flexbox" class="mb-5">
+            <h2>4. Flexbox</h2>
+
+            <p class="text-muted">
+                Estas clases permiten organizar elementos en fila usando flexbox.
+            </p>
+
+            <div class="card card-pi mb-4">
+                <div class="card-header">Ejemplo visual</div>
+
+                <div class="card-body">
+                    <div class="d-flex jc-center bg-surface p-3 rounded mb-3">
+                        <span class="badge badge-pr badge-pi">.jc-center</span>
+                    </div>
+
+                    <div class="d-flex jc-between bg-surface p-3 rounded mb-3">
+                        <span class="badge badge-ex badge-pi">Inicio</span>
+                        <span class="badge badge-in badge-pi">Final</span>
+                    </div>
+
+                    <div class="d-flex ai-center gap-3 bg-surface p-3 rounded" style="min-height:80px;">
+                        <span class="badge badge-pr badge-pi">.d-flex</span>
+                        <span class="badge badge-ad badge-pi">.ai-center</span>
+                        <span class="badge badge-pe badge-pi">.gap-3</span>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <h4 class="footer-titulo">⚓ Comunidad</h4>
-                <ul class="footer-lista">
-                    <li><a href="#" class="footer-link">Contribuir</a></li>
-                    <li><a href="#" class="footer-link">Reportar bug</a></li>
-                    <li><a href="#" class="footer-link">Discord</a></li>
-                    <li><a href="#" class="footer-link">Twitter</a></li>
-                </ul>
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;div class="d-flex jc-between ai-center gap-3"&gt;
+  &lt;span&gt;Elemento 1&lt;/span&gt;
+  &lt;span&gt;Elemento 2&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <!-- Display -->
+        <section id="display" class="mb-5">
+            <h2>5. Display</h2>
+
+            <p class="text-muted">
+                Clases para controlar la forma en que se muestra un elemento.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>.d-none</td>
+                            <td>Oculta el elemento.</td>
+                        </tr>
+
+                        <tr>
+                            <td>.d-block</td>
+                            <td>Muestra el elemento como bloque.</td>
+                        </tr>
+
+                        <tr>
+                            <td>.d-inline</td>
+                            <td>Muestra el elemento en línea.</td>
+                        </tr>
+
+                        <tr>
+                            <td>.d-md-none</td>
+                            <td>Oculta el elemento en pantallas medianas o menores.</td>
+                        </tr>
+
+                        <tr>
+                            <td>.d-md-block</td>
+                            <td>Muestra el elemento como bloque en pantallas medianas o menores.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Bordes y sombras -->
+        <section id="bordes-sombras" class="mb-5">
+            <h2>6. Bordes y sombras</h2>
+
+            <p class="text-muted">
+                Estas utilidades agregan redondeo y profundidad visual a los elementos.
+            </p>
+
+            <div class="card mb-4">
+                <div class="card-header">Ejemplo visual</div>
+
+                <div class="card-body">
+                    <div class="d-flex gap-3 mb-3" style="flex-wrap: wrap;">
+                        <div class="bg-primary p-3 rounded">.rounded</div>
+                        <div class="bg-primary p-3 rounded-lg">.rounded-lg</div>
+                        <div class="bg-oro p-3 rounded-pill text-primary fw-bold">.rounded-pill</div>
+                    </div>
+
+                    <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                        <div class="bg-surface p-4 rounded shadow-sm">.shadow-sm</div>
+                        <div class="bg-surface p-4 rounded shadow-lg">.shadow-lg</div>
+                    </div>
+                </div>
             </div>
 
-        </div>
+            <pre class="bg-surface p-3 rounded shadow-sm"><code>&lt;div class="bg-surface p-4 rounded shadow-lg"&gt;
+  Caja con sombra
+&lt;/div&gt;</code></pre>
+        </section>
 
-        <div class="footer-base">
-            © 2025 <strong>GrandLine UI</strong> · Construido con ⚔️ por piratas del código
-        </div>
+        <!-- Tabla resumen -->
+        <section class="mb-5">
+            <h2>Referencia rápida</h2>
 
-    </footer>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Clases disponibles</th>
+                        </tr>
+                    </thead>
 
-    <h1>UTILIDADES</h1>
+                    <tbody>
+                        <tr>
+                            <td>Tipografía</td>
+                            <td>.fs-1, .fs-2, .fs-3, .fs-4, .fs-5, .fw-bold, .fw-light</td>
+                        </tr>
 
-    <h2 class="text-oro">1. Tipografía</h2>
-    <div class="bg-surface p-3 rounded mb-3">
-        <p class="fs-1">Tamaño 1 (fs-1)</p>
-        <p class="fs-2">Tamaño 2 (fs-2)</p>
-        <p class="fs-3">Tamaño 3 (fs-3)</p>
-        <p class="fs-4">Tamaño 4 (fs-4)</p>
-        <p class="fs-5">Tamaño 5 (fs-5)</p>
-        <p class="fw-bold">Texto en negrita</p>
-        <p class="fw-light">Texto ligero</p>
-        <p class="text-left">Alineado izquierda</p>
-        <p class="text-center">Alineado centro</p>
-        <p class="text-right">Alineado derecha</p>
-    </div>
+                        <tr>
+                            <td>Alineación</td>
+                            <td>.text-left, .text-center, .text-right</td>
+                        </tr>
 
-    <h2 class="text-oro mt-4">2. Espaciado</h2>
-    <div class="bg-surface p-3 rounded mb-3">
-        <div class="bg-primary p-2 rounded mb-1">mb-1</div>
-        <div class="bg-primary p-2 rounded mb-3">mb-3</div>
-        <div class="bg-primary p-2 rounded mb-5">mb-5</div>
-        <div class="bg-primary pt-4 pb-4 rounded">pt-4 pb-4</div>
-    </div>
+                        <tr>
+                            <td>Espaciado</td>
+                            <td>.mt-1 a .mt-5, .mb-1 a .mb-5, .pt-1 a .pt-5, .pb-1 a .pb-5</td>
+                        </tr>
 
-    <h2 class="text-oro mt-4">3. Colores</h2>
-    <div class="bg-surface p-3 rounded mb-3">
-        <p class="text-primary fw-bold">Texto primary</p>
-        <p class="text-oro fw-bold">Texto oro</p>
-        <p class="text-success fw-bold">Texto success</p>
-        <p class="text-danger fw-bold">Texto danger</p>
-        <p class="text-muted fw-bold">Texto muted</p>
-    </div>
-    <div class="bg-primary p-3 rounded mb-2">Fondo primary</div>
-    <div class="bg-success p-3 rounded mb-2">Fondo success</div>
-    <div class="bg-danger p-3 rounded mb-2">Fondo danger</div>
-    <div class="bg-oro p-3 rounded mb-3">Fondo oro</div>
+                        <tr>
+                            <td>Texto</td>
+                            <td>.text-primary, .text-oro, .text-success, .text-danger, .text-muted</td>
+                        </tr>
 
-    <h2 class="text-oro mt-4">4. Flexbox</h2>
-    <div class="d-flex jc-center bg-surface p-3 rounded mb-2">
-        <div class="bg-primary p-2 rounded">Centrado (jc-center)</div>
-    </div>
-    <div class="d-flex jc-between bg-surface p-3 rounded mb-2">
-        <div class="bg-primary p-2 rounded">Izquierda</div>
-        <div class="bg-primary p-2 rounded">Derecha (jc-between)</div>
-    </div>
-    <div class="d-flex ai-center gap-3 bg-surface p-3 rounded mb-3" style="height: 80px;">
-        <div class="bg-primary p-2 rounded">Centrado vertical (ai-center)</div>
-    </div>
+                        <tr>
+                            <td>Fondos</td>
+                            <td>.bg-primary, .bg-oro, .bg-success, .bg-danger, .bg-surface</td>
+                        </tr>
 
-    <h2 class="text-oro mt-4">6. Bordes y Sombras</h2>
-    <div class="d-flex gap-3 mb-3">
-        <div class="bg-primary p-3 rounded">rounded</div>
-        <div class="bg-primary p-3 rounded-lg">rounded-lg</div>
-        <div class="bg-oro p-3 rounded-pill fw-bold">rounded-pill</div>
-    </div>
-    <div class="d-flex gap-3 mb-3">
-        <div class="bg-surface p-4 rounded shadow-sm">shadow-sm</div>
-        <div class="bg-surface p-4 rounded shadow-lg">shadow-lg</div>
-    </div>
+                        <tr>
+                            <td>Flexbox</td>
+                            <td>.d-flex, .jc-center, .jc-between, .ai-center, .gap-2, .gap-3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Display</td>
+                            <td>.d-none, .d-block, .d-inline, .d-md-none, .d-md-block</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bordes</td>
+                            <td>.rounded, .rounded-lg, .rounded-pill</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sombras</td>
+                            <td>.shadow-sm, .shadow-lg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 
