@@ -8,60 +8,59 @@ body {
   color: $text;
 }
 
-// todos los titulos usan la fuente cinzel
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-titulo;
   font-weight: 700;
-  letter-spacing: 1px;
   margin-bottom: $spacing-md;
-  line-height: 1.3;
+  line-height: 1.2;
+  letter-spacing: clamp(1px, 0.5vw, 3px);
 }
+
 
 // titulo principal grande y dorado
 h1 {
-  font-size: $font-4xl;
+  font-size: clamp(2.2rem, 6vw, $font-4xl);
   color: $gold-bright;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 3px;
-}
-h1, h2, h3 {
-  overflow-wrap: break-word;
-  word-break: break-word;
 }
 
 // titulo secundario
 h2 {
-  font-size: $font-3xl;
+  font-size: clamp(1.8rem, 5vw, $font-3xl);
   color: $accent;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 // subtitulo
 h3 {
-  font-size: $font-2xl;
+  font-size: clamp(1.5rem, 4vw, $font-2xl);
   color: $gold-bright;
 }
 
 // titulos menores
 h4 {
-  font-size: $font-xl;
+  font-size: clamp(1.3rem, 3vw, $font-xl);
   color: $text;
 }
 
 h5 {
-  font-size: $font-lg;
+  font-size: clamp(1.1rem, 2.5vw, $font-lg);
   color: $text;
 }
 
 h6 {
-  font-size: $font-base;
+  font-size: clamp(1rem, 2vw, $font-base);
   color: $text-muted;
   text-transform: uppercase;
 }
 
-// parrafos normales
+
+h1, h2, h3 {
+  overflow-wrap: anywhere;
+}
+
+
 p {
   font-size: $font-base;
   color: $text;
@@ -90,7 +89,7 @@ p {
 .text-sm { font-size: $font-sm; }
 .text-lg { font-size: $font-lg; }
 
-// citas estilo pergamino
+
 blockquote {
   border-left: 4px solid $accent;
   padding: $spacing-md $spacing-lg;
@@ -102,7 +101,6 @@ blockquote {
   font-family: $font-texto;
 }
 
-// codigo en linea
 code {
   font-family: $font-codigo;
   background-color: $surface;
@@ -110,7 +108,6 @@ code {
   padding: 2px 6px;
   border-radius: 4px;
   font-size: $font-sm;
-
   white-space: pre;
 }
 
@@ -123,10 +120,6 @@ pre {
   padding: $spacing-md;
   border-radius: $border-radius;
 }
-pre {
-  max-width: 100%;
-  overflow-x: auto;
-}
 
 pre code {
   white-space: pre;
@@ -134,7 +127,7 @@ pre code {
   overflow-wrap: normal;
 }
 
-// enlaces
+
 a {
   color: $accent;
   text-decoration: none;
@@ -146,11 +139,10 @@ a:hover {
   text-decoration: underline;
 }
 
-// clases de alineacion
+
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
 
-// clases de peso de fuente
 .fw-normal { font-weight: 400; }
 .fw-bold   { font-weight: 700; }
