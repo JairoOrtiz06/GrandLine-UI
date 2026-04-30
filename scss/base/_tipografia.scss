@@ -8,9 +8,6 @@ body {
   color: $text;
 }
 
-// ==========================
-// HEADINGS BASE
-// ==========================
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-titulo;
   font-weight: 700;
@@ -19,9 +16,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: clamp(1px, 0.5vw, 3px);
 }
 
-// ==========================
-// ESCALA RESPONSIVE
-// ==========================
 
 // titulo principal grande y dorado
 h1 {
@@ -61,17 +55,12 @@ h6 {
   text-transform: uppercase;
 }
 
-// ==========================
-// MEJOR MANEJO DE TEXTO
-// ==========================
+
 h1, h2, h3 {
   overflow-wrap: anywhere;
 }
 
 
-// ==========================
-// PÁRRAFOS
-// ==========================
 p {
   font-size: $font-base;
   color: $text;
@@ -100,9 +89,7 @@ p {
 .text-sm { font-size: $font-sm; }
 .text-lg { font-size: $font-lg; }
 
-// ==========================
-// BLOCKQUOTE
-// ==========================
+
 blockquote {
   border-left: 4px solid $accent;
   padding: $spacing-md $spacing-lg;
@@ -114,9 +101,6 @@ blockquote {
   font-family: $font-texto;
 }
 
-// ==========================
-// CÓDIGO
-// ==========================
 code {
   font-family: $font-codigo;
   background-color: $surface;
@@ -143,9 +127,7 @@ pre code {
   overflow-wrap: normal;
 }
 
-// ==========================
-// ENLACES
-// ==========================
+
 a {
   color: $accent;
   text-decoration: none;
@@ -157,9 +139,7 @@ a:hover {
   text-decoration: underline;
 }
 
-// ==========================
-// UTILIDADES
-// ==========================
+
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
