@@ -209,17 +209,20 @@ a:hover {
   padding: 0 15px;
 }
 
+/* filas */
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
+/* columnas */
 [class*=col-] {
   padding: 0 15px;
   box-sizing: border-box;
 }
 
-/*telefono */
+/* telefono / base */
 .col-1 {
   width: 8.3333333333%;
 }
@@ -268,7 +271,7 @@ a:hover {
   width: 100%;
 }
 
-/*tablet*/
+/* tablet */
 @media (min-width: 768px) {
   .col-md-1 {
     width: 8.3333333333%;
@@ -307,7 +310,7 @@ a:hover {
     width: 100%;
   }
 }
-/*desktop*/
+/* desktop */
 @media (min-width: 992px) {
   .col-lg-1 {
     width: 8.3333333333%;
